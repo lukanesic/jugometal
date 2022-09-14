@@ -17,7 +17,8 @@ const Small = ({
     <nav className='sm-nav'>
       <div className='sm-nav-logo'>
         <Link href='/'>
-          <h1>Jugometal</h1>
+          {/* LOGO img */}
+          <div className='small-logo' />
         </Link>
       </div>
 

@@ -40,6 +40,49 @@
     a {
       color: inherit;
     }
+
+    .small-logo {
+      background: url('./../public/images/jugometal-logo.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 29px;
+      width: 130px;
+      outline: none;
+      margin: 1rem auto;
+      -webkit-tap-highlight-color: transparent;
+      align-self: center;
+      justify-self: center;
+      cursor: pointer;
+
+      @include PhonePro() {
+        width: 150px;
+        height: 39px;
+      }
+
+      @include Pads() {
+        width: 200px;
+        height: 49px;
+      }
+
+      @include PadsPro() {
+        width: 150px;
+        height: 39px;
+        display: none;
+      }
+
+      @include Laptops() {
+        width: 150px;
+        height: 39px;
+        display: none;
+      }
+
+      @include HiDPI() {
+        width: 150px;
+        height: 39px;
+        display: none;
+      }
+    }
   }
 
   .sm-nav-li {

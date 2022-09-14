@@ -79,6 +79,12 @@ nav {
       grid-gap: 3rem;
       a {
         cursor: pointer;
+        color: $font;
+        transition: color 0.5s ease;
+      }
+
+      a:hover {
+        color: $black;
       }
 
       .nav-icon {

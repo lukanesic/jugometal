@@ -40,7 +40,7 @@ const TopCart = ({ open, setOpen }) => {
           >
             <div className='top-c-content'>
               <h3>
-                <span>12</span> Items added to your cart
+                <span>Placeholder</span> Items added to your cart
               </h3>
               <Link href='/cart'>
                 <button className='black'>View Cart</button>

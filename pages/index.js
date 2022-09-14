@@ -1,6 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 import MainLayout from '../layout/MainLayout'
+
+import HomeBanner from '../components/Banners/HomeBanner'
+import Logo from '../components/Logo'
+import LandingMoto from '../components/Moto/LandingMoto'
+import FrontCategories from '../components/FrontCategories'
 
 export default function Home() {
   return (
@@ -11,7 +17,12 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <MainLayout>Djina</MainLayout>
+      <MainLayout>
+        <Logo />
+        <HomeBanner />
+        <LandingMoto />
+        <FrontCategories />
+      </MainLayout>
     </div>
   )
 }

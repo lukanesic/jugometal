@@ -1,0 +1,90 @@
+.front-banner {
+  background: url('./../public/images/banners/main-banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+
+  @include Pads() {
+    height: 550px;
+  }
+
+  @include PadsPro() {
+    height: 550px;
+  }
+
+  @include Laptops() {
+    height: 550px;
+  }
+
+  @include HiDPI() {
+    height: 83vh;
+  }
+
+  .front-banner-qoute {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: inherit;
+    color: #fff;
+    padding: 3rem 1rem;
+
+    @include Pads {
+      padding: 2rem;
+    }
+
+    @include PadsPro() {
+      padding: 3rem 5rem;
+    }
+
+    @include Laptops() {
+      padding: 3rem 5rem;
+    }
+
+    @include HiDPI() {
+      padding: 3rem 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: lighter;
+
+      @include Pads() {
+        font-size: 2rem;
+      }
+
+      @include PadsPro() {
+        font-size: 2rem;
+      }
+
+      @include Laptops() {
+        font-size: 2.3rem;
+      }
+
+      @include HiDPI() {
+        font-size: 2.3rem;
+      }
+    }
+
+    h6 {
+      font-size: 0.9rem;
+
+      @include Pads() {
+        font-size: 1.2rem;
+      }
+
+      @include PadsPro() {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      @include Laptops() {
+        font-size: 1.3rem;
+      }
+
+      @include HiDPI() {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

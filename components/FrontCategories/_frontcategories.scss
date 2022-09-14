@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.categories-wrapper {
+  @include PadsPro() {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 3px;
+    margin: 2px 2px;
+  }
+
+  @include Laptops() {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 3px;
+    margin: 2px 2px;
+  }
+
+  @include HiDPI() {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 3px;
+    margin: 2px 2px;
+  }
+
+  .cat-info {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      font-weight: 600;
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    p {
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      line-height: 20px;
+    }
+
+    a {
+      display: inline-block;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      width: 200px;
+      margin-top: 0.5rem;
+      transition: all linear 0.4s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: $black;
+      background: $cat-color;
+    }
+  }
+
+  // samo za desktop
+  .categories-left {
+    .cat-tract {
+      background: url('./../public/images/banners/tr2.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 240px;
+      position: relative;
+      display: grid;
+      place-content: center;
+
+      @include Pads() {
+        height: 240px;
+      }
+
+      @include PadsPro() {
+        height: 300px;
+      }
+
+      @include Laptops() {
+        height: 300px;
+      }
+
+      @include HiDPI() {
+        height: 300px;
+      }
+    }
+
+    .cat-tract::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .categories-half-div {
+      @include PadsPro() {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 3px;
+      }
+
+      @include Laptops() {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 3px;
+      }
+
+      @include HiDPI() {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 3px;
+      }
+
+      .cat-ratar {
+        background: url('./../public/images/banners/rat.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+        position: relative;
+        display: grid;
+        place-content: center;
+        margin: 2px 0;
+
+        @include Pads() {
+          height: 240px;
+        }
+
+        @include PadsPro() {
+          margin: 0;
+          margin-top: 3px;
+          height: 282px;
+        }
+
+        @include Laptops() {
+          margin: 0;
+          margin-top: 3px;
+          height: 282px;
+        }
+
+        @include HiDPI() {
+          margin: 0;
+          margin-top: 3px;
+          height: 282px;
+        }
+      }
+
+      .cat-ratar::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background: rgba(20, 9, 9, 0.46);
+        height: 100%;
+        width: 100%;
+      }
+
+      .cat-vocar {
+        background: url('./../public/images/banners/voc.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 240px;
+        position: relative;
+        display: grid;
+        place-content: center;
+
+        @include Pads() {
+          height: 240px;
+        }
+
+        @include PadsPro() {
+          margin-top: 3px;
+          height: 282px;
+        }
+
+        @include Laptops() {
+          margin-top: 3px;
+          height: 282px;
+        }
+
+        @include HiDPI() {
+          margin-top: 3px;
+          height: 282px;
+          margin-bottom: 0;
+        }
+      }
+
+      .cat-vocar::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background: rgba(0, 9, 1, 0.48);
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .categories-right {
+    @include Laptops() {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 3px;
+      height: 100%;
+    }
+
+    @include HiDPI() {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 3px;
+      height: 100%;
+    }
+
+    .cat-stocar {
+      background: url('./../public/images/banners/stoc.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 240px;
+      position: relative;
+      display: grid;
+      place-content: center;
+      margin: 2px 0;
+
+      @include Pads() {
+        height: 240px;
+      }
+
+      @include PadsPro() {
+        margin: 0;
+        height: 300px;
+      }
+
+      @include Laptops() {
+        margin: 0;
+        height: 100%;
+      }
+
+      @include HiDPI() {
+        margin: 0;
+        height: 100%;
+      }
+    }
+
+    .cat-stocar::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(28, 30, 0, 0.43);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-transport {
+      background: url('./../public/images/banners/transport.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 240px;
+      position: relative;
+      display: grid;
+      place-content: center;
+      margin: 2px 0;
+
+      @include Pads() {
+        height: 240px;
+      }
+
+      @include PadsPro() {
+        margin-top: 3px;
+        height: 282px;
+      }
+
+      @include Laptops() {
+        margin: 0;
+        height: 100%;
+      }
+
+      @include HiDPI() {
+        margin: 0;
+        height: 100%;
+      }
+    }
+
+    .cat-transport::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(28, 30, 0, 0.43);
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
