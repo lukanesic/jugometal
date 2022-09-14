@@ -1,0 +1,90 @@
+nav {
+  display: none;
+
+  @include PadsPro() {
+    display: block;
+    border-bottom: 1px solid $cat-color;
+  }
+
+  @include Laptops {
+    border-bottom: 1px solid $cat-color;
+    display: block;
+  }
+
+  @include HiDPI {
+    border-bottom: 1px solid $cat-color;
+    display: block;
+  }
+
+  .nav-wrapper {
+    @include PadsPro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    @include Laptops {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    @include HiDPI {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    // content - info leva strama
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+
+      text-align: center;
+      padding: 0.5rem 0;
+      font-size: 16px;
+      align-items: center;
+
+      .facebook {
+        padding-left: 0;
+        font-size: 20px;
+      }
+
+      a {
+        border-right: 1px solid $cat-color;
+        padding: 0 1rem;
+        color: $font;
+        transition: color 0.4s linear;
+        cursor: pointer;
+      }
+
+      a:nth-child(3) {
+        border-right: none;
+      }
+
+      a:hover {
+        color: $black;
+      }
+    }
+
+    .navigation {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 3rem;
+      a {
+        cursor: pointer;
+      }
+
+      .nav-icon {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+}
