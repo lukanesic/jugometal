@@ -6,6 +6,7 @@ import SideCart from '../components/Menus/SideCart'
 import SideMenu from '../components/Menus/SideMenu'
 import TopCart from '../components/Menus/TopCart'
 import Small from '../components/Nav/Small'
+import Footer from '../components/Footer'
 
 const MainLayout = ({ children }) => {
   const [openSideC, setOpenSideC] = useState(false)
@@ -39,6 +40,7 @@ const MainLayout = ({ children }) => {
       {/* MOBILE CART */}
       <TopCart open={openTopC} setOpen={setOpenTopC} />
       {children}
+      <Footer />
     </>
   )
 }

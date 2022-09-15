@@ -1,0 +1,72 @@
+.page-banner {
+  height: 30vh;
+  position: relative;
+  z-index: -11000;
+  text-align: left;
+  padding: 1rem 0;
+  display: grid;
+  place-content: center;
+
+  .page-banner-info {
+    padding-top: 1rem;
+    text-align: center;
+    z-index: 100;
+
+    @include Pads() {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+
+    @include PadsPro {
+      width: 650px;
+    }
+
+    @include Laptops {
+      width: 800px;
+    }
+
+    @include HiDPI() {
+      width: 800px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: -1;
+      color: $cat-color;
+      font-size: 3rem;
+      display: inline-block;
+      margin: 0;
+      font-family: 'Bebas Neue', cursive;
+
+      @include Laptops() {
+        font-size: 3rem;
+      }
+
+      @include HiDPI() {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      color: $cat-color;
+      z-index: -1;
+      position: relative;
+      font-size: 0.9rem;
+      font-weight: 300;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.page-banner::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}

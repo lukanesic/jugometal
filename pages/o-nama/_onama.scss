@@ -1,0 +1,55 @@
+.o-nama {
+  padding: 2rem;
+  width: 100%;
+
+  @include PadsPro {
+    width: 800px;
+    padding-bottom: 3rem;
+  }
+
+  @include Laptops {
+    width: 800px;
+    padding-bottom: 3rem;
+  }
+
+  @include HiDPI() {
+    width: 900px;
+    padding-bottom: 3rem;
+  }
+
+  h1 {
+    color: $red;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .content {
+    line-height: 1.6;
+    color: $font;
+
+    .jugo-title {
+      color: $gray;
+      font-weight: 600;
+    }
+
+    .traktori-title {
+      color: $gray;
+      font-weight: 500;
+    }
+
+    .underline {
+      text-decoration: underline;
+      font-weight: 500;
+      color: $gray;
+    }
+  }
+
+  p {
+    padding: 1rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}

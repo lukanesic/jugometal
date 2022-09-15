@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import banner from './../../../public/images/banners/main-banner.jpg'
 
 const HomeBanner = () => {
   const containerAnimation = {
@@ -32,6 +34,13 @@ const HomeBanner = () => {
   }
   return (
     <div className='front-banner'>
+      <Image
+        src={banner}
+        alt={'Homepage Banner'}
+        layout='fill'
+        objectFit='cover'
+        style={{ zIndex: '-10' }}
+      />
       <motion.div
         className='front-banner-qoute max-width'
         variants={containerAnimation}

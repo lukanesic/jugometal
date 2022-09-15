@@ -1,10 +1,11 @@
 .front-banner {
-  background: url('./../public/images/banners/main-banner.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background: url('./../public/images/banners/main-banner.jpg');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   height: 60vh;
-
+  overflow: hidden;
+  position: relative;
   @include Pads() {
     height: 550px;
   }

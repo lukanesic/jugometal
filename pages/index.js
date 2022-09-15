@@ -7,6 +7,7 @@ import HomeBanner from '../components/Banners/HomeBanner'
 import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
+import Test from '../components/Featured/test'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <HomeBanner />
         <LandingMoto />
         <FrontCategories />
+        <Test />
       </MainLayout>
     </div>
   )

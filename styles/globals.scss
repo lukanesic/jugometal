@@ -52,3 +52,17 @@ a {
 
 @import './../components/Moto/LandingMoto/landingmoto';
 @import './../components/FrontCategories/frontcategories';
+@import './../components/Featured/featured';
+@import './../components/Footer/footer';
+@import './../components/Banners/PageBanner/pagebanner';
+
+@import './../components/Form/form';
+@import './../components/Box/box';
+@import './../components/Logo/SecLogo/seclogo';
+@import './../components/ProuductBox/productbox';
+// Pages
+@import './../pages/servis/servis';
+@import './../pages/finansiranje/finance';
+@import './../pages/o-nama/onama';
+@import './../pages/[category]/category';
+@import './../pages/[category]/[products]/products';

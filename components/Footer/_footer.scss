@@ -1,0 +1,189 @@
+footer {
+  background: $black;
+  padding: 1rem;
+
+  .footer {
+    @include Pads() {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    @include PadsPro() {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    @include Laptops() {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      padding: 1rem 2rem;
+    }
+
+    @include HiDPI() {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      padding: 1rem 2rem;
+    }
+
+    h4 {
+      color: $cat-color;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      color: $font;
+      color: #a3a3a3;
+      line-height: 27px;
+      font-size: 0.8rem;
+    }
+
+    a {
+      color: $font;
+      color: #a3a3a3;
+      line-height: 27px;
+      font-size: 0.8rem;
+      transition: color 0.4s linear;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: $red;
+    }
+
+    .jugo-adresa,
+    .jugo-mail,
+    .jugo-phone,
+    .jugo-face {
+      padding: 1rem 0;
+    }
+
+    .jugo-pages {
+      @include Laptops() {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 1rem;
+      }
+
+      @include HiDPI() {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 1rem;
+      }
+
+      .page-servis,
+      .page-akcija,
+      .page-about,
+      .page-finansiranje,
+      .page-kontakt,
+      .page-prodavnica {
+        padding: 1rem 0;
+
+        @include Laptops() {
+          height: 100px;
+        }
+
+        @include HiDPI() {
+          height: 100px;
+        }
+      }
+
+      // .page-kontakt {
+      //   @include Laptops() {
+      //     margin-top: -1rem;
+      //   }
+
+      //   @include HiDPI() {
+      //   }
+      // }
+    }
+  }
+}
+
+.credits {
+  border-top: 1px solid $font;
+  background: $black;
+  padding: 1rem;
+  color: $cat-color;
+
+  @include Pads() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include PadsPro() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include Laptops() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include HiDPI() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 0.8rem;
+
+    @include Laptops() {
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .credit-cards {
+    display: flex;
+
+    .visa {
+      background: url('./../public/images/kartice/visa1.png');
+      width: 50px;
+      height: 30px;
+      background-position: center;
+      background-size: cover;
+
+      margin-top: 0.6rem;
+    }
+
+    .master {
+      background: url('./../public/images/kartice/Master_Card.png');
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .express {
+      background: url('./../public/images/kartice/a-e.png');
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .dina {
+      background: url('./../public/images/kartice/dina-card.png');
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

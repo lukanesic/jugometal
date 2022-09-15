@@ -1,0 +1,40 @@
+.servis {
+  padding: 2rem;
+  width: 100%;
+
+  @include PadsPro {
+    width: 800px;
+    padding-bottom: 3rem;
+  }
+
+  @include Laptops() {
+    width: 800px;
+    padding-bottom: 3rem;
+  }
+
+  @include HiDPI() {
+    width: 900px;
+    padding-bottom: 3rem;
+  }
+
+  .content {
+    line-height: 1.6;
+    color: $font;
+  }
+
+  h1 {
+    color: $red;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .traktori-title {
+    font-weight: 500;
+    color: $gray;
+  }
+
+  p {
+    padding: 1rem;
+  }
+}

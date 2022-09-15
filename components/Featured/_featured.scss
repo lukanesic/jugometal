@@ -1,0 +1,516 @@
+.ponuda-header {
+  padding: 1rem 1rem;
+  text-align: left;
+  margin-top: 4rem;
+
+  @include Pads() {
+    width: 600px;
+    margin: 6rem auto 0;
+    padding: 0 0;
+  }
+
+  @include PadsPro() {
+    width: 700px;
+
+    margin: 7rem auto 0;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+
+  @include Laptops() {
+    width: 800px;
+
+    margin: 7rem auto 0;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+
+  @include HiDPI() {
+    width: 800px;
+    padding: 0 0;
+    padding-top: 2rem;
+    margin: 7rem auto 0;
+  }
+
+  h2 {
+    color: $red;
+    // font-size: 3rem;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 500;
+
+    @include Pads() {
+      font-size: 2.6rem;
+    }
+
+    @include PadsPro() {
+      font-size: 2.8rem;
+    }
+
+    @include Laptops() {
+      font-size: 3rem;
+    }
+
+    @include HiDPI() {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    // font-size: 1.3rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    line-height: 28px;
+    font-weight: 400;
+    color: $font;
+    margin-top: 2rem;
+
+    @include Pads() {
+      font-size: 1rem;
+    }
+
+    @include PadsPro {
+      font-size: 1rem;
+    }
+
+    @include Laptops() {
+      font-size: 1.3rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.ponuda-products {
+  padding: 0 0.5rem;
+
+  @include PhonePro() {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+  }
+
+  @include Landscape() {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+  }
+
+  @include Pads() {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    text-align: center;
+  }
+
+  @include PadsPro() {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 33%);
+  }
+
+  @include Laptops() {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  @include HiDPI() {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .ponuda-product-item {
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid $cat-color;
+
+    @include PhonePro() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    @include Landscape() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    @include Pads() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    @include PadsPro() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    @include Laptops() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    @include HiDPI() {
+      border-right: 1px solid $cat-color;
+      border-bottom: none;
+    }
+
+    .blank-img {
+      background-color: $font;
+      width: 130px;
+      height: 130px;
+      margin: 2rem auto 0.2rem;
+    }
+
+    .solis-60-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 130px;
+      height: 102px;
+      margin: 2rem auto 0.2rem;
+
+      @include Laptops {
+        width: 170px;
+        height: 132px;
+        margin-top: 2.7rem;
+      }
+
+      @include HiDPI {
+        width: 170px;
+        height: 132px;
+        margin-top: 2rem;
+      }
+    }
+
+    .yto-504-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 130px;
+      height: 152px;
+      margin: 0 auto;
+      margin-bottom: -1rem;
+
+      @include Laptops {
+        width: 160px;
+        height: 196px;
+      }
+
+      @include HiDPI {
+        width: 160px;
+        height: 196px;
+        margin-bottom: -1.8rem;
+      }
+    }
+
+    .yto-454-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 130px;
+      height: 110px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 170px;
+        height: 140px;
+      }
+
+      @include HiDPI {
+        width: 170px;
+        height: 140px;
+        margin-top: 0;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .solis-50-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 130px;
+      height: 112px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 155px;
+        height: 140px;
+      }
+
+      @include HiDPI {
+        width: 155px;
+        height: 140px;
+        margin-top: 0;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .balirka-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 130px;
+      height: 112px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 155px;
+        height: 140px;
+      }
+
+      @include HiDPI {
+        width: 155px;
+        height: 140px;
+      }
+    }
+
+    .celmak-prikolica-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 180px;
+      height: 112px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 200px;
+        height: 140px;
+      }
+
+      @include HiDPI {
+        width: 200px;
+        height: 140px;
+      }
+    }
+
+    .rotaciona-kosacica-agrisprint-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 180px;
+      height: 112px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 200px;
+        height: 160px;
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+      }
+
+      @include HiDPI {
+        width: 200px;
+        height: 160px;
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+      }
+    }
+
+    .motalica-metalfach-preporuka {
+      background: #f0f0f0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 180px;
+      height: 112px;
+      margin: 2rem auto 0rem;
+
+      @include Laptops {
+        width: 200px;
+        height: 160px;
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+      }
+
+      @include HiDPI {
+        width: 200px;
+        height: 160px;
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+      }
+    }
+
+    .product-item-content {
+      padding: 2rem 1rem;
+
+      h5 {
+        color: $font;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        color: $black;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+
+      .h-line {
+        height: 1px;
+        width: 50%;
+        background: $font;
+        margin: 0 auto;
+
+        @include PhonePro() {
+          width: 80%;
+        }
+
+        @include Pads() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include PadsPro() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include Laptops() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include HiDPI() {
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        height: 64px;
+        overflow: hidden;
+        margin-top: 1rem;
+        color: $gray;
+        font-size: 0.7rem;
+        padding: 0rem 0.5rem;
+        line-height: 20px;
+
+        @include PhonePro() {
+          font-size: 0.8rem;
+        }
+
+        @include Pads() {
+          font-size: 0.9rem;
+        }
+
+        @include PadsPro() {
+          font-size: 0.9rem;
+        }
+
+        @include Laptops() {
+          max-width: 90%;
+          margin: 1rem auto;
+          font-size: 0.9rem;
+        }
+
+        @include HiDPI() {
+          max-width: 90%;
+          margin: 1rem auto;
+          font-size: 0.9rem;
+        }
+      }
+
+      a {
+        color: $red;
+        border: 0.5px solid $red;
+        padding: 0.7rem 2rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        transition: all linear 0.4s;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #fff;
+        background: $red;
+      }
+    }
+  }
+
+  .ponuda-product-item:last-child {
+    border-bottom: none;
+  }
+
+  .ponuda-product-item:nth-child(even) {
+    @include PhonePro() {
+      border-right: none;
+    }
+
+    @include Landscape() {
+      border-right: none;
+    }
+  }
+
+  .ponuda-product-item:nth-child(3n) {
+    @include Pads() {
+      border-right: none;
+    }
+
+    @include PadsPro() {
+      border-right: none;
+    }
+  }
+
+  .ponuda-product-item:nth-child(4n) {
+    @include Laptops() {
+      border-right: none;
+    }
+
+    @include HiDPI() {
+      border-right: none;
+    }
+  }
+
+  // // za mobile
+  // .ponuda-product-item:nth-child(even) {
+  //   border-right: none;
+
+  //   // @include PadsPro() {
+  //   //   border-right: 1px solid $cat-color;
+  //   // }
+
+  //   // @include Laptops() {
+  //   //   border-right: 1px solid $cat-color;
+  //   // }
+
+  //   // @include HiDPI() {
+  //   //   border-right: 1px solid $cat-color;
+  //   // }
+  // }
+
+  // // za ipadpro
+  // .ponuda-product-item:nth-child(3n) {
+  //   border-right: none;
+
+  //   @include Laptops() {
+  //     border-right: 1px solid $cat-color;
+  //   }
+
+  //   @include HiDPI() {
+  //     border-right: 1px solid $cat-color;
+  //   }
+  // }
+
+  // // za lap hi-res
+  // .ponuda-product-item:nth-child(4n) {
+  //   border-right: none;
+  // }
+
+  // .ponuda-product-item:last-child {
+  //   border-bottom: none;
+  // }
+}
