@@ -15,7 +15,9 @@ import VocImg from './../../public/images/banners/voc.jpg'
 import StocImg from './../../public/images/banners/stoc.jpg'
 import TransImg from './../../public/images/banners/transport.jpg'
 
-const Category = () => {
+const Category = ({ data, path }) => {
+  console.log(path)
+  console.log(data)
   return (
     <MainLayout>
       <Logo />

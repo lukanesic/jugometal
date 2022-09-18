@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const Test = () => {
+const Test = ({ data }) => {
+  console.log(data)
   return (
     <div>
       <div className='ponuda-header'>
@@ -17,6 +19,7 @@ const Test = () => {
       <div className='ponuda-products max-width'>
         <div className='ponuda-product-item'>
           {/* <div className="solis-60"></div> */}
+
           <div className='solis-60-preporuka'></div>
           <div className='product-item-content'>
             <h5>Solis</h5>

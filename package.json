@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
-    "firebase": "^9.9.4",
     "framer-motion": "^7.3.5",
     "mongodb": "^4.9.1",
     "next": "12.3.0",

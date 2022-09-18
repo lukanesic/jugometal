@@ -52,7 +52,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className='page-kontakt'>
+            {/* <div className='page-kontakt'>
               <h4>Kontakt</h4>
               <Link href='/kontakt'>Kako doći do nas</Link>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
               <Link href='/rezervni-delovi'>
                 Poručite rezervne delove iz naše online prodavnice
               </Link>
-            </div>
+            </div> */}
 
             <div className='page-akcija' style={{ opacity: '0' }}>
               <h4>Akcija</h4>
