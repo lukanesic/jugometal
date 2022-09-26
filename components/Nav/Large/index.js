@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { FaFacebookF } from 'react-icons/fa'
 
 import { BsSearch } from 'react-icons/bs'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { ImUser } from 'react-icons/im'
+
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
   // simulacija
@@ -33,16 +33,24 @@ const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
           {/* Ne vise od 3 */}
           <div className='navigation'>
             {isLogged && <Link href='/profile'>Profil</Link>}
-            {!isLogged && <Link href='/login'>Login</Link>}
-
             <BsSearch
               className='nav-icon'
               onClick={() => setOpenSearch(!openSearch)}
             />
-            <AiOutlineShoppingCart
+
+            <h3
+              style={{ fontWeight: '300', cursor: 'pointer' }}
+              onClick={() => setOpenSearch(!openSearch)}
+            >
+              Pretraga
+            </h3>
+
+            <GiHamburgerMenu className='nav-icon' />
+
+            {/* <AiOutlineShoppingCart
               className='nav-icon'
               onClick={() => setOpen(!open)}
-            />
+            /> */}
           </div>
         </div>
       </div>

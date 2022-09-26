@@ -1,5 +1,5 @@
 @mixin PhonePro {
-  @media (min-width: 350px) and (max-width: 567px) {
+  @media (min-width: 410px) and (max-width: 567px) {
     @content;
   }
 }

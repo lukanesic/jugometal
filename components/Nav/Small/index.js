@@ -23,12 +23,12 @@ const Small = ({
       </div>
 
       <div className='sm-nav-li'>
-        <BsSearch className='sm-i' onClick={() => setOpenSearch(!openSearch)} />
-
-        <AiOutlineShoppingCart
+        {/* <AiOutlineShoppingCart
           className='sm-i'
           onClick={() => setOpenTopC(!openTopC)}
-        />
+        /> */}
+
+        <BsSearch className='sm-i' onClick={() => setOpenSearch(!openSearch)} />
 
         <GiHamburgerMenu
           className='sm-i '

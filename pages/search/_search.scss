@@ -1,0 +1,109 @@
+.search-container {
+  @include PadsPro() {
+    min-height: 60vh;
+  }
+
+  @include Laptops() {
+    min-height: 80vh;
+  }
+
+  @include HiDPI() {
+    min-height: 80vh;
+  }
+}
+
+.search-heading {
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+
+  @include PadsPro() {
+    margin-top: 2rem;
+  }
+
+  @include Laptops() {
+    margin-top: 2rem;
+  }
+
+  @include HiDPI() {
+    margin-top: 2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 300;
+
+    @include PadsPro() {
+      font-size: 1.4rem;
+    }
+
+    @include Laptops() {
+      font-size: 1.4rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1.4rem;
+    }
+  }
+
+  h1 {
+    margin: 0.5rem auto;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 100;
+
+    width: fit-content;
+
+    @include PadsPro() {
+      font-size: 4rem;
+    }
+
+    @include Laptops() {
+      font-size: 4rem;
+    }
+
+    @include HiDPI() {
+      font-size: 4rem;
+    }
+  }
+}
+
+.no-products {
+  padding: 0rem 2rem 4rem;
+
+  @include Pads() {
+    padding: 2rem 2rem 6rem;
+  }
+
+  @include PadsPro() {
+    padding: 2rem 2rem 6rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    @include PadsPro() {
+      font-size: 1.5rem;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    @include Laptops() {
+      font-size: 1.5rem;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    @include HiDPI() {
+      font-size: 1.5rem;
+      width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}

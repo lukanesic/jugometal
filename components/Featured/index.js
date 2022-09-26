@@ -43,7 +43,7 @@ const Featured = ({ data }) => {
               <div className='h-line'></div>
               <p>{product.about}</p>
               <Link
-                href={`${product.category}/${product.brandUrl}/${product.url}`}
+                href={`${product.category}/${product.subcategory}/${product.url}`}
               >
                 Detaljnije
               </Link>

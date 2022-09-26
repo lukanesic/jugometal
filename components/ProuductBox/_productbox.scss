@@ -83,12 +83,12 @@
 
         @include Laptops() {
           font-size: 1.6rem;
-          font-weight: 300;
+          font-weight: 500;
         }
 
         @include HiDPI() {
           font-size: 1.6rem;
-          font-weight: 300;
+          font-weight: 500;
         }
       }
 
@@ -98,19 +98,29 @@
         width: 90%;
         margin: 0rem auto 1rem;
 
-        @include Laptops() {
-          font-size: 1.2rem;
-        }
-
-        @include HiDPI() {
-          font-size: 1.2rem;
-        }
+        line-height: 1.5rem;
       }
 
       .plc-hld {
         background-color: #f0f0f0;
         width: 100%;
         color: #f0f0f0;
+      }
+
+      a {
+        color: $red;
+        border: 0.5px solid $red;
+        padding: 0.7rem 2rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        transition: all linear 0.4s;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #fff;
+        background: $red;
       }
     }
   }

@@ -26,6 +26,8 @@ const ProductBox = ({ link, title, image, id, placeholder, description }) => {
         <h5 className={placeholder ? 'plc-hld' : ''}>
           {placeholder ? 'placeholder' : `${description}`}
         </h5>
+
+        {link && <Link href={link}>Detaljnije</Link>}
       </div>
     </motion.div>
   )

@@ -44,65 +44,40 @@ const SideMenu = ({ open, setOpen }) => {
               <button onClick={() => setOpen(!open)}>X</button>
             </motion.div>
             <div className='side-menu-content'>
-              <Link href='/'>
-                <li>Interiors (404)</li>
+              <Link href='/traktori'>
+                <li>Traktori</li>
               </Link>
-              <Link href='/'>
-                <li>Beach House (404)</li>
+              <Link href='/stocarstvo'>
+                <li>Stočarstvo</li>
               </Link>
-              <Link href='/'>
-                <li>Fire & Heat (404)</li>
+              <Link href='/vocarstvo'>
+                <li>Voćarstvo</li>
               </Link>
-              <Link href='/'>
-                <li>Ski House (404)</li>
+              <Link href='/ratarstvo'>
+                <li>Ratarstvo</li>
               </Link>
-              <Link href='/'>
-                <li>Lightning (404)</li>
-              </Link>
-              <Link href='/'>
-                <li>Sale (404)</li>
+              <Link href='/transport'>
+                <li>Transport</li>
               </Link>
             </div>
 
             <div className='side-menu-content'>
-              <Link href='/'>
-                <li>About Us (404)</li>
+              <Link href='/o-nama'>
+                <li>O nama</li>
               </Link>
-              <Link href='/'>
-                <li>Contact (404)</li>
+              <Link href='/finansiranje'>
+                <li>Finansiranje</li>
               </Link>
-              <Link href='/'>
-                <li>Our Vision (404)</li>
+              <Link href='/servis'>
+                <li>Servis</li>
               </Link>
             </div>
 
             <div className='side-menu-content' style={{ borderBottom: 'none' }}>
-              <Link href='/account'>
-                <li>Account</li>
+              <Link href='/'>
+                <li>Početna</li>
               </Link>
             </div>
-
-            {/* <div className='side-menu-content' style={{ borderBottom: 'none' }}>
-              {user.isAdmin && (
-                <Link href='/admin'>
-                  <li>Admin</li>
-                </Link>
-              )}
-
-              {Object.keys(user).length !== 0 && !user.isAdmin && (
-                <Link href='/account'>
-                  <li>Account</li>
-                </Link>
-              )}
-
-              {Object.keys(user).length === 0 && (
-                <>
-                  <Link href='/login'>
-                    <li>Sign In</li>
-                  </Link>
-                </>
-              )}
-            </div> */}
           </motion.div>
         </>
       )}

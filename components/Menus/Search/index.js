@@ -56,7 +56,7 @@ const Search = ({ open, setOpen }) => {
             <div className='search-content'>
               <input
                 type='text'
-                placeholder='Search for ..'
+                placeholder='Pretražite traktore, brendove, kategorije...'
                 onChange={(e) => setSearchVal(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
               />
