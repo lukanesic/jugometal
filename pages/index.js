@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import MainLayout from '../layout/MainLayout'
 
@@ -7,7 +6,6 @@ import HomeBanner from '../components/Banners/HomeBanner'
 import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
-import Test from '../components/Featured/test'
 import { fetchFeatured } from '../lib/data'
 import Featured from '../components/Featured'
 
