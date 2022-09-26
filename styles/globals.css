@@ -1199,6 +1199,15 @@ nav .nav-wrapper .navigation .nav-icon {
   }
 }
 
+.product-logo {
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  top: -0.7rem;
+  left: 0;
+  right: 0;
+}
+
 .landing-moto {
   padding: 1rem 1rem;
   text-align: left;
@@ -2934,63 +2943,6 @@ footer .footer .jugo-pages .page-prodavnica {
 @media (min-width: 735px) and (max-width: 1023px) {
   .box:nth-child(even) {
     border-right: none;
-  }
-}
-
-.sec-logo {
-  background: url("./../public/images/jugometal-logo.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 29px;
-  width: 130px;
-  outline: none;
-  margin: 1rem 0;
-  -webkit-tap-highlight-color: transparent;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  cursor: pointer;
-  display: none;
-}
-
-@media (min-width: 350px) and (max-width: 567px) {
-  .sec-logo {
-    width: 150px;
-    height: 39px;
-  }
-}
-
-@media (min-width: 735px) and (max-width: 1023px) {
-  .sec-logo {
-    width: 150px;
-    height: 39px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .sec-logo {
-    height: 60px;
-    width: 250px;
-    display: block;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1439px) {
-  .sec-logo {
-    height: 70px;
-    width: 300px;
-    display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  .sec-logo {
-    height: 70px;
-    width: 300px;
-    display: block;
   }
 }
 

@@ -5,13 +5,16 @@ import { motion } from 'framer-motion'
 import MainLayout from './../../../layout/MainLayout'
 // Zapravo logo treba da se premesti, layout je uvek isti
 import Logo from './../../../components/Logo'
-import SecLogo from './../../../components/Logo/SecLogo'
 
 import ProductBox from '../../../components/ProuductBox'
+import { removeDuplicates, capitalizeFirstLetter } from '../../../lib/func'
 
-const Products = () => {
+const Products = ({ data, path }) => {
+  const category = removeDuplicates(data.map((sub) => sub.category)).toString()
+
   return (
     <MainLayout>
+      <Logo cls={'product-logo'} />
       <motion.div
         className='collection'
         initial={{ opacity: 0 }}
@@ -20,37 +23,67 @@ const Products = () => {
       >
         <div className='collection-heading'>
           {/* Dynamic */}
-          <h1>Carraro</h1>
+          <h1>{path && path}</h1>
           {/* <h1>{path && path}</h1> */}
-          <h4>Traktori</h4>
-        </div>
-
-        <div className='home-box-container'>
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
-          <ProductBox name={'IMT 334'} placeholder />
+          {/* <h4>{category && capitalizeFirstLetter(category)}</h4> */}
         </div>
 
         {/* iz baze */}
-        {/* <div className='home-box-container'>
+        <div className='home-box-container'>
           {data.map((product) => (
-            <Box
-              link={`${path}/${product.href}`}
+            <ProductBox
+              title={product.title}
+              link={`/${product.category}/${path}/${product.url}`}
               name={product.name}
-              price={product.price}
               image={product.image}
               key={product._id}
+              description={product.description}
             />
           ))}
-        </div> */}
+        </div>
       </motion.div>
     </MainLayout>
   )
+}
+
+export async function getStaticPaths() {
+  const getCategoryPath = async () => {
+    const request = await fetch(`http://localhost:3000/api/products/all`)
+    const response = await request.json()
+    return response
+  }
+
+  const data = await getCategoryPath()
+  const paths = await data.map((product) => {
+    return {
+      params: { category: product.category, products: product.subcategory },
+    }
+  })
+  return {
+    paths: paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps = async (context) => {
+  const { params } = context
+  const getCollection = async () => {
+    const request = await fetch(
+      `http://localhost:3000/api/products/subcategory?params=${params.products}`,
+      params
+    )
+    const response = await request.json()
+    return response
+  }
+
+  const data = await getCollection()
+
+  return {
+    props: {
+      data,
+      path: params.products,
+    },
+  }
 }
 
 export default Products

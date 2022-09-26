@@ -1,82 +1,93 @@
 import React from 'react'
-import Link from 'next/link'
 
 import { motion } from 'framer-motion'
 import { fadeTractor } from '../../lib/animations'
+import {
+  capitalizeAllLetters,
+  capitalizeFirstLetter,
+  removeDuplicates,
+  selectBanner,
+  selectBannerDescription,
+  selectSubcategoryDescription,
+} from '../../lib/func'
 
 import MainLayout from './../../layout/MainLayout'
 import Logo from './../../components/Logo'
 import PageBanner from './../../components/Banners/PageBanner'
 import Box from './../../components/Box'
 
-import TractorImg from './../../public/images/banners/tr2.jpg'
-import RatImg from './../../public/images/banners/rat.jpg'
-import VocImg from './../../public/images/banners/voc.jpg'
-import StocImg from './../../public/images/banners/stoc.jpg'
-import TransImg from './../../public/images/banners/transport.jpg'
+const Category = ({ path, data }) => {
+  const subCategories = removeDuplicates(data.map((sub) => sub.subcategory))
 
-const Category = ({ data, path }) => {
-  console.log(path)
-  console.log(data)
   return (
     <MainLayout>
       <Logo />
-      {/* TEST TEST TEST TEST */}
-      {/* TU IDU DINAMICNI PODACI IZ BAZE U ZAVISNOSTI KOJI JE LINK PRETISNUT */}
 
       <PageBanner
-        h1={'Traktori'}
-        p={'Izaberite traktor iz naše ponude koji odgovara Vašim potrebama'}
-        src={TractorImg}
-        alt={'TractorBanner'}
+        h1={path && capitalizeAllLetters(path)}
+        p={selectBannerDescription(path)}
+        src={selectBanner(path)}
+        alt={`${capitalizeFirstLetter(path)} Banner`}
       />
 
-      {/* DINAMICNO */}
       <motion.div
         animate='show'
         initial='hidden'
         variants={fadeTractor}
         className='six-grid-system'
       >
-        <Box
-          brandTitle={'Carraro'}
-          brandDescription={
-            'Carraro Agritalia je italijanski proizvođač traktora'
-          }
-        />
-        <Box
-          brandTitle={'IMT'}
-          brandDescription={
-            'IMT je pionir u mehanizaciji farmi i tehnologiji traktora '
-          }
-        />
-        <Box
-          brandTitle={'Carraro'}
-          brandDescription={
-            'Carraro Agritalia je italijanski proizvođač traktora'
-          }
-        />
-        <Box
-          brandTitle={'Carraro'}
-          brandDescription={
-            'Carraro Agritalia je italijanski proizvođač traktora'
-          }
-        />
-        <Box
-          brandTitle={'Carraro'}
-          brandDescription={
-            'Carraro Agritalia je italijanski proizvođač traktora'
-          }
-        />
-        <Box
-          brandTitle={'Carraro'}
-          brandDescription={
-            'Carraro Agritalia je italijanski proizvođač traktora'
-          }
-        />
+        {subCategories &&
+          subCategories.map((subs, index) => (
+            <Box
+              key={index}
+              brandTitle={capitalizeAllLetters(subs)}
+              brandDescription={selectSubcategoryDescription(subs)}
+              link={`/${path}/${subs}`}
+            />
+          ))}
       </motion.div>
     </MainLayout>
   )
+}
+
+export async function getStaticPaths() {
+  const getCategoryPath = async () => {
+    const request = await fetch(`http://localhost:3000/api/products/all`)
+    const response = await request.json()
+    return response
+  }
+
+  const data = await getCategoryPath()
+  const paths = await data.map((product) => {
+    return {
+      params: { category: product.category },
+    }
+  })
+  return {
+    paths: paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps = async (context) => {
+  const { params } = context
+  const getCollection = async () => {
+    const request = await fetch(
+      `http://localhost:3000/api/products/category?params=${params.category}`,
+      params
+    )
+    const response = await request.json()
+    return response
+  }
+
+  const data = await getCollection()
+
+  return {
+    props: {
+      data,
+      path: params.category,
+    },
+  }
 }
 
 export default Category

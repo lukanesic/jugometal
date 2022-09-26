@@ -8,8 +8,7 @@ const Box = ({ brandTitle, brandDescription, link }) => {
       <div className='box-brands'>
         <p>{brandDescription}</p>
       </div>
-      {/* <Link to={`link`}>Detaljnije</Link> */}
-      <Link href='/traktori/carraro'>Detaljnije</Link>
+      <Link href={link}>Detaljnije</Link>
     </div>
   )
 }

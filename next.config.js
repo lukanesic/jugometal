@@ -9,6 +9,9 @@ const nextConfig = {
       'www.ursus.com',
       'poljomarket.rs',
       'www.celmak.com',
+      'tafe.com',
+      'mahindratractor.com',
+      'deere.rs',
     ],
   },
 }

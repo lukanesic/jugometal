@@ -39,14 +39,14 @@ const Login = () => {
             type='password'
             name='password'
             id='password'
-            placeholder='Password'
+            placeholder='Lozinka'
             required
             ref={enteredPassword}
             className='inputLabel'
           />
         </div>
 
-        <button>Login</button>
+        <button>Ulogujte se</button>
 
         <div className='alternate'>
           <h4>{`Nemate nalog?`}</h4>
