@@ -48,7 +48,7 @@ const Products = ({ data, path }) => {
 
 export async function getStaticPaths() {
   const getCategoryPath = async () => {
-    const request = await fetch(`http://localhost:3000/api/products/all`)
+    const request = await fetch(`/api/products/all`)
     const response = await request.json()
     return response
   }
@@ -69,7 +69,7 @@ export const getStaticProps = async (context) => {
   const { params } = context
   const getCollection = async () => {
     const request = await fetch(
-      `http://localhost:3000/api/products/subcategory?params=${params.products}`,
+      `/api/products/subcategory?params=${params.products}`,
       params
     )
     const response = await request.json()
