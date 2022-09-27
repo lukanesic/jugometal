@@ -7,7 +7,7 @@ import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
 import Featured from './../components/Featured'
-import { getFeatured } from './api/products/featured'
+import { fetchFeatured } from '../lib/data'
 
 export default function Home({ data }) {
   return (
@@ -31,7 +31,7 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const response = await getFeatured()
+  const response = await fetchFeatured()
   const data = JSON.parse(JSON.stringify(response))
   return {
     props: {
