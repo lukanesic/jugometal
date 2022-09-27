@@ -1149,10 +1149,6 @@ nav .nav-wrapper .navigation .nav-icon {
 }
 
 .logo {
-  background: url("./../public/images/jugometal-logo.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 29px;
   width: 130px;
   outline: none;
@@ -1164,7 +1160,7 @@ nav .nav-wrapper .navigation .nav-icon {
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
-  display: none;
+  position: relative;
 }
 
 @media (min-width: 410px) and (max-width: 567px) {

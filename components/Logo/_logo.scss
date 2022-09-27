@@ -1,8 +1,4 @@
 .logo {
-  background: url('./../public/images/jugometal-logo.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 29px;
   width: 130px;
   outline: none;
@@ -11,7 +7,7 @@
   align-self: center;
   justify-self: center;
   cursor: pointer;
-  display: none;
+  position: relative;
 
   @include PhonePro() {
     width: 150px;
