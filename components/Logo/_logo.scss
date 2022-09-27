@@ -8,6 +8,7 @@
   justify-self: center;
   cursor: pointer;
   position: relative;
+  display: none;
 
   @include PhonePro() {
     width: 150px;

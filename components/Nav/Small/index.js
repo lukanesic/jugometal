@@ -5,6 +5,10 @@ import { BsSearch } from 'react-icons/bs'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
+import logo from './../../../public/images/jugometal-logo.png'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+
 const Small = ({
   openSideM,
   setOpenSideM,
@@ -13,12 +17,23 @@ const Small = ({
   openSearch,
   setOpenSearch,
 }) => {
+  const router = useRouter()
+
   return (
     <nav className='sm-nav'>
       <div className='sm-nav-logo'>
         <Link href='/'>
           {/* LOGO img */}
-          <div className='small-logo' />
+          <div className='small-logo' onClick={() => router.replace('/')}>
+            <Image
+              src={logo}
+              alt={'Jugometal Logo'}
+              layout={'fill'}
+              objectFit={'contain'}
+              objectPosition='center'
+              style={{ zIndex: '-10' }}
+            />
+          </div>
         </Link>
       </div>
 
