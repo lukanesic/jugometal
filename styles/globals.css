@@ -36,6 +36,15 @@ a {
   cursor: default;
 }
 
+input,
+textarea,
+button,
+select,
+a,
+.sm-i {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 nav {
   display: none;
 }
@@ -315,8 +324,6 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .sm-nav .sm-nav-li .sm-i {
   cursor: pointer;
-  outline: none;
-  background: transparent !important;
 }
 
 .sm-nav .sm-nav-li .d-none {

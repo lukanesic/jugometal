@@ -38,6 +38,15 @@ a {
   cursor: default;
 }
 
+input,
+textarea,
+button,
+select,
+a,
+.sm-i {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 @import './../components/Nav/Large/large';
 @import './../components/Nav/Small/small';
 
