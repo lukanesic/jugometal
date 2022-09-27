@@ -159,6 +159,37 @@
       border-bottom: none;
     }
 
+    .product-item-image-container {
+      margin: 0 auto;
+      width: 280px;
+      height: 200px;
+      position: relative;
+
+      @include PhonePro() {
+        width: 180px;
+        height: 200px;
+      }
+
+      @include Pads() {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include PadsPro() {
+        width: 250px;
+        height: 200px;
+      }
+
+      @include Laptops() {
+        width: 250px;
+        height: 200px;
+      }
+      @include HiDPI() {
+        width: 280px;
+        height: 200px;
+      }
+    }
+
     .product-item-content {
       padding: 2rem 1rem;
 

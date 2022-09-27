@@ -1,6 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 
+import visa from './../../public/images/kartice/visa1.png'
+import master from './../../public/images/kartice/Master_Card.png'
+import dina from './../../public/images/kartice/dina-card.png'
+import express from './../../public/images/kartice/a-e.png'
+import Image from 'next/image'
+
 const Footer = () => {
   return (
     <div>
@@ -73,10 +79,42 @@ const Footer = () => {
       </footer>
       <div className='credits'>
         <div className='credit-cards'>
-          <div className='visa'></div>
-          <div className='express'></div>
-          <div className='master'></div>
-          <div className='dina'></div>
+          <div className='credit-card-img'>
+            <Image
+              src={visa}
+              alt={'Visa credit card'}
+              layout={'fill'}
+              objectFit={'cover'}
+              objectPosition='center'
+            />
+          </div>
+          <div className='credit-card-img'>
+            <Image
+              src={master}
+              alt={'Master credit card'}
+              layout={'fill'}
+              objectFit={'cover'}
+              objectPosition='center'
+            />
+          </div>
+          <div className='credit-card-img'>
+            <Image
+              src={dina}
+              alt={'Dina credit card'}
+              layout={'fill'}
+              objectFit={'cover'}
+              objectPosition='center'
+            />
+          </div>
+          <div className='credit-card-img'>
+            <Image
+              src={express}
+              alt={'Express credit card'}
+              layout={'fill'}
+              objectFit={'cover'}
+              objectPosition='center'
+            />
+          </div>
         </div>
         <p>© 2022 Jugometal d.o.o. Sva prava zadržana.</p>
       </div>

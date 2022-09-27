@@ -315,6 +315,8 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .sm-nav .sm-nav-li .sm-i {
   cursor: pointer;
+  outline: none;
+  background: transparent !important;
 }
 
 .sm-nav .sm-nav-li .d-none {
@@ -1934,6 +1936,48 @@ nav .nav-wrapper .navigation .nav-icon {
   }
 }
 
+.ponuda-products .ponuda-product-item .product-item-image-container {
+  margin: 0 auto;
+  width: 280px;
+  height: 200px;
+  position: relative;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .ponuda-products .ponuda-product-item .product-item-image-container {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-products .ponuda-product-item .product-item-image-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-products .ponuda-product-item .product-item-image-container {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-products .ponuda-product-item .product-item-image-container {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-products .ponuda-product-item .product-item-image-container {
+    width: 280px;
+    height: 200px;
+  }
+}
+
 .ponuda-products .ponuda-product-item .product-item-content {
   padding: 2rem 1rem;
 }
@@ -2325,37 +2369,11 @@ footer .footer .jugo-pages .page-prodavnica {
   display: flex;
 }
 
-.credits .credit-cards .visa {
-  background: url("./../public/images/kartice/visa1.png");
+.credits .credit-cards .credit-card-img {
   width: 50px;
   height: 30px;
-  background-position: center;
-  background-size: cover;
+  position: relative;
   margin-top: 0.6rem;
-}
-
-.credits .credit-cards .master {
-  background: url("./../public/images/kartice/Master_Card.png");
-  width: 50px;
-  height: 50px;
-  background-position: center;
-  background-size: cover;
-}
-
-.credits .credit-cards .express {
-  background: url("./../public/images/kartice/a-e.png");
-  width: 50px;
-  height: 50px;
-  background-position: center;
-  background-size: cover;
-}
-
-.credits .credit-cards .dina {
-  background: url("./../public/images/kartice/dina-card.png");
-  width: 50px;
-  height: 50px;
-  background-position: center;
-  background-size: cover;
 }
 
 .page-banner {

@@ -152,38 +152,12 @@ footer {
   .credit-cards {
     display: flex;
 
-    .visa {
-      background: url('./../public/images/kartice/visa1.png');
+    .credit-card-img {
       width: 50px;
       height: 30px;
-      background-position: center;
-      background-size: cover;
 
+      position: relative;
       margin-top: 0.6rem;
-    }
-
-    .master {
-      background: url('./../public/images/kartice/Master_Card.png');
-      width: 50px;
-      height: 50px;
-      background-position: center;
-      background-size: cover;
-    }
-
-    .express {
-      background: url('./../public/images/kartice/a-e.png');
-      width: 50px;
-      height: 50px;
-      background-position: center;
-      background-size: cover;
-    }
-
-    .dina {
-      background: url('./../public/images/kartice/dina-card.png');
-      width: 50px;
-      height: 50px;
-      background-position: center;
-      background-size: cover;
     }
   }
 }

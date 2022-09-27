@@ -19,15 +19,7 @@ const Featured = ({ data }) => {
       <div className='ponuda-products max-width'>
         {data.map((product) => (
           <div className='ponuda-product-item' key={product._id}>
-            <div
-              className='product-item-image-container'
-              style={{
-                position: 'relative',
-                width: '200px',
-                height: '200px',
-                margin: '0 auto',
-              }}
-            >
+            <div className='product-item-image-container'>
               <Image
                 src={product.image}
                 alt={product.title}
