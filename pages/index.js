@@ -6,8 +6,8 @@ import HomeBanner from '../components/Banners/HomeBanner'
 import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
-import { fetchFeatured } from '../lib/data'
-import Featured from '../components/Featured'
+import Featured from './../components/Featured'
+import { getFeatured } from './api/products/featured'
 
 export default function Home({ data }) {
   return (
@@ -30,10 +30,9 @@ export default function Home({ data }) {
   )
 }
 
-// getstaticprops
 export const getStaticProps = async () => {
-  const data = await fetchFeatured()
-
+  const response = await getFeatured()
+  const data = JSON.parse(JSON.stringify(response))
   return {
     props: {
       data,

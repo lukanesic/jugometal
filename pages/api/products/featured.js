@@ -1,12 +1,15 @@
 import { connectToDbMong } from '../../../lib/db'
 import Product from '../../../models/productModel'
 
+export const getFeatured = async () => {
+  const data = await handler()
+  return data
+}
+
 const handler = async (req, res) => {
-  if (req.method === 'GET') {
-    await connectToDbMong()
-    const data = await Product.find({ featured: true })
-    res.status(200).json(data)
-  }
+  await connectToDbMong()
+  const data = await Product.find({ featured: true })
+  return data
 }
 
 export default handler
