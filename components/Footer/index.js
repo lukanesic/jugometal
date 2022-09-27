@@ -84,7 +84,7 @@ const Footer = () => {
               src={visa}
               alt={'Visa credit card'}
               layout={'fill'}
-              objectFit={'cover'}
+              objectFit={'contain'}
               objectPosition='center'
             />
           </div>
@@ -93,7 +93,7 @@ const Footer = () => {
               src={master}
               alt={'Master credit card'}
               layout={'fill'}
-              objectFit={'cover'}
+              objectFit={'contain'}
               objectPosition='center'
             />
           </div>
@@ -102,7 +102,7 @@ const Footer = () => {
               src={dina}
               alt={'Dina credit card'}
               layout={'fill'}
-              objectFit={'cover'}
+              objectFit={'contain'}
               objectPosition='center'
             />
           </div>
@@ -111,7 +111,7 @@ const Footer = () => {
               src={express}
               alt={'Express credit card'}
               layout={'fill'}
-              objectFit={'cover'}
+              objectFit={'contain'}
               objectPosition='center'
             />
           </div>

@@ -834,7 +834,7 @@ nav .nav-wrapper .navigation .nav-icon {
   top: 0;
   left: 0;
   right: 0;
-  height: 120vh;
+  height: calc(100vh - calc(100vh - 100%));
   bottom: 0;
   z-index: 10;
   background-color: rgba(139, 139, 139, 0.4);
@@ -853,7 +853,7 @@ nav .nav-wrapper .navigation .nav-icon {
 }
 
 .side-menu {
-  height: 120vh;
+  height: inherit;
   z-index: 25;
   position: absolute;
   top: 0;
@@ -2374,13 +2374,13 @@ footer .footer .jugo-pages .page-prodavnica {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .credits .credit-cards .credit-card-img {
   width: 50px;
-  height: 30px;
+  height: 50px;
   position: relative;
-  margin-top: 0.6rem;
 }
 
 .page-banner {
