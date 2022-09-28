@@ -9,7 +9,17 @@ const ProductBox = ({ link, title, image, id, placeholder, description }) => {
       {link && (
         <Link href={link}>
           {/* next/image */}
-          {image && <img src={image} alt={title} height={300} width={300} />}
+          {image && (
+            <div className='img'>
+              <Image
+                src={image}
+                alt={title}
+                layout='fill'
+                objectPosition='center'
+                objectFit='contain'
+              />
+            </div>
+          )}
         </Link>
       )}
 
@@ -23,9 +33,10 @@ const ProductBox = ({ link, title, image, id, placeholder, description }) => {
         <h3 className={placeholder ? 'plc-hld' : ''}>
           {placeholder ? 'placeholder' : title}
         </h3>
-        <h5 className={placeholder ? 'plc-hld' : ''}>
+        <div className='h-line'></div>
+        <p className={placeholder ? 'plc-hld' : ''}>
           {placeholder ? 'placeholder' : `${description}`}
-        </h5>
+        </p>
 
         {link && <Link href={link}>Detaljnije</Link>}
       </div>

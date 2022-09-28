@@ -39,6 +39,7 @@ nav {
       width: 100%;
       margin: 0 auto;
       align-items: center;
+      padding: 0.4rem 0;
     }
 
     // content - info leva strama
@@ -48,12 +49,12 @@ nav {
 
       text-align: center;
       padding: 0.5rem 0;
-      font-size: 16px;
+      font-size: 0.9rem;
       align-items: center;
 
       .facebook {
         padding-left: 0;
-        font-size: 20px;
+        font-size: 1.1rem;
       }
 
       a {
@@ -75,8 +76,8 @@ nav {
 
     .navigation {
       display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-gap: 3rem;
+      grid-template-columns: repeat(2, auto);
+
       a {
         cursor: pointer;
         color: $font;
@@ -89,7 +90,7 @@ nav {
 
       .nav-icon {
         cursor: pointer;
-        font-size: 20px;
+        font-size: 1.1rem;
       }
     }
   }

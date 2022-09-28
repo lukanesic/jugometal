@@ -6,61 +6,37 @@ import Image from 'next/image'
 import MainLayout from '../../../../layout/MainLayout'
 import { fetchAll, fetchProduct } from '../../../../lib/data'
 
+import { capitalizeFirstLetter } from './../../../../lib/func'
+
 const Product = ({ path, data }) => {
-  console.log(data)
   const product = data[0]
   return (
     <MainLayout>
-      <Logo cls={'product-logo'} />
+      {/* <Logo cls={'product-logo'} /> */}
+      <Logo />
       <motion.div
         className='collection'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className='collection-heading'>
-          {/* Dynamic */}
-          {/* <h1>{collectionName}</h1> */}
-          <h1>{product.title}</h1>
-          <h4>{product.subcategory.toUpperCase()}</h4>
-        </div>
         <div className='product-container'>
-          {/* Placeholder dok ne dobijem pravu sliku */}
-          <div
-            className='img-placeholder'
-            style={{
-              height: 400,
-              width: 600,
-              margin: '0 auto',
-              position: 'relative',
-            }}
-          >
+          <div className='img-placeholder'>
             <Image
               src={product.image}
               alt={product.title}
               layout='fill'
-              objectFit='center'
+              objectFit='cover'
+              objectPosition='center'
             />
           </div>
           <div className='p-info'>
-            <p className='description d1'>{product.about}</p>
-            <p className='description d2'>{product.description}</p>
-            {/* <h3>Price</h3>
-            <h3>${product.price}</h3> */}
-            <button
-            // onClick={() =>
-            //   handleAddToCart({
-            //     name: product.name,
-            //     price: product.price,
-            //     about: product.about,
-            //     description: product.description,
-            //     _id: product._id,
-            //     image: product.image,
-            //   })
-            // }
-            >
-              Add To Cart
-            </button>
+            <h1>{product.title}</h1>
+            <h4>{capitalizeFirstLetter(product.category)}</h4>
+            <p>
+              Promena. Ovde dolaze specifikacije koji ce svaki proizvod da ima.
+              Znaci 3 osnovne informacije kao kod John Deere i to je to.
+            </p>
           </div>
         </div>
       </motion.div>

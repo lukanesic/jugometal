@@ -2,22 +2,38 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // Probaj i sa drugim layoutom. Ne zaboravi
-import MainLayout from './../../../layout/MainLayout'
+import MainLayout from '../../../layout/MainLayout'
 // Zapravo logo treba da se premesti, layout je uvek isti
-import Logo from './../../../components/Logo'
+import Logo from '../../../components/Logo'
 
 import ProductBox from '../../../components/ProuductBox'
-import { removeDuplicates, capitalizeFirstLetter } from '../../../lib/func'
+import {
+  removeDuplicates,
+  capitalizeFirstLetter,
+  capitalizeAllLetters,
+  selectBannerDescription,
+  selectBanner,
+  selectSubcategoryDescription,
+} from '../../../lib/func'
 import { fetchAll, fetchSubcategory } from '../../../lib/data'
+import PageBanner from '../../../components/Banners/PageBanner'
 
 const Products = ({ data, path }) => {
   const category = removeDuplicates(data.map((sub) => sub.category)).toString()
-
-  console.log(data)
+  const subCategory = removeDuplicates(
+    data.map((sub) => sub.subcategory)
+  ).toString()
 
   return (
     <MainLayout>
-      <Logo cls={'product-logo'} />
+      {/* <Logo cls={'product-logo'} /> */}
+      <Logo />
+      <PageBanner
+        h1={path && capitalizeAllLetters(path)}
+        p={selectSubcategoryDescription(subCategory)}
+        src={selectBanner(category)}
+        alt={`${capitalizeFirstLetter(path)} Banner`}
+      />
       <motion.div
         className='collection'
         initial={{ opacity: 0 }}
@@ -26,7 +42,7 @@ const Products = ({ data, path }) => {
       >
         <div className='collection-heading'>
           {/* Dynamic */}
-          <h1>{path && path}</h1>
+          {/* <h1>{path && path}</h1> */}
           {/* <h1>{path && path}</h1> */}
           {/* <h4>{category && capitalizeFirstLetter(category)}</h4> */}
         </div>

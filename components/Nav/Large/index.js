@@ -33,19 +33,36 @@ const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
           {/* Ne vise od 3 */}
           <div className='navigation'>
             {isLogged && <Link href='/profile'>Profil</Link>}
-            <BsSearch
-              className='nav-icon'
-              onClick={() => setOpenSearch(!openSearch)}
-            />
+            <div style={{ display: 'flex', marginRight: '3rem' }}>
+              <BsSearch
+                className='nav-icon'
+                onClick={() => setOpenSearch(!openSearch)}
+              />
+
+              <h3
+                style={{
+                  fontWeight: '300',
+                  cursor: 'pointer',
+                  marginLeft: '.5rem',
+                  fontSize: '1rem',
+                }}
+                onClick={() => setOpenSearch(!openSearch)}
+              >
+                Pretraga
+              </h3>
+            </div>
+
+            {/* <GiHamburgerMenu className='nav-icon' /> */}
 
             <h3
-              style={{ fontWeight: '300', cursor: 'pointer' }}
-              onClick={() => setOpenSearch(!openSearch)}
+              style={{
+                fontWeight: '300',
+                cursor: 'pointer',
+                fontSize: '1rem',
+              }}
             >
-              Pretraga
+              Menu
             </h3>
-
-            <GiHamburgerMenu className='nav-icon' />
 
             {/* <AiOutlineShoppingCart
               className='nav-icon'

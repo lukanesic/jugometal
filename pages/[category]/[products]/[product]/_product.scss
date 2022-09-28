@@ -14,9 +14,77 @@
     max-width: 1200px;
   }
 
+  .img-placeholder {
+    margin: 3rem auto 0;
+    position: relative;
+    width: 280px;
+    height: 180px;
+
+    @include PhonePro() {
+      width: 350px;
+      height: 250px;
+    }
+
+    @include Pads() {
+      width: 450px;
+      height: 300px;
+    }
+
+    @include PadsPro() {
+      width: 540px;
+      height: 350px;
+    }
+
+    @include Laptops() {
+      width: 600px;
+      height: 400px;
+    }
+    @include HiDPI() {
+      width: 750px;
+      height: 500px;
+    }
+  }
+
   .p-info {
     max-width: 400px;
     margin: 2rem auto;
+    z-index: 5;
+
+    @include Laptops() {
+      margin-top: 5rem;
+      margin-right: 4rem;
+    }
+
+    @include HiDPI() {
+      margin-top: 5rem;
+      margin-right: 4rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+
+      @include Pads() {
+        font-size: 2rem;
+      }
+
+      @include PadsPro() {
+        font-size: 2.5rem;
+      }
+
+      @include Laptops() {
+        font-size: 2.5rem;
+      }
+      @include HiDPI() {
+        font-size: 2.5rem;
+      }
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
 
     .description {
       margin: 1rem 0;
