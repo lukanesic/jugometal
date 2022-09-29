@@ -1,0 +1,149 @@
+.contact-form {
+  padding: 2rem 1rem;
+
+  @include Pads() {
+    width: 60%;
+    margin: 0 auto 2rem;
+  }
+
+  @include PadsPro() {
+    width: 80%;
+    margin: 0 auto 2rem;
+  }
+
+  @include Laptops() {
+    width: 1000px;
+    margin: 0 auto 2rem;
+  }
+
+  @include HiDPI() {
+    width: 1000px;
+    margin: 0 auto 2rem;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  label {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .flex-desktop {
+    @include PadsPro() {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 1rem;
+    }
+
+    @include Laptops() {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 1rem;
+    }
+
+    @include HiDPI() {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 1rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      @include PadsPro() {
+        width: 100%;
+        margin: 0.75rem 0;
+      }
+
+      @include Laptops() {
+        width: 100%;
+        margin: 0.75rem 0;
+      }
+
+      @include HiDPI() {
+        width: 100%;
+        margin: 0.75rem 0;
+      }
+
+      input {
+        padding: 0.75rem;
+        border-radius: 10px;
+        border: 1px solid #cecece;
+        background: #fafafa;
+        transition: 0.4s ease all;
+        outline: none;
+      }
+
+      input:focus {
+        border: 1px solid #282828;
+      }
+
+      input::placeholder {
+        color: #686868;
+      }
+
+      .inputLabelError {
+        border: 1px solid #d80000;
+      }
+
+      .inputLabelError:focus {
+        border: 1px solid #ff0000;
+      }
+    }
+  }
+
+  .textarea {
+    margin-top: 2rem;
+
+    textarea {
+      width: 100%;
+      height: 250px;
+      resize: none;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #cecece;
+      background: #fafafa;
+      transition: 0.4s ease all;
+      outline: none;
+      margin-top: 0.5rem;
+    }
+
+    textarea:focus {
+      border: 1px solid #282828;
+    }
+
+    textarea::placeholder {
+      color: #686868;
+    }
+  }
+
+  button {
+    color: $red;
+    border: 0.5px solid $red;
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all linear 0.4s;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  button:hover {
+    color: #fff;
+    background: $red;
+  }
+
+  // .inputLabelError {
+  //   border: 1px solid #d80000;
+  // }
+
+  // .inputLabelError:focus {
+  //   border: 1px solid #ff0000;
+  // }
+}

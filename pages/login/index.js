@@ -1,5 +1,8 @@
 import React, { useRef, useState } from 'react'
 import Link from 'next/link'
+import Router, { useRouter } from 'next/router'
+
+import { signIn, getSession } from 'next-auth/react'
 
 import MainLayout from './../../layout/MainLayout'
 import Logo from './../../components/Logo'
@@ -11,9 +14,43 @@ const Login = () => {
   const enteredEmail = useRef()
   const enteredPassword = useRef()
 
-  const handleLogin = (e) => {
+  const router = useRouter()
+
+  const resetForm = () => {
+    enteredEmail.current.value = ''
+    enteredPassword.current.value = ''
+
+    setError()
+  }
+
+  const handleLogin = async (e) => {
     e.preventDefault()
-    console.log('hi')
+    const email = enteredEmail.current.value
+    const password = enteredPassword.current.value
+
+    if (password.length < 6) {
+      setError('Password must contain more than 6 characters!')
+      return
+    }
+
+    try {
+      const result = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      })
+
+      if (result.error) {
+        setError(result.error)
+        return
+      }
+
+      resetForm()
+      router.replace('/admin')
+    } catch (err) {
+      console.log(err.code)
+      setError('Failed')
+    }
   }
 
   return (
@@ -47,14 +84,26 @@ const Login = () => {
         </div>
 
         <button>Ulogujte se</button>
-
-        <div className='alternate'>
-          <h4>{`Nemate nalog?`}</h4>
-          <Link href='/registration'>Registrujte se ovde.</Link>
-        </div>
       </Form>
     </MainLayout>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession({ req: context.req })
+
+  if (session) {
+    return {
+      redirect: {
+        destination: '/admin',
+        permanent: false,
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
 }
 
 export default Login

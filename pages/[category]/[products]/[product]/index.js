@@ -7,6 +7,7 @@ import MainLayout from '../../../../layout/MainLayout'
 import { fetchAll, fetchProduct } from '../../../../lib/data'
 
 import { capitalizeFirstLetter } from './../../../../lib/func'
+import ContactForm from '../../../../components/ContactForm'
 
 const Product = ({ path, data }) => {
   const product = data[0]
@@ -37,9 +38,21 @@ const Product = ({ path, data }) => {
               Promena. Ovde dolaze specifikacije koji ce svaki proizvod da ima.
               Znaci 3 osnovne informacije kao kod John Deere i to je to.
             </p>
+
+            <ul style={{ margin: '1rem 0' }}>
+              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit amet.</li>
+              <li style={{ margin: '1rem' }}>
+                Lorem ipsum dolor sit amet consectetur.
+              </li>
+              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
+              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
+              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
+            </ul>
           </div>
         </div>
       </motion.div>
+
+      <ContactForm product={{ title: product.title, id: product._id }} />
     </MainLayout>
   )
 }

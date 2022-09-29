@@ -18,9 +18,9 @@ a {
   text-decoration: none;
 }
 
-li {
-  list-style: none;
-}
+// li {
+//   list-style: none;
+// }
 
 .max-width {
   max-width: 1400px;
@@ -68,6 +68,7 @@ a,
 @import './../components/Form/form';
 @import './../components/Box/box';
 @import './../components/ProuductBox/productbox';
+@import './../components/ContactForm/contactform';
 // Pages
 @import './../pages/servis/servis';
 @import './../pages/finansiranje/finance';

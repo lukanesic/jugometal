@@ -5,11 +5,13 @@ import { FaFacebookF } from 'react-icons/fa'
 
 import { BsSearch } from 'react-icons/bs'
 
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { useSession, signOut } from 'next-auth/react'
 
 const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
   // simulacija
   const [isLogged, setIsLogged] = useState(false)
+
+  const { data: session, status } = useSession()
 
   return (
     <nav>
@@ -32,8 +34,14 @@ const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
 
           {/* Ne vise od 3 */}
           <div className='navigation'>
-            {isLogged && <Link href='/profile'>Profil</Link>}
-            <div style={{ display: 'flex', marginRight: '3rem' }}>
+            <div
+              style={{
+                display: 'flex',
+                marginRight: '3rem',
+              }}
+            >
+              {session && <Link href='/admin'>Admin</Link>}
+
               <BsSearch
                 className='nav-icon'
                 onClick={() => setOpenSearch(!openSearch)}

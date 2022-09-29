@@ -18,7 +18,7 @@
     margin: 3rem auto 0;
     position: relative;
     width: 280px;
-    height: 180px;
+    height: 200px;
 
     @include PhonePro() {
       width: 350px;
@@ -52,7 +52,7 @@
 
     @include Laptops() {
       margin-top: 5rem;
-      margin-right: 4rem;
+      margin-right: -2rem;
     }
 
     @include HiDPI() {
