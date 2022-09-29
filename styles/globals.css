@@ -8,6 +8,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html,
+body {
+  width: 100%;
+  position: relative;
+}
+
 body {
   line-height: 1.2;
 }
@@ -2389,6 +2395,12 @@ footer .footer .jugo-pages .page-prodavnica {
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .page-banner {
+    height: 70vh;
+  }
 }
 
 .page-banner .page-banner-info {
