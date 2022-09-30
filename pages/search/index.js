@@ -49,13 +49,18 @@ const Search = () => {
         {Object.keys(products).length === 0 && ''}
 
         {/* Motion */}
-        {!loading && Object.keys(filteredProducts).length === 0 && (
+        {!loading && (
           <div className='no-products'>
-            <h2>Šta tačno tražite?</h2>
+            {Object.keys(filteredProducts).length === 0 && (
+              <>
+                <h2>Šta tačno tražite?</h2>
 
-            <p>
-              Vaša pretraga za {`'${searchKeyword}''`} nije pokazala rezultat.
-            </p>
+                <p>
+                  Vaša pretraga za {`'${searchKeyword}''`} nije pokazala
+                  rezultat.
+                </p>
+              </>
+            )}
           </div>
         )}
 
