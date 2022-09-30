@@ -7,12 +7,14 @@ import SideMenu from '../components/Menus/SideMenu'
 import TopCart from '../components/Menus/TopCart'
 import Small from '../components/Nav/Small'
 import Footer from '../components/Footer'
+import DMenu from '../components/Menus/DMenu'
 
 const MainLayout = ({ children }) => {
   const [openSideC, setOpenSideC] = useState(false)
   const [openTopC, setOpenTopC] = useState(false)
   const [openSideM, setOpenSideM] = useState(false)
   const [openSearch, setOpenSearch] = useState(false)
+  const [openDmenu, setOpenDmenu] = useState(false)
 
   return (
     <>
@@ -30,10 +32,13 @@ const MainLayout = ({ children }) => {
         setOpen={setOpenSideC}
         openSearch={openSearch}
         setOpenSearch={setOpenSearch}
+        openDMenu={openDmenu}
+        setOpenDmenu={setOpenDmenu}
       />
 
       <SideCart open={openSideC} setOpen={setOpenSideC} />
       <Search open={openSearch} setOpen={setOpenSearch} />
+      <DMenu open={openDmenu} setOpen={setOpenDmenu} />
 
       {/* MOBILE MENU */}
       <SideMenu open={openSideM} setOpen={setOpenSideM} />

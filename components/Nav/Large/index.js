@@ -7,7 +7,7 @@ import { BsSearch } from 'react-icons/bs'
 
 import { useSession, signOut } from 'next-auth/react'
 
-const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
+const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
   // simulacija
   const [isLogged, setIsLogged] = useState(false)
 
@@ -68,6 +68,8 @@ const Large = ({ open, setOpen, openSearch, setOpenSearch }) => {
                 cursor: 'pointer',
                 fontSize: '1rem',
               }}
+              onClick={() => setOpenDmenu(!openDmenu)}
+              // onClick={() => console.log('d')}
             >
               Menu
             </h3>

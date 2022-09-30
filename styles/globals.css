@@ -3345,6 +3345,106 @@ footer .footer .jugo-pages .page-prodavnica {
   font-weight: 500;
 }
 
+.close-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 1.5rem;
+}
+
+.close-button button {
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  -webkit-transition: background 0.4s linear;
+  transition: background 0.4s linear;
+}
+
+.close-button button:hover {
+  background: rgba(61, 61, 61, 0.1);
+}
+
+.side-dropback-d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120vh;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(139, 139, 139, 0.4);
+  display: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .side-dropback-d {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .side-dropback-d {
+    display: block;
+  }
+}
+
+.side-menu-desktop {
+  height: 100%;
+  z-index: 25;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-y: hidden;
+  background-color: #fbfbfb;
+  width: 60vw;
+}
+
+.side-menu-desktop li {
+  list-style: none;
+  padding: 1rem 0rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #282828;
+  cursor: pointer;
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .side-menu-desktop {
+    overflow: scroll;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .side-menu-desktop {
+    overflow-y: scroll;
+  }
+}
+
+.side-menu-content-desktop {
+  border-bottom: 1px solid #cecece;
+  margin: 0 2rem;
+}
+
+.side-menu-content-desktop a {
+  color: inherit;
+}
+
+.side-menu-content-desktop li {
+  list-style: none;
+  padding: 1rem 0rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #282828;
+  cursor: pointer;
+}
+
 .servis {
   padding: 2rem;
   width: 100%;
