@@ -1,9 +1,12 @@
 import React from 'react'
+import { IoIosQuote } from 'react-icons/io'
 
 const Quote = () => {
   return (
     <div className='luka-radoja'>
-      <div className='quote'>" "</div>
+      <div className='quote'>
+        <IoIosQuote />
+      </div>
       <p>
         U životu sam dobio samo jednu nagradu iz ruku Meše Selimovića 1958.
         godine. Drugu nagradu dali su mi radni ljudi Jugometal-a. Jugometal
