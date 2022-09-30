@@ -4,19 +4,34 @@ import { signOut, getSession, useSession } from 'next-auth/react'
 
 import MainLayout from './../../layout/MainLayout'
 import Logo from './../../components/Logo'
-import ProductBox from '../../components/ProuductBox'
-import Form from './../../components/Form'
+import AddForm from './../../components/AddForm'
 
 import { useRouter } from 'next/router'
+import Message from '../../components/Message'
 
-const Admin = ({ data }) => {
+const Admin = () => {
   const { data: session, status } = useSession()
 
   const [accountTab, setAccountTab] = useState(0)
+  const [open, setOpen] = useState(false)
+
+  const [messages, setMessages] = useState()
+  const [loading, setLoading] = useState(true)
 
   const router = useRouter()
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    const fetchMessages = async () => {
+      const request = await fetch('/api/inquire/all')
+      const response = await request.json()
+      setMessages(response)
+      setLoading(false)
+    }
+
+    fetchMessages()
+  }, [])
+
+  console.log(messages)
 
   const handleSignOut = async () => {
     router.replace('/')
@@ -50,80 +65,25 @@ const Admin = ({ data }) => {
           <h3 onClick={() => handleSignOut()}>Izlogujte se</h3>
         </div>
 
-        {accountTab === 0 && <AddForm />}
+        {accountTab === 0 && <AddForm open={open} setOpen={setOpen} />}
+
+        {accountTab === 1 && (
+          <div className='messages'>
+            {messages &&
+              messages.map((item, index) => (
+                <Message key={index} item={item} />
+              ))}
+          </div>
+        )}
       </div>
     </MainLayout>
   )
 }
 
-const AddForm = () => {
+const MessagePlaceholder = () => {
   return (
-    <div className='add-product-form'>
-      <label>Ime proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: Solis 60'
-        required
-        className='inputLabel'
-      />
-
-      <label>Kategorija proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: traktori / stocarstvo / ratarstvo (obavezno malim slovima)'
-        required
-        className='inputLabel'
-      />
-
-      <label>Podkategorija proizvoda</label>
-      <input
-        type='email'
-        placeholder='Primer: solis / balirke / motalice (obavezno malim slovima)'
-        required
-        className='inputLabel'
-      />
-
-      <label>Link Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: solis-60 (obavezno malim slovima i odvajanje reci - linijom)'
-        required
-        className='inputLabel'
-      />
-
-      <label>Slika Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Slika je link koji dolazi sa oficijalne stranice proizvoda koji se ubacuje'
-        required
-        className='inputLabel'
-      />
-
-      <label>Opis Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Opis proizvoda u najkracim crtama'
-        required
-        className='inputLabel'
-      />
-
-      <label>Veci opis Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Opis proizvoda'
-        required
-        className='inputLabel'
-      />
-
-      <label>Kljucne reci proizvoda</label>
-      <input
-        type='text'
-        placeholder='Uneti 5-6 kljucne reci proizvoda (ime, kategoriju, podkategoriju) i odvajati zarezom!'
-        required
-        className='inputLabel'
-      />
-
-      <button>Dodajte proizvod</button>
+    <div className='msg-placehole'>
+      <h1>kk</h1>
     </div>
   )
 }

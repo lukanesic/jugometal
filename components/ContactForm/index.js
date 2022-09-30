@@ -33,7 +33,7 @@ const ContactForm = ({ product }) => {
     }
 
     try {
-      const response = await fetch('/api/inquire', {
+      const response = await fetch('/api/inquire/inquire', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

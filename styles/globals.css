@@ -3164,6 +3164,138 @@ footer .footer .jugo-pages .page-prodavnica {
   background: #ea1c24;
 }
 
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.add-product-form {
+  margin: 3rem 0;
+}
+
+.add-product-form label {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.add-product-form input {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #cecece;
+  background: #fafafa;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+  outline: none;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.add-product-form input:focus {
+  border: 1px solid #282828;
+}
+
+.add-product-form input::-webkit-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input:-ms-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input::-ms-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input::placeholder {
+  color: #282828;
+}
+
+.add-product-form .inputLabelError {
+  border: 1px solid #d80000;
+}
+
+.add-product-form .inputLabelError:focus {
+  border: 1px solid #ff0000;
+}
+
+.add-product-form button {
+  color: #ea1c24;
+  border: 0.5px solid #ea1c24;
+  padding: 0.7rem 2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.add-product-form button:hover {
+  color: #fff;
+  background: #ea1c24;
+}
+
+.message {
+  padding: 4rem 0;
+  border-bottom: 1px solid #4c4c4c;
+}
+
+.message .message-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.message .message-headers h4 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.message .customer-message {
+  padding: 4rem 0;
+}
+
+.message .customer-message h4 {
+  margin-bottom: 1rem;
+}
+
+.message .customer-message p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #282828;
+}
+
+.message .message-footers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.message .message-footers h4 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .servis {
   padding: 2rem;
   width: 100%;
@@ -3801,7 +3933,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 @media (min-width: 1280px) and (max-width: 1439px) {
   .admin {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     display: block;
   }
@@ -3809,7 +3941,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 @media (min-width: 1440px) {
   .admin {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     display: block;
   }
@@ -3855,70 +3987,7 @@ footer .footer .jugo-pages .page-prodavnica {
   color: #181818;
 }
 
-.add-product-form {
-  margin: 3rem 0;
-}
-
-.add-product-form label {
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-
-.add-product-form input {
-  padding: 0.75rem;
-  border-radius: 10px;
-  border: 1px solid #cecece;
-  background: #fafafa;
-  -webkit-transition: 0.4s ease all;
-  transition: 0.4s ease all;
-  outline: none;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-.add-product-form input:focus {
-  border: 1px solid #282828;
-}
-
-.add-product-form input::-webkit-input-placeholder {
-  color: #282828;
-}
-
-.add-product-form input:-ms-input-placeholder {
-  color: #282828;
-}
-
-.add-product-form input::-ms-input-placeholder {
-  color: #282828;
-}
-
-.add-product-form input::placeholder {
-  color: #282828;
-}
-
-.add-product-form .inputLabelError {
-  border: 1px solid #d80000;
-}
-
-.add-product-form .inputLabelError:focus {
-  border: 1px solid #ff0000;
-}
-
-.add-product-form button {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
-  padding: 0.7rem 2rem;
-  margin-top: 1rem;
-  display: inline-block;
-  font-size: 0.9rem;
-  -webkit-transition: all linear 0.4s;
-  transition: all linear 0.4s;
-  cursor: pointer;
-  background: transparent;
-}
-
-.add-product-form button:hover {
-  color: #fff;
-  background: #ea1c24;
+.messages {
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=globals.css.map */

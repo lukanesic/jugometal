@@ -1,0 +1,51 @@
+.add-product-form {
+  margin: 3rem 0;
+  label {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  input {
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid #cecece;
+    background: #fafafa;
+    transition: 0.4s ease all;
+    outline: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  input:focus {
+    border: 1px solid #282828;
+  }
+
+  input::placeholder {
+    color: #282828;
+  }
+
+  .inputLabelError {
+    border: 1px solid #d80000;
+  }
+
+  .inputLabelError:focus {
+    border: 1px solid #ff0000;
+  }
+
+  button {
+    color: $red;
+    border: 0.5px solid $red;
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all linear 0.4s;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  button:hover {
+    color: #fff;
+    background: $red;
+  }
+}

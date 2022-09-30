@@ -31,6 +31,10 @@ const inquireSchema = mongoose.Schema(
       required: true,
       ref: 'Product',
     },
+    isRead: {
+      type: Boolean,
+      required: true,
+    },
   },
   {
     timestamps: true,
