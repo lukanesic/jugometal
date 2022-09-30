@@ -29,9 +29,7 @@ const Admin = () => {
     }
 
     fetchMessages()
-  }, [])
-
-  console.log(messages)
+  }, [messages])
 
   const handleSignOut = async () => {
     router.replace('/')

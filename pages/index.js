@@ -7,6 +7,7 @@ import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
 import Featured from './../components/Featured'
+import Qoute from './../components/Quote'
 import { fetchFeatured } from '../lib/data'
 
 export default function Home({ data }) {
@@ -25,6 +26,7 @@ export default function Home({ data }) {
         <FrontCategories />
 
         <Featured data={data} />
+        <Qoute />
       </MainLayout>
     </div>
   )

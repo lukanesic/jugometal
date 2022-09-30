@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Message = ({ item }) => {
   // Ovo je imitacija da li je message procitana ili ne
@@ -13,11 +13,25 @@ const Message = ({ item }) => {
     createdAt,
     productTitle,
     isRead,
+    _id,
   } = item
 
   // Mora da se napravi new date objekat pri pravljenju same inquire. Ne moze ovde lepo da se formatira datum. Jer je na americkom
   const date = new Date(createdAt).toLocaleDateString()
-  console.log(isRead)
+
+  const handleUpdate = async ({ value, id }) => {
+    const updateStatus = async () => {
+      await fetch('/api/inquire/modify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ value, id }),
+      })
+    }
+
+    updateStatus()
+  }
 
   return (
     <div className='message'>
@@ -25,7 +39,7 @@ const Message = ({ item }) => {
         <h4>
           {name} {surname}
         </h4>{' '}
-        <h4>{email}</h4>
+        <a href={`mailto:${email}`}>{email}</a>
         <h4>{phone}</h4>
       </div>
       <div className='customer-message'>
@@ -40,7 +54,7 @@ const Message = ({ item }) => {
           <>
             <h4 style={{ color: 'red' }}>Status: Nije procitano</h4>
             <h4
-              onClick={() => setIsRead(!isRead)}
+              onClick={() => handleUpdate({ value: true, id: _id })}
               style={{ color: 'green', cursor: 'pointer' }}
             >
               Oznacite kao procitano
@@ -52,7 +66,7 @@ const Message = ({ item }) => {
           <>
             <h4 style={{ color: 'green' }}>Status: Procitano</h4>
             <h4
-              onClick={() => setIsRead(!isRead)}
+              onClick={() => handleUpdate({ value: false, id: _id })}
               style={{ color: 'red', cursor: 'pointer' }}
             >
               Oznacite kao neprocitano

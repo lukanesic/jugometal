@@ -11,6 +11,16 @@
       font-weight: 600;
       font-size: 1rem;
     }
+
+    a {
+      color: #282828;
+      cursor: pointer;
+      transition: color 0.4s ease;
+    }
+
+    a:hover {
+      color: $red;
+    }
   }
 
   .customer-message {

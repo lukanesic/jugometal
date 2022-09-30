@@ -1,0 +1,33 @@
+.luka-radoja {
+  background-color: #ecf2f8;
+  margin-top: 5rem;
+  text-align: center;
+  padding: 3rem;
+
+  .quote {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $font;
+    line-height: 27px;
+
+    @include Laptops() {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include HiDPI() {
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  h5 {
+    color: $black;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+}

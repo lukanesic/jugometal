@@ -3265,6 +3265,17 @@ footer .footer .jugo-pages .page-prodavnica {
   font-size: 1rem;
 }
 
+.message .message-headers a {
+  color: #282828;
+  cursor: pointer;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+.message .message-headers a:hover {
+  color: #ea1c24;
+}
+
 .message .customer-message {
   padding: 4rem 0;
 }
@@ -3294,6 +3305,44 @@ footer .footer .jugo-pages .page-prodavnica {
 .message .message-footers h4 {
   font-weight: 500;
   font-size: 1rem;
+}
+
+.luka-radoja {
+  background-color: #ecf2f8;
+  margin-top: 5rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.luka-radoja .quote {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.luka-radoja p {
+  color: #737373;
+  line-height: 27px;
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .luka-radoja p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .luka-radoja p {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.luka-radoja h5 {
+  color: #292929;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: 500;
 }
 
 .servis {
@@ -3779,7 +3828,7 @@ footer .footer .jugo-pages .page-prodavnica {
   width: 100%;
   text-transform: uppercase;
   font-weight: 500;
-  margin: 2rem 0 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
   border: none;
 }
@@ -3962,7 +4011,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .account-tab {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 2rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3981,6 +4030,7 @@ footer .footer .jugo-pages .page-prodavnica {
   font-weight: 600;
   -webkit-transition: color 0.4 ease;
   transition: color 0.4 ease;
+  font-size: 1.5rem;
 }
 
 .account-tab .active-tab {
