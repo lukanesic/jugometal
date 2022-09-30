@@ -8,12 +8,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html,
-body {
-  width: 100%;
-  position: relative;
-}
-
 body {
   line-height: 1.2;
 }
@@ -3799,5 +3793,132 @@ footer .footer .jugo-pages .page-prodavnica {
 .no-products p {
   text-align: center;
   margin-top: 3rem;
+}
+
+.admin {
+  display: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .admin {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .admin {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.profileH {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.profileH h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.profileH h4 {
+  font-weight: 200;
+}
+
+.account-tab {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.account-tab h3 {
+  cursor: pointer;
+  color: #7c7c7c;
+  font-weight: 600;
+  -webkit-transition: color 0.4 ease;
+  transition: color 0.4 ease;
+}
+
+.account-tab .active-tab {
+  color: #181818;
+}
+
+.add-product-form {
+  margin: 3rem 0;
+}
+
+.add-product-form label {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.add-product-form input {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #cecece;
+  background: #fafafa;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+  outline: none;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.add-product-form input:focus {
+  border: 1px solid #282828;
+}
+
+.add-product-form input::-webkit-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input:-ms-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input::-ms-input-placeholder {
+  color: #282828;
+}
+
+.add-product-form input::placeholder {
+  color: #282828;
+}
+
+.add-product-form .inputLabelError {
+  border: 1px solid #d80000;
+}
+
+.add-product-form .inputLabelError:focus {
+  border: 1px solid #ff0000;
+}
+
+.add-product-form button {
+  color: #ea1c24;
+  border: 0.5px solid #ea1c24;
+  padding: 0.7rem 2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.add-product-form button:hover {
+  color: #fff;
+  background: #ea1c24;
 }
 /*# sourceMappingURL=globals.css.map */

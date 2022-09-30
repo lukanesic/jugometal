@@ -10,12 +10,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html,
-body {
-  width: 100%;
-  position: relative;
-}
-
 body {
   line-height: 1.2;
 }
@@ -83,3 +77,4 @@ a,
 @import './../pages/[category]/[products]/products';
 @import './../pages/[category]/[products]/[product]/product';
 @import './../pages/search/search';
+@import './../pages/admin/admin';

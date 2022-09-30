@@ -33,7 +33,7 @@ const ProductBox = ({ link, title, image, id, placeholder, description }) => {
         <h3 className={placeholder ? 'plc-hld' : ''}>
           {placeholder ? 'placeholder' : title}
         </h3>
-        <div className='h-line'></div>
+        {!placeholder && <div className='h-line'></div>}
         <p className={placeholder ? 'plc-hld' : ''}>
           {placeholder ? 'placeholder' : `${description}`}
         </p>
