@@ -13,7 +13,7 @@ const Servis = () => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
 

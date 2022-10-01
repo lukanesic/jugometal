@@ -19,7 +19,7 @@ export default function Home({ data }) {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
   return (

@@ -28,7 +28,7 @@ const Search = () => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
 

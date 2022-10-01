@@ -13,7 +13,7 @@ const Finansiranje = () => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
 

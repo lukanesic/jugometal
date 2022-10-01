@@ -24,7 +24,7 @@ const Product = ({ path, data }) => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
 

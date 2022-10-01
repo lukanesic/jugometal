@@ -31,7 +31,7 @@ const Products = ({ data, path }) => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
 

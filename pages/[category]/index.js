@@ -27,7 +27,7 @@ const Category = ({ path, data }) => {
       {
         behavior: 'smooth',
       },
-      500
+      1500
     )
   }, [])
   return (
