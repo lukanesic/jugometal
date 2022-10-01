@@ -160,4 +160,42 @@ export const products = [
     spec4: 'Težina: 350kg',
     spec5: 'Potrebna snaga traktora: 40ks',
   },
+  {
+    title: 'Solis 20',
+    description:
+      'Solis 20 su mali traktori posebno namenjenii za rad u ograničenom i uskom prostoru. Solis 20..',
+    about:
+      'Solis 20 su mali traktori posebno namenjenii za rad u ograničenom i uskom prostoru u povrtarstvu, staklenicima, voćarstvu i vinogradarstvu, a pored toga, pogodni su za univerzalnu primenu na manjim posedima, komunalne radove i transport.',
+    image:
+      'https://www.solis-srbija.rs/media/catalogProduct/solis20/Traktor-solis-20-01.jpg',
+    category: 'traktori',
+    subcategory: 'solis',
+    url: 'solis-20',
+    seoKey: 'traktori, solis 20, solis srbija, traktori srbija',
+    searchKey: 'solis 20 traktori',
+    spec1: 'Pogon: 4 WD. Četvorotaktni dizel',
+    spec2: 'Kategorija (ks): 20, (kW): 13,4',
+    spec3: 'Sila dizanja hidraulike (kg): 500',
+    spec4: 'Homologovan u skladu sa evropskim normama',
+    spec5: 'Garancija 3 godine ili 2000 radnih sati',
+  },
+  {
+    title: 'Solis 60NT',
+    description:
+      'Namenjeni za korišćenje u poljoprivredi, komunalne radove i transport uz lakoću rada.',
+    about:
+      'SOLIS N serija sa uskim razmakom između točkova, garantuje maksimalne performanse u primeni u voćarstvu i vinogradarstvu. Sinhronizovana transmisija kod ove serije obezbeđuje lakoću rada uz visoku produktivnost.',
+    image:
+      'https://www.solis-srbija.rs/media/catalogProduct/solis20/Traktor-solis-20-01.jpg',
+    category: 'traktori',
+    subcategory: 'solis',
+    url: 'solis-20',
+    seoKey: 'traktori, solis 20, solis srbija, traktori srbija',
+    searchKey: 'solis 20 traktori',
+    spec1: 'Pogon: 4 WD. Četvorotaktni dizel',
+    spec2: 'Kategorija (ks): 20, (kW): 13,4',
+    spec3: 'Sila dizanja hidraulike (kg): 500',
+    spec4: 'Homologovan u skladu sa evropskim normama',
+    spec5: 'Garancija 3 godine ili 2000 radnih sati',
+  },
 ]
