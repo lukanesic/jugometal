@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 // Probaj i sa drugim layoutom. Ne zaboravi
@@ -23,6 +23,17 @@ const Products = ({ data, path }) => {
   const subCategory = removeDuplicates(
     data.map((sub) => sub.subcategory)
   ).toString()
+
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
 
   return (
     <MainLayout>

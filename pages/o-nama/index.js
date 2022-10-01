@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
 import MainLayout from './../../layout/MainLayout'
@@ -6,6 +6,17 @@ import MainLayout from './../../layout/MainLayout'
 import OnamaBanner from './../../public/images/banners/about.jpg'
 
 const ONama = () => {
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
+
   return (
     <MainLayout>
       <Logo />

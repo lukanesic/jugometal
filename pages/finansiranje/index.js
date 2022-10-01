@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
 import MainLayout from './../../layout/MainLayout'
 
 import FinansBanner from './../../public/images/banners/finance.jpg'
 
-const index = () => {
+const Finansiranje = () => {
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
+
   return (
     <MainLayout>
       <Logo />
@@ -53,4 +64,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Finansiranje

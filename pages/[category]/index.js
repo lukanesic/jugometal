@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { motion } from 'framer-motion'
 import { fadeTractor } from '../../lib/animations'
@@ -19,6 +19,17 @@ import { fetchAll, fetchCategory } from '../../lib/data'
 
 const Category = ({ path, data }) => {
   const subCategories = removeDuplicates(data.map((sub) => sub.subcategory))
+
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
   return (
     <MainLayout>
       <Logo />

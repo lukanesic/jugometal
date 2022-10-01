@@ -9,8 +9,19 @@ import FrontCategories from '../components/FrontCategories'
 import Featured from './../components/Featured'
 import Qoute from './../components/Quote'
 import { fetchFeatured } from '../lib/data'
+import { useEffect } from 'react'
 
 export default function Home({ data }) {
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
   return (
     <div>
       <Head>

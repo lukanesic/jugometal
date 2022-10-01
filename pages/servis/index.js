@@ -6,6 +6,17 @@ import MainLayout from './../../layout/MainLayout'
 import ServisBanner from './../../public/images/banners/servis2.jpg'
 
 const Servis = () => {
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
+
   return (
     <MainLayout>
       <Logo />

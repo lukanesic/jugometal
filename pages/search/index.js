@@ -21,6 +21,17 @@ const Search = () => {
     fetchProducts()
   }, [])
 
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
+
   const searchKey = searchKeyword.toLowerCase()
 
   const filteredProducts = products

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Logo from '../../../../components/Logo'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -16,6 +16,17 @@ const Product = ({ path, data }) => {
   const router = useRouter()
 
   const product = data[0]
+
+  useEffect(() => {
+    const body = document.querySelector('#__next')
+
+    body.scrollIntoView(
+      {
+        behavior: 'smooth',
+      },
+      500
+    )
+  }, [])
 
   const handleDelete = async (id) => {
     try {
