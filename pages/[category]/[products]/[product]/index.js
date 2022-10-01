@@ -48,7 +48,7 @@ const Product = ({ path, data }) => {
               src={product.image}
               alt={product.title}
               layout='fill'
-              objectFit='cover'
+              objectFit='contain'
               objectPosition='center'
             />
           </div>
@@ -62,20 +62,16 @@ const Product = ({ path, data }) => {
                 </button>
               </>
             )}
-            <h4>{capitalizeFirstLetter(product.category)}</h4>
-            <p>
-              Promena. Ovde dolaze specifikacije koji ce svaki proizvod da ima.
-              Znaci 3 osnovne informacije kao kod John Deere i to je to.
-            </p>
+            {/* <h4>{capitalizeFirstLetter(product.category)}</h4> */}
 
-            <ul style={{ margin: '1rem 0' }}>
-              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit amet.</li>
-              <li style={{ margin: '1rem' }}>
-                Lorem ipsum dolor sit amet consectetur.
-              </li>
-              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
-              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
-              <li style={{ margin: '1rem' }}>Lorem ipsum dolor sit.</li>
+            <p>{product.about}</p>
+
+            <ul>
+              <li>{product.spec1}</li>
+              <li>{product.spec2}</li>
+              <li>{product.spec3}</li>
+              <li>{product.spec4}</li>
+              <li>{product.spec5}</li>
             </ul>
           </div>
         </div>

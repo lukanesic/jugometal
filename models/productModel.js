@@ -38,6 +38,26 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    spec1: {
+      type: String,
+      required: true,
+    },
+    spec2: {
+      type: String,
+      required: true,
+    },
+    spec3: {
+      type: String,
+      required: true,
+    },
+    spec4: {
+      type: String,
+      required: true,
+    },
+    spec5: {
+      type: String,
+      required: true,
+    },
     featured: Boolean,
   },
   {

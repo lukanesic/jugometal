@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import logo from './../../../public/images/jugometal-logo.png'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import SideMenu from '../../Menus/SideMenu'
 
 const Small = ({
   openSideM,

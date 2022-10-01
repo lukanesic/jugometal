@@ -1,10 +1,10 @@
 import { connectToDbMong } from '../../lib/db'
-import { users } from '../../models/userSeeder'
-import User from './../../models/userModel'
+import { products } from '../../models/productSeeder'
+import Product from './../../models/productModel'
 
 const handler = async (req, res) => {
   await connectToDbMong()
-  await User.insertMany(users)
+  await Product.insertMany(products)
 }
 
 export default handler

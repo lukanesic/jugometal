@@ -187,6 +187,11 @@ nav .nav-wrapper .navigation .nav-icon {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 1rem;
+  position: relative;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  border-bottom: 1px solid #cecece;
 }
 
 @media (min-width: 568px) and (max-width: 734px) {
@@ -3429,7 +3434,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .side-menu-content-desktop {
   border-bottom: 1px solid #cecece;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 .side-menu-content-desktop a {
@@ -3438,11 +3443,19 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .side-menu-content-desktop li {
   list-style: none;
-  padding: 1rem 0rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
   font-size: 1.2rem;
-  text-transform: uppercase;
   color: #282828;
   cursor: pointer;
+  background: transparent;
+  -webkit-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+  border-radius: 10px;
+}
+
+.side-menu-content-desktop li:hover {
+  background: #dfdfdf;
 }
 
 .servis {
@@ -3797,10 +3810,10 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .product-container .img-placeholder {
-  margin: 3rem auto 0;
+  margin: 0 auto;
   position: relative;
   width: 280px;
-  height: 200px;
+  height: 260px;
 }
 
 @media (min-width: 410px) and (max-width: 567px) {
@@ -3812,28 +3825,28 @@ footer .footer .jugo-pages .page-prodavnica {
 
 @media (min-width: 735px) and (max-width: 1023px) {
   .product-container .img-placeholder {
-    width: 450px;
-    height: 300px;
+    width: 530px;
+    height: 500px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .product-container .img-placeholder {
-    width: 540px;
-    height: 350px;
+    width: 530px;
+    height: 500px;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
   .product-container .img-placeholder {
-    width: 600px;
-    height: 400px;
+    width: 550px;
+    height: 500px;
   }
 }
 
 @media (min-width: 1440px) {
   .product-container .img-placeholder {
-    width: 750px;
+    width: 550px;
     height: 500px;
   }
 }
@@ -3862,6 +3875,7 @@ footer .footer .jugo-pages .page-prodavnica {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  color: #282828;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
@@ -3888,37 +3902,20 @@ footer .footer .jugo-pages .page-prodavnica {
   }
 }
 
-.product-container .p-info h4 {
+.product-container .p-info p {
   font-size: 1rem;
-  font-weight: 400;
+  color: #4c4c4c;
+  line-height: 1.5rem;
 }
 
-.product-container .p-info .description {
-  margin: 1rem 0;
+.product-container .p-info ul {
+  margin: 1rem;
 }
 
-@media (min-width: 1280px) and (max-width: 1439px) {
-  .product-container .p-info .description {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .product-container .p-info .description {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1439px) {
-  .product-container .p-info h3 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .product-container .p-info h3 {
-    font-size: 20px;
-  }
+.product-container .p-info ul li {
+  font-size: 1rem;
+  color: #4c4c4c;
+  margin: 0.5rem 0;
 }
 
 .product-container .p-info button {

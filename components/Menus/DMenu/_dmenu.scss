@@ -72,7 +72,7 @@
 
 .side-menu-content-desktop {
   border-bottom: 1px solid #cecece;
-  margin: 0 2rem;
+  margin: 0 1rem;
 
   a {
     color: inherit;
@@ -80,10 +80,17 @@
 
   li {
     list-style: none;
-    padding: 1rem 0rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
     font-size: 1.2rem;
-    text-transform: uppercase;
     color: #282828;
     cursor: pointer;
+    background: transparent;
+    transition: background 0.4s ease;
+    border-radius: 10px;
+  }
+
+  li:hover {
+    background: #dfdfdf;
   }
 }

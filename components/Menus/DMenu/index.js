@@ -31,9 +31,9 @@ const DMenu = ({ open, setOpen }) => {
           onClick={() => setOpen(!open)}
         >
           <motion.div
-            initial={{ opacity: 0, width: '10vw' }}
-            animate={{ opacity: 1, width: '30vw' }}
-            exit={{ opacity: 0, width: '10vw' }}
+            initial={{ opacity: 0, width: '5vw' }}
+            animate={{ opacity: 1, width: '20vw' }}
+            exit={{ opacity: 0, width: '5vw' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className='side-menu'
           >

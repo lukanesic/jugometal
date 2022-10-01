@@ -7,6 +7,12 @@
   align-items: center;
   padding: 1rem 1rem;
 
+  position: relative;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  border-bottom: 1px solid #cecece;
+
   @include Landscape() {
     padding: 1.5rem 1rem;
   }
