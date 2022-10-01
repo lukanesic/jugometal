@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
   const [openDmenu, setOpenDmenu] = useState(false)
 
   return (
-    <>
+    <div className='app-wrapper'>
       <Small
         openSideM={openSideM}
         setOpenSideM={setOpenSideM}
@@ -46,7 +46,7 @@ const MainLayout = ({ children }) => {
       <TopCart open={openTopC} setOpen={setOpenTopC} />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

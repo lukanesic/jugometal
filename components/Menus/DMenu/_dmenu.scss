@@ -29,6 +29,7 @@
   z-index: 10;
   background-color: rgba(139, 139, 139, 0.4);
   display: none;
+  overflow-y: hidden;
 
   @include Laptops() {
     display: block;
@@ -50,7 +51,6 @@
   // width: 40%;
   // opacity: 0;
   // box-shadow: rgba(61, 61, 61, 0.2);
-  width: 60vw;
 
   li {
     list-style: none;
@@ -61,13 +61,13 @@
     cursor: pointer;
   }
 
-  @include Landscape() {
-    overflow: scroll;
-  }
+  // @include Landscape() {
+  //   overflow: scroll;
+  // }
 
-  @include Pads() {
-    overflow-y: scroll;
-  }
+  // @include Pads() {
+  //   overflow-y: scroll;
+  // }
 }
 
 .side-menu-content-desktop {

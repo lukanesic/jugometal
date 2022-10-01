@@ -12,6 +12,18 @@ body {
   line-height: 1.2;
 }
 
+html,
+body {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.app-wrapper {
+  position: relative;
+  overflow-y: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -3386,6 +3398,7 @@ footer .footer .jugo-pages .page-prodavnica {
   z-index: 10;
   background-color: rgba(139, 139, 139, 0.4);
   display: none;
+  overflow-y: hidden;
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
@@ -3408,7 +3421,6 @@ footer .footer .jugo-pages .page-prodavnica {
   right: 0;
   overflow-y: hidden;
   background-color: #fbfbfb;
-  width: 60vw;
 }
 
 .side-menu-desktop li {
@@ -3418,18 +3430,6 @@ footer .footer .jugo-pages .page-prodavnica {
   text-transform: uppercase;
   color: #282828;
   cursor: pointer;
-}
-
-@media (min-width: 568px) and (max-width: 734px) {
-  .side-menu-desktop {
-    overflow: scroll;
-  }
-}
-
-@media (min-width: 735px) and (max-width: 1023px) {
-  .side-menu-desktop {
-    overflow-y: scroll;
-  }
 }
 
 .side-menu-content-desktop {

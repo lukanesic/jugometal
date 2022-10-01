@@ -56,8 +56,8 @@ const ContactForm = ({ product }) => {
   return (
     <form className='contact-form' onSubmit={(e) => handleSubmit(e)}>
       <h3>
-        Budite slobodni da nam pošaljete pitanje koje Vas interesuje u vezi
-        proizvoda.
+        Za više informacije budite slobodni da nam pošaljete pitanje koje Vas
+        interesuje u vezi proizvoda.
       </h3>
 
       <div className='flex-desktop'>
