@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
 import MainLayout from './../../layout/MainLayout'
