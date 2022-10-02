@@ -14,6 +14,11 @@ const handler = async (req, res) => {
       about: req.body.about,
       seoKey: req.body.seoKey,
       searchKey: req.body.searchKey,
+      spec1: req.body.spec1,
+      spec2: req.body.spec2,
+      spec3: req.body.spec3,
+      spec4: req.body.spec4,
+      spec5: req.body.spec5,
     })
 
     res.status(200).json({ msg: 'arived', data })

@@ -12,6 +12,7 @@ const nextConfig = {
       'tafe.com',
       'mahindratractor.com',
       'deere.rs',
+      'zetor.com',
     ],
   },
 }

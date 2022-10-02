@@ -1,6 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
-const AddForm = ({ open, setOpen, setNotification }) => {
+const AddForm = () => {
+  const [feedback, setFeedback] = useState(false)
+
   const title = useRef()
   const category = useRef()
   const subcategory = useRef()
@@ -9,6 +11,11 @@ const AddForm = ({ open, setOpen, setNotification }) => {
   const description = useRef()
   const about = useRef()
   const keyWords = useRef()
+  const spec1 = useRef()
+  const spec2 = useRef()
+  const spec3 = useRef()
+  const spec4 = useRef()
+  const spec5 = useRef()
 
   const resetForm = () => {
     title.current.value = ''
@@ -19,6 +26,15 @@ const AddForm = ({ open, setOpen, setNotification }) => {
     description.current.value = ''
     about.current.value = ''
     keyWords.current.value = ''
+    spec1.current.value = ''
+    spec2.current.value = ''
+    spec3.current.value = ''
+    spec4.current.value = ''
+    spec5.current.value = ''
+
+    setTimeout(() => {
+      setFeedback(false)
+    }, [10000])
   }
 
   const handleSubmit = async (e) => {
@@ -36,6 +52,11 @@ const AddForm = ({ open, setOpen, setNotification }) => {
       about: about.current.value,
       seoKey: keyWords.current.value,
       searchKey: searchKey,
+      spec1: spec1.current.value,
+      spec2: spec2.current.value,
+      spec3: spec3.current.value,
+      spec4: spec4.current.value,
+      spec5: spec5.current.value,
     }
 
     try {
@@ -53,14 +74,11 @@ const AddForm = ({ open, setOpen, setNotification }) => {
       if (data.msg === 'arived') {
         resetForm()
         // Feedback da je poruka poslata
-        setNotification('Uspesno ste ubacili proizvod')
-        setOpen(!open)
+        setFeedback(true)
       }
     } catch (err) {
       console.log(err)
     }
-
-    console.log(product)
   }
 
   return (
@@ -113,19 +131,19 @@ const AddForm = ({ open, setOpen, setNotification }) => {
       <label>Opis Proizvoda</label>
       <input
         type='text'
-        placeholder='Opis proizvoda u najkracim crtama'
+        placeholder='Opis proizvoda do 15 reci'
         required
         className='inputLabel'
-        ref={about}
+        ref={description}
       />
 
       <label>Veci opis Proizvoda</label>
       <input
         type='text'
-        placeholder='Opis proizvoda'
+        placeholder='Opis proizvoda do 30 reci'
         required
         className='inputLabel'
-        ref={description}
+        ref={about}
       />
 
       <label>Kljucne reci proizvoda</label>
@@ -137,29 +155,61 @@ const AddForm = ({ open, setOpen, setNotification }) => {
         ref={keyWords}
       />
 
-      {!open && <button>Dodajte proizvod</button>}
-      {open && (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: 'fit-content',
-          }}
-        >
-          <button
-            className='green'
-            style={{
-              background: 'green',
-              color: '#fff',
-              border: '1px solid transparent',
-            }}
-            onClick={() => setOpen(!open)}
-          >
-            Proizvod je ubačen
-          </button>
-          <button onClick={() => setOpen(!open)}>Dodajte nov</button>
+      <div className='specs'>
+        <div>
+          <label>Specifikacija br.1</label>
+          <input
+            type='text'
+            placeholder='Uneti jednu tehnicku karakteristiku modela'
+            required
+            className='inputLabel'
+            ref={spec1}
+          />
         </div>
-      )}
+        <div>
+          <label>Specifikacija br.2</label>
+          <input
+            type='text'
+            placeholder='Uneti jednu tehnicku karakteristiku modela'
+            required
+            className='inputLabel'
+            ref={spec2}
+          />
+        </div>
+        <div>
+          <label>Specifikacija br.3</label>
+          <input
+            type='text'
+            placeholder='Uneti jednu tehnicku karakteristiku modela'
+            required
+            className='inputLabel'
+            ref={spec3}
+          />
+        </div>
+        <div>
+          <label>Specifikacija br.4</label>
+          <input
+            type='text'
+            placeholder='Uneti jednu tehnicku karakteristiku modela'
+            required
+            className='inputLabel'
+            ref={spec4}
+          />
+        </div>
+        <div>
+          <label>Specifikacija br.5</label>
+          <input
+            type='text'
+            placeholder='Uneti jednu tehnicku karakteristiku modela'
+            required
+            className='inputLabel'
+            ref={spec5}
+          />
+        </div>
+      </div>
+
+      {!feedback && <button>Dodajte proizvod</button>}
+      {feedback && <button className='green'>Proizvod uspešno ubačen</button>}
     </form>
   )
 }

@@ -1,13 +1,13 @@
 .contact-form {
-  padding: 2rem 1rem;
+  padding: 2rem 3rem;
 
   @include Pads() {
-    width: 60%;
+    width: 500px;
     margin: 0 auto 2rem;
   }
 
   @include PadsPro() {
-    width: 80%;
+    width: 500px;
     margin: 0 auto 2rem;
   }
 
@@ -25,6 +25,14 @@
     font-weight: 400;
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    width: 100%;
+
+    @include Laptops() {
+      width: 80%;
+    }
+    @include HiDPI() {
+      width: 80%;
+    }
   }
 
   label {
@@ -137,6 +145,18 @@
   button:hover {
     color: #fff;
     background: $red;
+  }
+
+  .green {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
+  }
+
+  .green:hover {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
   }
 
   // .inputLabelError {

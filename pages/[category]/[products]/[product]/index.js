@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../../../components/Logo'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -16,6 +16,8 @@ const Product = ({ path, data }) => {
   const router = useRouter()
 
   const product = data[0]
+
+  const [remove, setRemove] = useState('Izbrišite proizvod')
 
   useEffect(() => {
     const body = document.querySelector('#__next')
@@ -37,7 +39,8 @@ const Product = ({ path, data }) => {
         },
         body: JSON.stringify(id),
       })
-      router.back()
+      router.replace('/')
+      setRemove('Proizvod uspešno izbrisan')
     } catch (err) {
       console.log(err)
     }
@@ -46,7 +49,7 @@ const Product = ({ path, data }) => {
   return (
     <>
       <Head>
-        <title>{product.title} - Jugometal</title>
+        <title>{`${product.title} - Jugometal`}</title>
         <meta
           name='description'
           property='og:description'
@@ -78,7 +81,7 @@ const Product = ({ path, data }) => {
                 <>
                   <h1>{product.title} </h1>
                   <button onClick={() => handleDelete(product._id)}>
-                    Izbrišite proizvod
+                    {remove}
                   </button>
                 </>
               )}

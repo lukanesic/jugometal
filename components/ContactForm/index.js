@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 const ContactForm = ({ product }) => {
-  const [error, setError] = useState()
+  const [feedback, setFeedback] = useState(false)
 
   const enteredName = useRef()
   const enteredSurname = useRef()
@@ -16,7 +16,9 @@ const ContactForm = ({ product }) => {
     enteredPhone.current.value = ''
     enteredMessage.current.value = ''
 
-    setError()
+    setTimeout(() => {
+      setFeedback(false)
+    }, [10000])
   }
 
   const handleSubmit = async (e) => {
@@ -42,11 +44,11 @@ const ContactForm = ({ product }) => {
       })
 
       const data = await response.json()
-      console.log(data)
 
       if (data.msg === 'arived') {
         resetForm()
         // Feedback da je poruka poslata
+        setFeedback(true)
       }
     } catch (err) {
       console.log(err)
@@ -57,7 +59,8 @@ const ContactForm = ({ product }) => {
     <form className='contact-form' onSubmit={(e) => handleSubmit(e)}>
       <h3>
         Za više informacije budite slobodni da nam pošaljete pitanje koje Vas
-        interesuje u vezi proizvoda.
+        interesuje u vezi proizvoda. Unesite vaše informacije i mi ćemo vam
+        odgovoriti u najkraćem roku.
       </h3>
 
       <div className='flex-desktop'>
@@ -126,7 +129,8 @@ const ContactForm = ({ product }) => {
         ></textarea>
       </div>
 
-      <button>Pošaljite pitanje</button>
+      {!feedback && <button>Pošaljite pitanje</button>}
+      {feedback && <button className='green'>Poruka poslata</button>}
     </form>
   )
 }

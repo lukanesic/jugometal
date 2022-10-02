@@ -13,7 +13,6 @@ const Admin = () => {
   const { data: session, status } = useSession()
 
   const [accountTab, setAccountTab] = useState(0)
-  const [open, setOpen] = useState(false)
 
   const [messages, setMessages] = useState()
   const [loading, setLoading] = useState(true)
@@ -43,7 +42,7 @@ const Admin = () => {
         <div className='profileH'>
           {/* <h1>{session && session.user.name}</h1> */}
           <h1>Admin</h1>
-          <h4>{session && session.user.email}</h4>
+          {/* <h4>{session && session.user.email}</h4> */}
         </div>
 
         {/* Prvo resenje */}
@@ -63,7 +62,7 @@ const Admin = () => {
           <h3 onClick={() => handleSignOut()}>Izlogujte se</h3>
         </div>
 
-        {accountTab === 0 && <AddForm open={open} setOpen={setOpen} />}
+        {accountTab === 0 && <AddForm />}
 
         {accountTab === 1 && (
           <div className='messages'>

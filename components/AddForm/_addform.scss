@@ -48,4 +48,23 @@
     color: #fff;
     background: $red;
   }
+
+  .green {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
+  }
+
+  .green:hover {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
+  }
+
+  .specs {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+  }
 }
