@@ -13,7 +13,7 @@ const nextConfig = {
       'mahindratractor.com',
       'deere.rs',
       'zetor.com',
-      'yumetal.com',
+      'yumetal.rs',
     ],
   },
 }
