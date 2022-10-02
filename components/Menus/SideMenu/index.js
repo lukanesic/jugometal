@@ -45,37 +45,37 @@ const SideMenu = ({ open, setOpen }) => {
             </motion.div>
             <div className='side-menu-content'>
               <Link href='/traktori'>
-                <li>Traktori</li>
+                <li onClick={() => setOpen(!open)}>Traktori</li>
               </Link>
               <Link href='/stocarstvo'>
-                <li>Stočarstvo</li>
+                <li onClick={() => setOpen(!open)}>Stočarstvo</li>
               </Link>
               <Link href='/vocarstvo'>
-                <li>Voćarstvo</li>
+                <li onClick={() => setOpen(!open)}>Voćarstvo</li>
               </Link>
               <Link href='/ratarstvo'>
-                <li>Ratarstvo</li>
+                <li onClick={() => setOpen(!open)}>Ratarstvo</li>
               </Link>
               <Link href='/transport'>
-                <li>Transport</li>
+                <li onClick={() => setOpen(!open)}>Transport</li>
               </Link>
             </div>
 
             <div className='side-menu-content'>
               <Link href='/o-nama'>
-                <li>O nama</li>
+                <li onClick={() => setOpen(!open)}>O nama</li>
               </Link>
               <Link href='/finansiranje'>
-                <li>Finansiranje</li>
+                <li onClick={() => setOpen(!open)}>Finansiranje</li>
               </Link>
               <Link href='/servis'>
-                <li>Servis</li>
+                <li onClick={() => setOpen(!open)}>Servis</li>
               </Link>
             </div>
 
             <div className='side-menu-content' style={{ borderBottom: 'none' }}>
               <Link href='/'>
-                <li>Početna</li>
+                <li onClick={() => setOpen(!open)}>Početna</li>
               </Link>
             </div>
           </motion.div>
