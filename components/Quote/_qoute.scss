@@ -13,14 +13,22 @@
     color: $font;
     line-height: 27px;
 
+    @include Pads() {
+      width: 600px;
+    }
+
+    @include PadsPro() {
+      width: 700px;
+    }
+
     @include Laptops() {
-      width: 70%;
-      margin: 0 auto;
+      width: 800px;
+      margin: 2rem auto;
     }
 
     @include HiDPI() {
-      width: 700px;
-      margin: 0 auto;
+      width: 800px;
+      margin: 2rem auto;
     }
   }
 

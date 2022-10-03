@@ -1,15 +1,15 @@
 import Head from 'next/head'
+import { fetchFeatured } from '../lib/data'
+import { useEffect } from 'react'
 
 import MainLayout from '../layout/MainLayout'
-
 import HomeBanner from '../components/Banners/HomeBanner'
 import Logo from '../components/Logo'
 import LandingMoto from '../components/Moto/LandingMoto'
 import FrontCategories from '../components/FrontCategories'
 import Featured from './../components/Featured'
 import Qoute from './../components/Quote'
-import { fetchFeatured } from '../lib/data'
-import { useEffect } from 'react'
+import Delovi from '../components/Delovi'
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -47,6 +47,7 @@ export default function Home({ data }) {
 
         <Featured data={data} />
         <Qoute />
+        <Delovi />
       </MainLayout>
     </div>
   )

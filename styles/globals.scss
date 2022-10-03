@@ -59,6 +59,105 @@ a,
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+// 404
+.page-404 {
+  padding: 3rem;
+  text-align: center;
+  margin: 3rem auto;
+
+  @include Pads() {
+    width: 500px;
+  }
+
+  @include PadsPro() {
+    width: 500px;
+  }
+
+  @include Laptops() {
+    width: 500px;
+  }
+
+  @include HiDPI() {
+    width: 500px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-weight: 500;
+
+    @include Pads() {
+      font-size: 3rem;
+    }
+
+    @include PadsPro() {
+      font-size: 3rem;
+    }
+
+    @include Laptops() {
+      font-size: 3rem;
+    }
+
+    @include HiDPI() {
+      font-size: 3rem;
+    }
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    @include Pads() {
+      font-size: 1.3rem;
+    }
+
+    @include PadsPro() {
+      font-size: 1.3rem;
+    }
+
+    @include Laptops() {
+      font-size: 1.3rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1.3rem;
+    }
+  }
+
+  a {
+    font-size: 15px;
+    padding: 0.8rem 3rem;
+    margin: 1rem 0;
+    background: #ea1c24;
+    outline: none;
+    border: none;
+    border: 1px solid #ea1c24;
+    color: #fff;
+    transition: all 0.4s linear;
+    border: 1px solid #fff;
+    cursor: pointer;
+
+    @include Pads() {
+      font-size: 1.1rem;
+    }
+
+    @include PadsPro() {
+      font-size: 1.1rem;
+    }
+
+    @include Laptops() {
+      font-size: 1.1rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1.1rem;
+    }
+  }
+
+  a:hover {
+    background: rgb(193, 0, 0);
+  }
+}
+
 @import './../components/Nav/Large/large';
 @import './../components/Nav/Small/small';
 
@@ -84,8 +183,10 @@ a,
 @import './../components/Backdrop/backdrop';
 @import './../components/AddForm/addform';
 @import './../components/Message/message';
+
 @import './../components/Quote/qoute';
 @import './../components/Menus/DMenu/dmenu';
+@import './../components/Delovi/delovi';
 // Pages
 @import './../pages/servis/servis';
 @import './../pages/finansiranje/finance';
