@@ -1,1 +1,1 @@
-# Preview jugometal-2sdt.vercel.app
+# Preview https://jugometal-2sdt.vercel.app
