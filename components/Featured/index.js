@@ -7,7 +7,8 @@ const Featured = ({ data }) => {
   return (
     <div>
       <div className='ponuda-header'>
-        <h2>Jugometal Ponuda</h2>
+        <h4>Jugometal</h4>
+        <h5>Naša ponuda</h5>
         <p>
           Pogledajte neke od naših najprodavanijih i najpristupacnijih proizvoda
           koji su spremi za porudzbine istog trenutka. Pozovite za više

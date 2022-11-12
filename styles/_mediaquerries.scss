@@ -1,3 +1,9 @@
+@mixin OnlyForFeatured {
+  @media (min-width: 375px) and (max-width: 567px) {
+    @content;
+  }
+}
+
 @mixin PhonePro {
   @media (min-width: 410px) and (max-width: 567px) {
     @content;

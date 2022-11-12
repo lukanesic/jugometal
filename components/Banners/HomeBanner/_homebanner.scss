@@ -3,7 +3,7 @@
   // background-position: center;
   // background-repeat: no-repeat;
   // background-size: cover;
-  height: 60vh;
+  height: 80vh;
   overflow: hidden;
   position: relative;
   @include Pads() {
@@ -19,7 +19,7 @@
   }
 
   @include HiDPI() {
-    height: 83vh;
+    height: 75vh;
   }
 
   .front-banner-qoute {
@@ -28,14 +28,18 @@
     justify-content: flex-end;
     height: inherit;
     color: #fff;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
+
+    @include PhonePro() {
+      padding: 4rem 2rem;
+    }
 
     @include Pads {
-      padding: 2rem;
+      padding: 3rem;
     }
 
     @include PadsPro() {
-      padding: 3rem 5rem;
+      padding: 3rem;
     }
 
     @include Laptops() {
@@ -47,44 +51,70 @@
     }
 
     h3 {
-      font-size: 1.2rem;
-      font-weight: lighter;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 28px;
+      letter-spacing: -1px;
+      color: rgb(235, 235, 235);
+
+      @include PhonePro() {
+        font-size: 1.8rem;
+      }
 
       @include Pads() {
-        font-size: 2rem;
+        font-size: 2.3rem;
+        line-height: 48px;
+        width: 300px;
       }
 
       @include PadsPro() {
-        font-size: 2rem;
+        font-size: 2.3rem;
+        line-height: 48px;
+        width: 300px;
       }
 
       @include Laptops() {
         font-size: 2.3rem;
+        line-height: 48px;
+        width: 500px;
       }
 
       @include HiDPI() {
         font-size: 2.3rem;
+        line-height: 48px;
+        width: 500px;
       }
     }
 
     h6 {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      font-weight: 200;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.75);
+
+      @include PhonePro() {
+        font-size: 1rem;
+      }
 
       @include Pads() {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        width: 300px;
       }
 
       @include PadsPro() {
-        font-size: 1.2rem;
-        font-weight: 400;
+        font-size: 1.1rem;
+        width: 300px;
       }
 
       @include Laptops() {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        width: 400px;
       }
 
       @include HiDPI() {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        width: 400px;
       }
     }
   }

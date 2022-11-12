@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { fetchMessages } from '../../lib/data'
 import { signOut, getSession, useSession } from 'next-auth/react'
 
 import MainLayout from './../../layout/MainLayout'
@@ -87,8 +86,6 @@ const MessagePlaceholder = () => {
 
 export const getServerSideProps = async (context) => {
   const session = await getSession({ req: context.req })
-  const response = await fetchMessages()
-  const data = JSON.parse(JSON.stringify(response))
 
   if (!session) {
     return {
@@ -97,12 +94,6 @@ export const getServerSideProps = async (context) => {
         permanent: false,
       },
     }
-  }
-
-  return {
-    props: {
-      data,
-    },
   }
 }
 export default Admin

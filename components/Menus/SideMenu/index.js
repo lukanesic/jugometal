@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { AiOutlineClose } from 'react-icons/ai'
 // import { useSelector } from 'react-redux'
 
 const SideMenu = ({ open, setOpen }) => {
@@ -41,7 +42,9 @@ const SideMenu = ({ open, setOpen }) => {
             className='side-menu'
           >
             <motion.div className='close-button'>
-              <button onClick={() => setOpen(!open)}>X</button>
+              <button onClick={() => setOpen(!open)}>
+                <AiOutlineClose style={{ color: '#fff' }} />
+              </button>
             </motion.div>
             <div className='side-menu-content'>
               <Link href='/traktori'>
@@ -73,9 +76,14 @@ const SideMenu = ({ open, setOpen }) => {
               </Link>
             </div>
 
-            <div className='side-menu-content' style={{ borderBottom: 'none' }}>
+            <div className='side-menu-content'>
               <Link href='/'>
-                <li onClick={() => setOpen(!open)}>Početna</li>
+                <li
+                  onClick={() => setOpen(!open)}
+                  style={{ borderBottom: 'unset' }}
+                >
+                  Početna
+                </li>
               </Link>
             </div>
           </motion.div>

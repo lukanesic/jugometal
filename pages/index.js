@@ -10,6 +10,11 @@ import FrontCategories from '../components/FrontCategories'
 import Featured from './../components/Featured'
 import Qoute from './../components/Quote'
 import Delovi from '../components/Delovi'
+import Navigation from '../components/Navigation'
+import Categories from '../components/Categories'
+import Offer from '../components/Offer'
+import FeatureBrands from '../components/FeatureBrands'
+import Rezervni from '../components/Rezervni'
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -41,13 +46,18 @@ export default function Home({ data }) {
 
       <MainLayout>
         <Logo />
+        <Navigation />
         <HomeBanner />
-        <LandingMoto />
-        <FrontCategories />
+        {/* <LandingMoto /> */}
+        <Categories />
 
         <Featured data={data} />
-        <Qoute />
+        {/* <Offer heading={'Ponuda traktora'} />
+        <Offer heading={'Ponuda mašina'} /> */}
+        <FeatureBrands />
+        {/* <Rezervni /> */}
         <Delovi />
+        <Qoute />
       </MainLayout>
     </div>
   )

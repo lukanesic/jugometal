@@ -46,7 +46,7 @@ const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
                 className='nav-icon'
                 onClick={() => setOpenSearch(!openSearch)}
               />
-
+              {/* 
               <h3
                 style={{
                   fontWeight: '300',
@@ -57,12 +57,12 @@ const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
                 onClick={() => setOpenSearch(!openSearch)}
               >
                 Pretraga
-              </h3>
+              </h3> */}
             </div>
 
             {/* <GiHamburgerMenu className='nav-icon' /> */}
 
-            <h3
+            {/* <h3
               style={{
                 fontWeight: '300',
                 cursor: 'pointer',
@@ -72,6 +72,15 @@ const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
               // onClick={() => console.log('d')}
             >
               Menu
+            </h3> */}
+
+            <h3
+              style={{
+                fontWeight: '300',
+                fontSize: '.9rem',
+              }}
+            >
+              Kneza Miloša 81, Svilajnac
             </h3>
 
             {/* <AiOutlineShoppingCart

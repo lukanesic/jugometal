@@ -1,0 +1,318 @@
+.category-wrapper {
+  margin: 1rem auto 1.3rem;
+  margin-top: 3rem;
+  width: 99%;
+  max-width: 1200px;
+  justify-content: space-between;
+
+  @include Pads() {
+    display: flex;
+  }
+
+  @include PadsPro() {
+    display: flex;
+  }
+
+  @include Laptops() {
+    display: flex;
+    width: 90%;
+  }
+
+  @include HiDPI() {
+    display: flex;
+    width: 90%;
+  }
+
+  .categorie-info {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 4rem;
+    padding-right: 3rem;
+
+    h2 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+      max-width: 250px;
+
+      @include Pads() {
+        font-size: 1.7rem;
+      }
+
+      @include PadsPro() {
+        font-size: 1.7rem;
+      }
+
+      @include Laptops() {
+        font-size: 2rem;
+      }
+
+      @include HiDPI() {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 300px;
+
+      @include Laptops() {
+        font-size: 1.2rem;
+      }
+
+      @include HiDPI() {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .cat-left {
+    width: 100%;
+
+    @include Pads() {
+      width: 49.9%;
+    }
+
+    @include PadsPro() {
+      width: 49.9%;
+    }
+
+    @include Laptops() {
+      width: 49.9%;
+    }
+
+    @include HiDPI() {
+      width: 49.9%;
+    }
+
+    .cat-tr {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      margin-top: 0.2rem;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+
+      @include Pads() {
+        height: 550px;
+      }
+
+      @include PadsPro() {
+        height: 550px;
+      }
+
+      @include Laptops() {
+        height: 550px;
+      }
+
+      @include HiDPI() {
+        height: 700px;
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    .cat-tr::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-tr:hover {
+      background: rgba(16, 19, 0, 0.62);
+    }
+
+    .cat-stoc {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      margin-top: 0.2rem;
+
+      @include PadsPro() {
+        height: 500px;
+        margin-bottom: 0rem;
+      }
+
+      @include Laptops() {
+        height: 600px;
+        margin-bottom: 0rem;
+      }
+
+      @include HiDPI() {
+        height: 700px;
+        margin-bottom: 0rem;
+      }
+    }
+
+    .cat-stoc::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-stoc:hover {
+      background: rgba(16, 19, 0, 0.62);
+    }
+  }
+
+  .cat-right {
+    width: 100%;
+
+    @include Pads() {
+      width: 49.9%;
+    }
+
+    @include PadsPro() {
+      width: 49.9%;
+    }
+
+    @include Laptops() {
+      width: 49.9%;
+    }
+
+    @include HiDPI() {
+      width: 49.9%;
+    }
+
+    .cat-rat {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      margin-top: 0.2rem;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+
+      @include Pads() {
+        height: 400px;
+      }
+
+      @include PadsPro() {
+        height: 400px;
+      }
+
+      @include Laptops() {
+        height: 450px;
+      }
+
+      @include HiDPI() {
+        height: 550px;
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    .cat-rat::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-rat:hover {
+      background: rgba(16, 19, 0, 0.62);
+    }
+
+    .cat-voc {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      margin-top: 0.2rem;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+
+      @include Pads() {
+        height: 400px;
+      }
+
+      @include PadsPro() {
+        height: 400px;
+      }
+
+      @include Laptops() {
+        height: 450px;
+      }
+
+      @include HiDPI() {
+        height: 550px;
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    .cat-voc::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-voc:hover {
+      background: rgba(16, 19, 0, 0.62);
+    }
+
+    .cat-tran {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      margin-top: 0.2rem;
+
+      @include Pads() {
+        height: 400px;
+      }
+
+      @include PadsPro() {
+        height: 400px;
+      }
+
+      @include Laptops() {
+        height: 450px;
+      }
+
+      @include HiDPI() {
+        height: 550px;
+      }
+    }
+
+    .cat-tran::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: rgba(16, 19, 0, 0.42);
+      height: 100%;
+      width: 100%;
+    }
+
+    .cat-tran:hover {
+      background: rgba(16, 19, 0, 0.62);
+    }
+  }
+}

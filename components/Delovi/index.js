@@ -3,11 +3,14 @@ import React from 'react'
 const Delovi = () => {
   return (
     <div className='delovi'>
-      <h3>Rezervni delovi</h3>
-      <p>
-        Jugometal isporučuje originalne rezervne delove za servisiranje traktora
-        i mašina u garantnom i postgarantnom periodu.
-      </p>
+      <div className='ponuda-headerr'>
+        <h4>Rezervni delovi</h4>
+        <h5>Pozovite za više detalja</h5>
+        <p>
+          Jugometal isporučuje originalne rezervne delove za servisiranje
+          traktora i mašina u garantnom i postgarantnom periodu.
+        </p>
+      </div>
 
       <ul>
         <li>

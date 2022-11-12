@@ -1,23 +1,24 @@
-.close-button {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem 1.5rem;
+// .close-button {
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 1rem 1.5rem;
+//   display: none;
 
-  button {
-    font-size: 1.2rem;
-    border: none;
-    background: transparent;
-    font-weight: 400;
-    cursor: pointer;
-    padding: 0.4rem 0.8rem;
-    border-radius: 12px;
-    transition: background 0.4s linear;
-  }
+//   button {
+//     font-size: 1.2rem;
+//     border: none;
+//     background: transparent;
+//     font-weight: 400;
+//     cursor: pointer;
+//     padding: 0.4rem 0.8rem;
+//     border-radius: 12px;
+//     transition: background 0.4s linear;
+//   }
 
-  button:hover {
-    background: rgba(61, 61, 61, 0.1);
-  }
-}
+//   button:hover {
+//     background: #fff;
+//   }
+// }
 
 .side-dropback {
   position: absolute;
@@ -45,7 +46,7 @@
   top: 0;
   right: 0;
   overflow-y: hidden;
-  background-color: rgb(251, 251, 251);
+  background: $black;
   // width: 40%;
   // opacity: 0;
   // box-shadow: rgba(61, 61, 61, 0.2);
@@ -61,20 +62,16 @@
 }
 
 .side-menu-content {
-  border-bottom: 1px solid #cecece;
-  margin: 0 2rem;
-
-  a {
-    color: inherit;
-  }
+  margin: 0 1rem;
 
   li {
     list-style: none;
-    padding: 0.5rem 0rem;
+    padding: 0.6rem 0rem;
     font-size: 1rem;
-    text-transform: uppercase;
-    color: #282828;
+    color: #fff;
     cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 500;
 
     @include PhonePro() {
       font-size: 1.1rem;

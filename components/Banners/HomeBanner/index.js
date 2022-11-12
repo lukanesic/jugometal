@@ -47,9 +47,11 @@ const HomeBanner = () => {
         initial='hidden'
         animate='show'
       >
-        <motion.h3 variants={titleAnimeh3}>Budućnost je u hrani</motion.h3>
+        <motion.h3 variants={titleAnimeh3}>
+          Traktori i poljoprivredna mehanizacija
+        </motion.h3>
         <motion.h6 variants={animeh6}>
-          Jugometal poljoprivredni proizvodi
+          Višegodišnji rad, poslovnost i saradnja sa poljoprivrednicima
         </motion.h6>
       </motion.div>
     </div>
