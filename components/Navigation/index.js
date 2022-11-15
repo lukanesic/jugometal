@@ -11,11 +11,11 @@ const Navigation = () => {
         <Link href='/ratarstvo'>
           <li>Ratarstvo</li>
         </Link>
-        <Link href='/stocarstvo'>
-          <li>Stocarstvo</li>
+        <Link href='/stočarstvo'>
+          <li>Stočarstvo</li>
         </Link>
-        <Link href='/vocarstvo'>
-          <li>Vocarstvo</li>
+        <Link href='/voćarstvo'>
+          <li>Voćarstvo</li>
         </Link>
         <Link href='/transport'>
           <li>Transport</li>

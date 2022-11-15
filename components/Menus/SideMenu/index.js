@@ -50,10 +50,10 @@ const SideMenu = ({ open, setOpen }) => {
               <Link href='/traktori'>
                 <li onClick={() => setOpen(!open)}>Traktori</li>
               </Link>
-              <Link href='/stocarstvo'>
+              <Link href='/stočarstvo'>
                 <li onClick={() => setOpen(!open)}>Stočarstvo</li>
               </Link>
-              <Link href='/vocarstvo'>
+              <Link href='/voćarstvo'>
                 <li onClick={() => setOpen(!open)}>Voćarstvo</li>
               </Link>
               <Link href='/ratarstvo'>

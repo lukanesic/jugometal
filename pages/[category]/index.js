@@ -17,6 +17,7 @@ import Logo from './../../components/Logo'
 import PageBanner from './../../components/Banners/PageBanner'
 import Box from './../../components/Box'
 import { fetchAll, fetchCategory } from '../../lib/data'
+import Navigation from '../../components/Navigation'
 
 const Category = ({ path, data }) => {
   const subCategories = removeDuplicates(data.map((sub) => sub.subcategory))
@@ -44,7 +45,7 @@ const Category = ({ path, data }) => {
 
       <MainLayout>
         <Logo />
-
+        <Navigation />
         <PageBanner
           h1={path && capitalizeAllLetters(path)}
           p={selectBannerDescription(path)}

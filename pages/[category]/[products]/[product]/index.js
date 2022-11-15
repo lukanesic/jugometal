@@ -76,10 +76,10 @@ const Product = ({ path, data }) => {
               />
             </div>
             <div className='p-info'>
-              {!session && <h1>{product.title} </h1>}
+              {!session && <h1>#{product.title} </h1>}
               {session && (
                 <>
-                  <h1>{product.title} </h1>
+                  <h1>#{product.title} </h1>
                   <button onClick={() => handleDelete(product._id)}>
                     {remove}
                   </button>

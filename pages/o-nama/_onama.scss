@@ -52,4 +52,55 @@
   strong {
     font-weight: 600;
   }
+
+  ul {
+    padding: 0 2rem;
+
+    text-align: left;
+    li {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.4);
+
+      @include Laptops() {
+        font-size: 1rem;
+      }
+
+      @include HiDPI() {
+        font-size: 1rem;
+      }
+
+      span {
+        color: $black;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    padding: 2rem 1rem;
+
+    text-align: center;
+
+    font-size: 1rem;
+    align-items: center;
+
+    .facebook {
+      padding-left: 0;
+      font-size: 1rem;
+    }
+
+    a {
+      border-right: 1px solid $cat-color;
+      padding: 0 1rem;
+      color: $red;
+      transition: color 0.4s linear;
+      cursor: pointer;
+    }
+
+    a:nth-child(3) {
+      border-right: none;
+    }
+  }
 }

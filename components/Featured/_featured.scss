@@ -179,8 +179,15 @@
     }
 
     @include HiDPI() {
+      border: 1px solid transparent;
       border-right: 1px solid $cat-color;
-      border-bottom: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &:hover {
+        border: 1px solid $cat-color;
+        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+      }
     }
 
     .product-item-image-container {

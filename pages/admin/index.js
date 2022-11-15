@@ -76,14 +76,6 @@ const Admin = () => {
   )
 }
 
-const MessagePlaceholder = () => {
-  return (
-    <div className='msg-placehole'>
-      <h1>kk</h1>
-    </div>
-  )
-}
-
 export const getServerSideProps = async (context) => {
   const session = await getSession({ req: context.req })
 
@@ -94,6 +86,10 @@ export const getServerSideProps = async (context) => {
         permanent: false,
       },
     }
+  }
+
+  return {
+    props: { session },
   }
 }
 export default Admin

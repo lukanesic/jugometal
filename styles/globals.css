@@ -303,7 +303,7 @@ nav .nav-wrapper .navigation {
 
 nav .nav-wrapper .navigation a {
   cursor: pointer;
-  color: #ea1c24;
+  color: #ed1d24;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
   margin-right: 2rem;
@@ -533,8 +533,8 @@ nav .nav-wrapper .navigation .nav-icon {
 }
 
 .offer .carousel-wrapper .card-wrapper .card-info a {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 0.5rem;
   display: inline-block;
@@ -546,7 +546,7 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .offer .carousel-wrapper .card-wrapper .card-info a:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .brand-wrapper {
@@ -2172,7 +2172,7 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .landing-moto h1 span {
   font-weight: 700;
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
@@ -2267,14 +2267,14 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .landing-moto a {
   font-weight: 600;
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 16px;
   cursor: pointer;
 }
 
 .landing-moto span {
   font-weight: 400;
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -2678,7 +2678,7 @@ nav .nav-wrapper .navigation .nav-icon {
 }
 
 .ponuda-header h4 {
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 1.6rem;
   margin-bottom: 0.3rem;
   font-weight: 500;
@@ -2687,7 +2687,7 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .ponuda-header h4 span {
   font-weight: 700;
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
@@ -2880,8 +2880,16 @@ nav .nav-wrapper .navigation .nav-icon {
 
 @media (min-width: 1440px) {
   .ponuda-products .ponuda-product-item {
+    border: 1px solid transparent;
     border-right: 1px solid #f0f0f0;
-    border-bottom: none;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .ponuda-products .ponuda-product-item:hover {
+    border: 1px solid #f0f0f0;
+    -webkit-box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -3030,8 +3038,8 @@ nav .nav-wrapper .navigation .nav-icon {
 }
 
 .ponuda-products .ponuda-product-item .product-item-content a {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 0.5rem;
   display: inline-block;
@@ -3043,7 +3051,7 @@ nav .nav-wrapper .navigation .nav-icon {
 
 .ponuda-products .ponuda-product-item .product-item-content a:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .ponuda-products .ponuda-product-item:last-child {
@@ -3153,7 +3161,7 @@ footer .footer a {
 }
 
 footer .footer a:hover {
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 footer .footer .jugo-adresa,
@@ -3613,13 +3621,13 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .box .box-brands p:hover {
-  color: #ea1c24;
+  color: #ed1d24;
   cursor: default;
 }
 
 .box a {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 1rem;
   display: inline-block;
@@ -3631,7 +3639,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .box a:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .box:first-child {
@@ -3821,7 +3829,7 @@ footer .footer .jugo-pages .page-prodavnica {
 .home-box-container .home-box .home-box-info h3 {
   width: 90%;
   margin: 0rem auto 1rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
@@ -3895,8 +3903,8 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .home-box-container .home-box .home-box-info a {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 0.5rem;
   display: inline-block;
@@ -3908,24 +3916,25 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .home-box-container .home-box .home-box-info a:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .contact-form {
-  padding: 2rem 3rem;
+  padding: 1rem;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
   .contact-form {
-    width: 500px;
+    padding: 1rem 2rem;
     margin: 0 auto 2rem;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .contact-form {
-    width: 500px;
+    padding: 1rem 3rem;
     margin: 0 auto 2rem;
+    max-width: 1000px;
   }
 }
 
@@ -3944,10 +3953,11 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .contact-form h3 {
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 100%;
+  line-height: 25px;
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
@@ -4105,8 +4115,8 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .contact-form button {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 1rem;
   display: inline-block;
@@ -4119,7 +4129,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .contact-form button:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .contact-form .green {
@@ -4196,8 +4206,8 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .add-product-form button {
-  color: #ea1c24;
-  border: 0.5px solid #ea1c24;
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
   padding: 0.7rem 2rem;
   margin-top: 1rem;
   display: inline-block;
@@ -4210,7 +4220,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .add-product-form button:hover {
   color: #fff;
-  background: #ea1c24;
+  background: #ed1d24;
 }
 
 .add-product-form .green {
@@ -4264,7 +4274,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .message .message-headers a:hover {
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 .message .customer-message {
@@ -4521,7 +4531,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .delovi .ponuda-headerr h4 {
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 1.6rem;
   margin-bottom: 0.3rem;
   font-weight: 500;
@@ -4530,7 +4540,7 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .delovi .ponuda-headerr h4 span {
   font-weight: 700;
-  color: #ea1c24;
+  color: #ed1d24;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
@@ -4617,18 +4627,30 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .delovi ul {
-  padding: 0 1rem;
+  padding: 0 2rem;
   text-align: left;
 }
 
 .delovi ul li {
-  margin: 1rem 0;
-  font-size: 1rem;
-  color: #737373;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .delovi ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .delovi ul li {
+    font-size: 1rem;
+  }
 }
 
 .delovi ul li span {
-  color: #282828;
+  color: #292929;
   font-weight: 500;
 }
 
@@ -4664,7 +4686,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .servis h1 {
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 2rem;
   margin: 0;
   padding: 1rem;
@@ -4725,7 +4747,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .finans h1 {
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 2rem;
   margin: 0;
   padding: 1rem;
@@ -4772,7 +4794,7 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .o-nama h1 {
-  color: #ea1c24;
+  color: #ed1d24;
   font-size: 2rem;
   margin: 0;
   padding: 1rem;
@@ -4805,6 +4827,64 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .o-nama strong {
   font-weight: 600;
+}
+
+.o-nama ul {
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.o-nama ul li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .o-nama ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .o-nama ul li {
+    font-size: 1rem;
+  }
+}
+
+.o-nama ul li span {
+  color: #292929;
+  font-weight: 500;
+}
+
+.o-nama .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.o-nama .social .facebook {
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.o-nama .social a {
+  border-right: 1px solid #f0f0f0;
+  padding: 0 1rem;
+  color: #ed1d24;
+  -webkit-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+  cursor: pointer;
+}
+
+.o-nama .social a:nth-child(3) {
+  border-right: none;
 }
 
 .six-grid-system {
@@ -4933,7 +5013,7 @@ footer .footer .jugo-pages .page-prodavnica {
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 200;
-  color: #ea1c24;
+  color: #ed1d24;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -4963,13 +5043,37 @@ footer .footer .jugo-pages .page-prodavnica {
   margin: 0 auto;
 }
 
+@media (min-width: 735px) and (max-width: 1023px) {
+  .product-container {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .product-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    max-width: 1000px;
+    grid-gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 1280px) and (max-width: 1439px) {
   .product-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (50%)[2];
-        grid-template-columns: repeat(2, 50%);
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
     max-width: 1000px;
+    grid-gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -4977,9 +5081,13 @@ footer .footer .jugo-pages .page-prodavnica {
   .product-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (50%)[2];
-        grid-template-columns: repeat(2, 50%);
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
     max-width: 1200px;
+    grid-gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -5006,8 +5114,8 @@ footer .footer .jugo-pages .page-prodavnica {
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .product-container .img-placeholder {
-    width: 530px;
-    height: 500px;
+    width: 500px;
+    height: 470px;
   }
 }
 
@@ -5026,7 +5134,6 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .product-container .p-info {
-  max-width: 400px;
   margin: 2rem auto;
   z-index: 5;
 }
@@ -5046,15 +5153,17 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .product-container .p-info h1 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #282828;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #ed1d24;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {
   .product-container .p-info h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -5077,18 +5186,44 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .product-container .p-info p {
-  font-size: 1rem;
-  color: #4c4c4c;
-  line-height: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 20px;
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .product-container .p-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .product-container .p-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .product-container .p-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product-container .p-info p {
+    font-size: 1rem;
+  }
 }
 
 .product-container .p-info ul {
   margin: 1rem;
+  margin-top: 2rem;
 }
 
 .product-container .p-info ul li {
   font-size: 1rem;
-  color: #4c4c4c;
+  color: #292929;
+  line-height: 25px;
   margin: 0.5rem 0;
 }
 
@@ -5172,7 +5307,7 @@ footer .footer .jugo-pages .page-prodavnica {
   margin: 0.5rem auto;
   font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 400;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

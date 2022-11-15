@@ -18,6 +18,7 @@ import {
 import { fetchAll, fetchSubcategory } from '../../../lib/data'
 import PageBanner from '../../../components/Banners/PageBanner'
 import Head from 'next/head'
+import Navigation from '../../../components/Navigation'
 
 const Products = ({ data, path }) => {
   const category = removeDuplicates(data.map((sub) => sub.category)).toString()
@@ -49,6 +50,7 @@ const Products = ({ data, path }) => {
       <MainLayout>
         {/* <Logo cls={'product-logo'} /> */}
         <Logo />
+        <Navigation />
         <PageBanner
           h1={path && capitalizeAllLetters(path)}
           p={selectSubcategoryDescription(subCategory)}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import TractorImg from './../../public/images/banners/tr2.jpg'
 import RatImg from './../../public/images/banners/rat.jpg'
@@ -8,10 +9,12 @@ import StocImg from './../../public/images/banners/stoc.jpg'
 import TransImg from './../../public/images/banners/transport.jpg'
 
 const Categories = () => {
+  const router = useRouter()
+
   return (
     <div className='category-wrapper'>
       <div className='cat-left'>
-        <div className='cat-tr'>
+        <div className='cat-tr' onClick={() => router.push('/traktori')}>
           <Image
             src={TractorImg}
             alt='Tractor Banner'
@@ -24,7 +27,7 @@ const Categories = () => {
             <p>Izaberite traktor koji odgovara vašim potrebama</p>
           </div>
         </div>
-        <div className='cat-stoc'>
+        <div className='cat-stoc' onClick={() => router.push('/stocarstvo')}>
           <Image
             src={StocImg}
             alt='Stocarstvo Banner'
@@ -41,7 +44,7 @@ const Categories = () => {
 
       {/* ---------------------------- */}
       <div className='cat-right'>
-        <div className='cat-rat'>
+        <div className='cat-rat' onClick={() => router.push('/ratarstvo')}>
           <Image
             src={RatImg}
             alt='Ratarstvo Banner'
@@ -54,7 +57,7 @@ const Categories = () => {
             <p>Izaberite iz naše ponude mašina namenjene ratarstvu</p>
           </div>
         </div>
-        <div className='cat-voc'>
+        <div className='cat-voc' onClick={() => router.push('/vocarstvo')}>
           <Image
             src={VocImg}
             alt='Vocarstvo Banner'
@@ -68,7 +71,7 @@ const Categories = () => {
           </div>
         </div>
 
-        <div className='cat-tran'>
+        <div className='cat-tran' onClick={() => router.push('/transport')}>
           <Image
             src={TransImg}
             alt='Transport Banner'
