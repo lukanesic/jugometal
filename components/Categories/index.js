@@ -27,7 +27,7 @@ const Categories = () => {
             <p>Izaberite traktor koji odgovara vašim potrebama</p>
           </div>
         </div>
-        <div className='cat-stoc' onClick={() => router.push('/stocarstvo')}>
+        <div className='cat-stoc' onClick={() => router.push('/stočarstvo')}>
           <Image
             src={StocImg}
             alt='Stocarstvo Banner'
@@ -57,7 +57,7 @@ const Categories = () => {
             <p>Izaberite iz naše ponude mašina namenjene ratarstvu</p>
           </div>
         </div>
-        <div className='cat-voc' onClick={() => router.push('/vocarstvo')}>
+        <div className='cat-voc' onClick={() => router.push('/voćarstvo')}>
           <Image
             src={VocImg}
             alt='Vocarstvo Banner'
