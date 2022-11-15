@@ -58,12 +58,12 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* <div className='page-kontakt'>
-              <h4>Kontakt</h4>
-              <Link href='/kontakt'>Kako doći do nas</Link>
+            <div className='page-kontakt'>
+              <h4>Rezervni delovi</h4>
+              <Link href='/rezervni-delovi'>Originalni rezervni delovi</Link>
             </div>
 
-            <div className='prodavnica'>
+            {/*<div className='prodavnica'>
               <h4>Prodavnica</h4>
               <Link href='/rezervni-delovi'>
                 Poručite rezervne delove iz naše online prodavnice

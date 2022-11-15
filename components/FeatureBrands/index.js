@@ -3,11 +3,17 @@ import React from 'react'
 
 import Carraro from './../../public/images/banners/carraro.jpeg'
 import Deere from './../../public/images/banners/jd.webp'
+import { useRouter } from 'next/router'
 
 const FeatureBrands = () => {
+  const router = useRouter()
+
   return (
     <div className='brand-wrapper'>
-      <div className='brand-jd'>
+      <div
+        className='brand-jd'
+        onClick={() => router.push('/traktori/john-deere')}
+      >
         <Image
           src={Deere}
           alt='John Deere Banner'
@@ -23,7 +29,10 @@ const FeatureBrands = () => {
           </p>
         </div>
       </div>
-      <div className='brand-carr'>
+      <div
+        className='brand-carr'
+        onClick={() => router.push('/traktori/carraro')}
+      >
         <Image
           src={Carraro}
           alt='Carraro Banner'
