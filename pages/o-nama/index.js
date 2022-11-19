@@ -4,7 +4,7 @@ import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
 import Navigation from '../../components/Navigation'
 import MainLayout from './../../layout/MainLayout'
-
+import Loader from '../../components/Loader'
 import OnamaBanner from './../../public/images/banners/about.jpg'
 
 const ONama = () => {
@@ -35,6 +35,7 @@ const ONama = () => {
         <meta property='og:site_name' content='Jugometal Svilajnac' />
         <meta />
       </Head>
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />

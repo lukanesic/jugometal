@@ -6,6 +6,7 @@ import Navigation from './../../components/Navigation'
 import KorpaBanner from './../../public/images/banners/korpa.jpg'
 import CartContent from '../../components/CartContent'
 import Order from '../../components/Order'
+import Loader from '../../components/Loader'
 
 const Checkout = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const Checkout = () => {
       {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
       <meta property='og:site_name' content='Jugometal Svilajnac' />
       <meta />
-
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />

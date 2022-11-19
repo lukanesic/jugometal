@@ -6,6 +6,7 @@ import MainLayout from './../../layout/MainLayout'
 import Contact from './../../public/images/banners/korpa2.jpg'
 import Head from 'next/head'
 import Navigation from '../../components/Navigation'
+import Loader from '../../components/Loader'
 
 import { BsFillTelephoneFill } from 'react-icons/bs'
 
@@ -36,6 +37,7 @@ const Kontakt = () => {
         {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
         <meta property='og:site_name' content='Jugometal Svilajnac' />
       </Head>
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />

@@ -4,6 +4,7 @@ import Logo from '../../components/Logo'
 import MainLayout from './../../layout/MainLayout'
 import Navigation from './../../components/Navigation'
 import FinansBanner from './../../public/images/banners/finance.jpg'
+import Loader from '../../components/Loader'
 
 const Finansiranje = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const Finansiranje = () => {
       {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
       <meta property='og:site_name' content='Jugometal Svilajnac' />
       <meta />
-
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />

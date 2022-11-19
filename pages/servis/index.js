@@ -6,6 +6,7 @@ import MainLayout from './../../layout/MainLayout'
 import ServisBanner from './../../public/images/banners/servis2.jpg'
 import Head from 'next/head'
 import Navigation from '../../components/Navigation'
+import Loader from '../../components/Loader'
 
 const Servis = () => {
   useEffect(() => {
@@ -34,7 +35,7 @@ const Servis = () => {
         {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
         <meta property='og:site_name' content='Jugometal Svilajnac' />
       </Head>
-
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />
