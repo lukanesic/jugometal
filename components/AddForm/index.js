@@ -16,6 +16,8 @@ const AddForm = () => {
   const spec3 = useRef()
   const spec4 = useRef()
   const spec5 = useRef()
+  const mpcena = useRef()
+  const vpcena = useRef()
 
   const resetForm = () => {
     title.current.value = ''
@@ -31,6 +33,8 @@ const AddForm = () => {
     spec3.current.value = ''
     spec4.current.value = ''
     spec5.current.value = ''
+    mpcena.current.value = ''
+    vpcena.current.value = ''
 
     setTimeout(() => {
       setFeedback(false)
@@ -57,6 +61,8 @@ const AddForm = () => {
       spec3: spec3.current.value,
       spec4: spec4.current.value,
       spec5: spec5.current.value,
+      mpcena: +mpcena.current.value,
+      vpcena: +vpcena.current.value,
     }
 
     try {
@@ -83,85 +89,115 @@ const AddForm = () => {
 
   return (
     <form className='add-product-form' onSubmit={(e) => handleSubmit(e)}>
-      <label>Ime proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: Solis 60'
-        required
-        className='inputLabel'
-        ref={title}
-      />
+      <div className='specs'>
+        <div>
+          <label>
+            Ime proizvoda{' '}
+            <span>
+              <span>*</span>
+            </span>
+          </label>
+          <input
+            type='text'
+            placeholder='Primer: Solis 60'
+            required
+            className='inputLabel'
+            ref={title}
+          />
+        </div>
 
-      <label>Kategorija proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: traktori / stocarstvo / ratarstvo (obavezno malim slovima)'
-        required
-        className='inputLabel'
-        ref={category}
-      />
+        <div>
+          <label>
+            Kategorija proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Primer: traktori / stocarstvo / ratarstvo (obavezno malim slovima)'
+            required
+            className='inputLabel'
+            ref={category}
+          />
+        </div>
 
-      <label>Podkategorija proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: solis / balirke / motalice (obavezno malim slovima)'
-        required
-        className='inputLabel'
-        ref={subcategory}
-      />
+        <div>
+          <label>
+            Podkategorija proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Primer: solis / balirke / motalice (obavezno malim slovima)'
+            required
+            className='inputLabel'
+            ref={subcategory}
+          />
+        </div>
 
-      <label>Link Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Primer: solis-60 (obavezno malim slovima i odvajanje reci - linijom)'
-        required
-        className='inputLabel'
-        ref={url}
-      />
+        <div>
+          <label>
+            Link Proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Primer: solis-60 (obavezno malim slovima i odvajanje reci - linijom)'
+            required
+            className='inputLabel'
+            ref={url}
+          />
+        </div>
 
-      <label>Slika Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Slika je link koji dolazi sa oficijalne stranice proizvoda koji se ubacuje'
-        required
-        className='inputLabel'
-        ref={image}
-      />
+        <div>
+          <label>
+            Slika Proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Slika je link koji dolazi sa oficijalne stranice proizvoda koji se ubacuje'
+            required
+            className='inputLabel'
+            ref={image}
+          />
+        </div>
 
-      <label>Opis Proizvoda</label>
-      <input
-        type='text'
-        placeholder='Opis proizvoda do 15 reci'
-        required
-        className='inputLabel'
-        ref={description}
-      />
+        <div>
+          <label>
+            Opis Proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Opis proizvoda do 15 reci'
+            required
+            className='inputLabel'
+            ref={description}
+          />
+        </div>
+      </div>
 
       <label>Veci opis Proizvoda</label>
       <input
         type='text'
         placeholder='Opis proizvoda do 30 reci'
-        required
         className='inputLabel'
         ref={about}
       />
 
-      <label>Kljucne reci proizvoda</label>
-      <input
-        type='text'
-        placeholder='Uneti 5-6 kljucne reci proizvoda (ime, kategoriju, podkategoriju) i odvajati zarezom!'
-        required
-        className='inputLabel'
-        ref={keyWords}
-      />
-
       <div className='specs'>
+        <div>
+          <label>
+            Kljucne reci proizvoda <span>*</span>
+          </label>
+          <input
+            type='text'
+            placeholder='Uneti 5-6 kljucne reci proizvoda (ime, kategoriju, podkategoriju) i odvajati zarezom!'
+            required
+            className='inputLabel'
+            ref={keyWords}
+          />
+        </div>
         <div>
           <label>Specifikacija br.1</label>
           <input
             type='text'
             placeholder='Uneti jednu tehnicku karakteristiku modela'
-            required
             className='inputLabel'
             ref={spec1}
           />
@@ -171,7 +207,6 @@ const AddForm = () => {
           <input
             type='text'
             placeholder='Uneti jednu tehnicku karakteristiku modela'
-            required
             className='inputLabel'
             ref={spec2}
           />
@@ -181,7 +216,6 @@ const AddForm = () => {
           <input
             type='text'
             placeholder='Uneti jednu tehnicku karakteristiku modela'
-            required
             className='inputLabel'
             ref={spec3}
           />
@@ -191,7 +225,6 @@ const AddForm = () => {
           <input
             type='text'
             placeholder='Uneti jednu tehnicku karakteristiku modela'
-            required
             className='inputLabel'
             ref={spec4}
           />
@@ -201,9 +234,26 @@ const AddForm = () => {
           <input
             type='text'
             placeholder='Uneti jednu tehnicku karakteristiku modela'
-            required
             className='inputLabel'
             ref={spec5}
+          />
+        </div>
+        <div>
+          <label>MP cena</label>
+          <input
+            type='text'
+            placeholder='Maloprodajna cena (samo za delove)'
+            className='inputLabel'
+            ref={mpcena}
+          />
+        </div>
+        <div>
+          <label>VP cena</label>
+          <input
+            type='text'
+            placeholder='Velikoprodajna cena (samo za delove)'
+            className='inputLabel'
+            ref={vpcena}
           />
         </div>
       </div>

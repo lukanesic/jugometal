@@ -2,13 +2,13 @@
   display: none;
 
   @include Laptops() {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     display: block;
   }
 
   @include HiDPI() {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     display: block;
   }

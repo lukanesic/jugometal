@@ -59,20 +59,22 @@ const Footer = () => {
             </div>
 
             <div className='page-kontakt'>
-              <h4>Rezervni delovi</h4>
-              <Link href='/rezervni-delovi'>Originalni rezervni delovi</Link>
+              <h4>Kontakt</h4>
+              <Link href='/kontakt'>Kontaktirajte nas</Link>
             </div>
 
-            {/*<div className='prodavnica'>
-              <h4>Prodavnica</h4>
-              <Link href='/rezervni-delovi'>
-                Poručite rezervne delove iz naše online prodavnice
+            {/* <div className='prodavnica'>
+              <h4>Rezervni delovi</h4>
+              <Link href='/delovi'>
+                Poručite originalne rezervne delove iz naše online prodavnice
               </Link>
             </div> */}
 
-            <div className='page-akcija' style={{ opacity: '0' }}>
-              <h4>Akcija</h4>
-              <p>Budite u toku</p>
+            <div className='page-akcija'>
+              <h4>Rezervni delovi</h4>
+              <Link href='/delovi'>
+                Poručite originalne rezervne delove iz naše online prodavnice
+              </Link>
             </div>
           </div>
         </div>

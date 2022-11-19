@@ -5,11 +5,12 @@ import Link from 'next/link'
 const AddToCartSide = ({
   show,
   setShow,
-  name,
+  title,
   price,
   image,
-  collection,
-  description1,
+  category,
+  subcategory,
+  about,
 }) => {
   useEffect(() => {
     if (show) {
@@ -53,8 +54,8 @@ const AddToCartSide = ({
                 {/* <img src={image} alt={name} /> */}
 
                 <div className='add-cart-p-i-c'>
-                  <h2>{name}</h2>
-                  <h3>Collection : {collection}</h3>
+                  <h2>{title}</h2>
+                  <h3>{category}</h3>
                 </div>
               </div>
               <div className='add-cart-container'>
@@ -62,7 +63,7 @@ const AddToCartSide = ({
                   <button className='black'>View Cart</button>
                 </Link>
                 <button className='white' onClick={() => setShow(!show)}>
-                  Keep Shopping
+                  Nastavite sa kupovinom
                 </button>
               </div>
             </div>

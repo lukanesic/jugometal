@@ -5,6 +5,7 @@ import MainLayout from './../../layout/MainLayout'
 
 import ServisBanner from './../../public/images/banners/servis2.jpg'
 import Head from 'next/head'
+import Navigation from '../../components/Navigation'
 
 const Servis = () => {
   useEffect(() => {
@@ -20,20 +21,23 @@ const Servis = () => {
 
   return (
     <>
-      <title>Servis - Jugometal</title>
-      <meta property='og:title' content='Servis - Jugometal' />
-      <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <meta
-        name='description'
-        property='og:description'
-        content='Traktori, priključne mašine - Traktori i poljoprivredne mašine domaćih proizvođača IMT i IMR, Solis, Zetor, Čelmak kao i svetski poznatog Massey Fergusona. Prodaja priključnih mašina i servisiranje.'
-      />
-      {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
-      <meta property='og:site_name' content='Jugometal Svilajnac' />
-      <meta />
+      <Head>
+        <title>Servis - Jugometal</title>
+        <meta property='og:title' content='Servis - Jugometal' />
+        <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta
+          name='description'
+          property='og:description'
+          content='Traktori, priključne mašine - Traktori i poljoprivredne mašine domaćih proizvođača IMT i IMR, Solis, Zetor, Čelmak kao i svetski poznatog Massey Fergusona. Prodaja priključnih mašina i servisiranje.'
+        />
+        {/* <meta property='og:url' content='Ovde se vracas posle i stavljas domen https://jugometal.com' /> */}
+        <meta property='og:site_name' content='Jugometal Svilajnac' />
+      </Head>
+
       <MainLayout>
         <Logo />
+        <Navigation />
         <PageBanner
           src={ServisBanner}
           alt={'Servis Banner'}

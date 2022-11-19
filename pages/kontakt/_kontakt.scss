@@ -1,0 +1,123 @@
+.kontakt {
+  @include Pads() {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @include Pads() {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 800px;
+    margin: 3rem auto;
+    justify-content: space-between;
+  }
+
+  @include PadsPro() {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 800px;
+    margin: 3rem auto;
+    justify-content: space-between;
+  }
+
+  @include Laptops() {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 1200px;
+    margin: 3rem auto;
+    justify-content: space-between;
+  }
+
+  @include HiDPI() {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 1200px;
+    margin: 3rem auto;
+
+    justify-content: space-between;
+  }
+  .kontakt-container {
+    margin: 0rem 1rem;
+    padding: 2rem 0rem;
+    border-bottom: 1px solid #cecece;
+
+    @include Pads() {
+      border-bottom: unset;
+    }
+
+    @include PadsPro() {
+      border-bottom: unset;
+    }
+
+    @include Laptops() {
+      border-bottom: unset;
+    }
+
+    @include HiDPI() {
+      border-bottom: unset;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      text-transform: uppercase;
+      color: $red;
+
+      @include PadsPro() {
+        font-size: 1.5rem;
+      }
+
+      @include Laptops() {
+        font-size: 1.5rem;
+      }
+
+      @include HiDPI() {
+        font-size: 1.5rem;
+      }
+    }
+
+    h4 {
+      margin: 0.5rem 0;
+      color: #282828;
+
+      @include PadsPro() {
+        font-size: 1.1rem;
+      }
+
+      @include Laptops() {
+        font-size: 1.1rem;
+      }
+      @include HiDPI() {
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #282828;
+      margin: 0.25rem 0;
+    }
+
+    .address {
+      margin: 1rem 0;
+    }
+
+    .country {
+      margin: 1rem 0;
+    }
+
+    .phone {
+      p {
+        margin: 0.5rem 0;
+        span {
+          color: $red;
+          margin-right: 1rem;
+          font-weight: bold;
+        }
+      }
+
+      .mail {
+        padding-top: 1rem;
+      }
+    }
+  }
+}

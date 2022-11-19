@@ -39,10 +39,10 @@ const Small = ({
       </div>
 
       <div className='sm-nav-li'>
-        {/* <AiOutlineShoppingCart
+        <AiOutlineShoppingCart
           className='sm-i'
           onClick={() => setOpenTopC(!openTopC)}
-        /> */}
+        />
 
         <BsSearch className='sm-i' onClick={() => setOpenSearch(!openSearch)} />
 

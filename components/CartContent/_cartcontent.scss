@@ -1,0 +1,410 @@
+.cart-ctr {
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+
+  @include PadsPro() {
+    max-width: 1000px;
+  }
+
+  @include Laptops() {
+    max-width: 1000px;
+  }
+
+  @include HiDPI() {
+    max-width: 1000px;
+  }
+
+  .hdgns {
+    margin-top: -2rem !important;
+
+    @include Pads() {
+      margin-top: 0 !important;
+    }
+
+    @include PadsPro() {
+      margin-top: 0 !important;
+    }
+
+    @include Laptops() {
+      margin-top: 0 !important;
+    }
+
+    @include HiDPI() {
+      margin-top: 0 !important;
+    }
+  }
+
+  .cnt-ctr {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: 1rem 0;
+
+    @include Pads() {
+      padding: 1rem 0;
+      margin: 1rem 0;
+    }
+
+    @include PadsPro() {
+      padding: 1rem 0;
+      margin: 1rem 0;
+    }
+
+    @include Laptops() {
+      padding: 1rem 0;
+      margin: 1rem 0;
+    }
+
+    @include HiDPI() {
+      padding: 1rem 0;
+      margin: 1rem 0;
+    }
+
+    .no-hdng-left {
+      display: none;
+
+      @include Pads() {
+        display: block;
+      }
+
+      @include PadsPro() {
+        display: block;
+      }
+
+      @include Laptops() {
+        display: block;
+      }
+
+      @include HiDPI() {
+        display: block;
+      }
+    }
+
+    .left {
+      width: 50%;
+
+      .cart-prod {
+        display: flex;
+        flex-direction: row;
+
+        @include Pads() {
+          align-items: center;
+        }
+
+        @include PadsPro() {
+          align-items: center;
+        }
+
+        @include Laptops() {
+          align-items: center;
+        }
+
+        @include HiDPI() {
+          align-items: center;
+        }
+
+        .close-icon {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          display: none;
+          cursor: pointer;
+          border: 1px solid #cecece;
+          border-radius: 50%;
+          place-content: center;
+          padding: 0.5rem;
+          transition: border 0.4s ease;
+
+          @include Pads() {
+            display: grid;
+          }
+
+          @include PadsPro() {
+            display: grid;
+          }
+
+          @include Laptops() {
+            display: grid;
+          }
+
+          @include HiDPI() {
+            display: grid;
+          }
+        }
+
+        .close-icon:hover {
+          border: 1px solid #282828;
+        }
+
+        .cart-img {
+          width: 80px;
+          height: 80px;
+          position: relative;
+          margin-right: 0.8rem;
+
+          @include Pads() {
+            width: 110px;
+            height: 110px;
+          }
+
+          @include PadsPro() {
+            width: 110px;
+            height: 110px;
+          }
+
+          @include Laptops() {
+            width: 110px;
+            height: 110px;
+          }
+          @include HiDPI() {
+            width: 110px;
+            height: 110px;
+          }
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          @include Pads() {
+            width: 50%;
+          }
+
+          @include PadsPro() {
+            width: 50%;
+          }
+
+          @include Laptops() {
+            width: 50%;
+          }
+
+          @include HiDPI() {
+            width: 50%;
+          }
+
+          h5 {
+            color: #282828;
+
+            @include Pads() {
+              font-size: 1.2rem;
+            }
+            @include PadsPro() {
+              font-size: 1.2rem;
+            }
+
+            @include Laptops() {
+              font-size: 1.2rem;
+            }
+
+            @include HiDPI() {
+              font-size: 1.2rem;
+            }
+          }
+
+          h6 {
+            color: #282828be;
+            font-weight: 400;
+
+            @include Pads() {
+              margin: 0.8rem 0;
+              font-size: 1rem;
+            }
+            @include PadsPro() {
+              margin: 0.8rem 0;
+              font-size: 1rem;
+            }
+            @include Laptops() {
+              margin: 0.8rem 0;
+              font-size: 1rem;
+            }
+            @include HiDPI() {
+              margin: 0.8rem 0;
+              font-size: 1rem;
+            }
+          }
+
+          h4 {
+            font-weight: 400;
+            font-size: 0.9rem;
+          }
+
+          .price {
+            @include Pads() {
+              display: none;
+            }
+
+            @include PadsPro() {
+              display: none;
+            }
+
+            @include Laptops() {
+              display: none;
+            }
+
+            @include HiDPI() {
+              display: none;
+            }
+          }
+
+          .about {
+            display: none;
+
+            @include Pads() {
+              display: block;
+            }
+
+            @include PadsPro() {
+              display: block;
+            }
+
+            @include Laptops() {
+              display: block;
+            }
+
+            @include HiDPI() {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .right-small {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+
+      @include Pads() {
+        display: none;
+      }
+
+      @include PadsPro() {
+        display: none;
+      }
+
+      @include Laptops() {
+        display: none;
+      }
+      @include HiDPI() {
+        display: none;
+      }
+
+      .qty-ctr {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #cecece;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100px;
+
+        .qty {
+          font-size: 0.8rem;
+          color: #282828a1;
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #282828a2;
+        border-bottom: 1px solid #cecece;
+        cursor: pointer;
+      }
+    }
+
+    .right-lg {
+      width: 50%;
+
+      grid-template-columns: repeat(3, 33.3%);
+      justify-content: space-between;
+      align-items: center;
+      display: none;
+
+      @include Pads() {
+        display: grid;
+      }
+
+      @include PadsPro() {
+        display: grid;
+      }
+
+      @include Laptops() {
+        display: grid;
+      }
+
+      @include HiDPI() {
+        display: grid;
+      }
+
+      .qty-ctr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #cecece;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+        width: 50%;
+        margin: 0 auto;
+
+        .qty {
+          font-size: 0.8rem;
+          color: #282828a1;
+          outline: none;
+        }
+      }
+
+      h4,
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .continue-shop {
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: $red;
+    cursor: pointer;
+    font-weight: 500;
+    width: f;
+  }
+}
+
+.empty-cart {
+  height: 400px;
+  display: grid;
+  place-content: center;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #282828a1;
+  }
+
+  button {
+    max-width: 300px;
+    min-width: 200px;
+    background: rgba($color: $red, $alpha: 0.8);
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.8rem 0;
+    margin: 0.2rem auto;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  button:hover {
+    background: $red;
+  }
+}

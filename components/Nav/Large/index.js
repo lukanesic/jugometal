@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 import { FaFacebookF } from 'react-icons/fa'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import { BsSearch } from 'react-icons/bs'
 
 import { useSession, signOut } from 'next-auth/react'
 
-const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
+const Large = ({
+  openSearch,
+  setOpenSearch,
+  openDmenu,
+  setOpenDmenu,
+  open,
+  setOpen,
+}) => {
   // simulacija
   const [isLogged, setIsLogged] = useState(false)
 
@@ -74,19 +82,19 @@ const Large = ({ openSearch, setOpenSearch, openDmenu, setOpenDmenu }) => {
               Menu
             </h3> */}
 
-            <h3
+            {/* <h3
               style={{
                 fontWeight: '300',
                 fontSize: '.9rem',
               }}
             >
               Kneza Miloša 81, Svilajnac
-            </h3>
+            </h3> */}
 
-            {/* <AiOutlineShoppingCart
+            <AiOutlineShoppingCart
               className='nav-icon'
               onClick={() => setOpen(!open)}
-            /> */}
+            />
           </div>
         </div>
       </div>

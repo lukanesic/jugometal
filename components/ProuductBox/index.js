@@ -3,7 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const ProductBox = ({ link, title, image, id, placeholder, description }) => {
+const ProductBox = ({
+  link,
+  title,
+  image,
+  id,
+  placeholder,
+  description,
+  category,
+}) => {
   return (
     <motion.div className='home-box'>
       {link && (
@@ -16,7 +24,7 @@ const ProductBox = ({ link, title, image, id, placeholder, description }) => {
                 alt={title}
                 layout='fill'
                 objectPosition='center'
-                objectFit='contain'
+                objectFit={`${category === 'delovi' ? 'cover' : 'contain'}`}
               />
             </div>
           )}

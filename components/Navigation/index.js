@@ -5,20 +5,20 @@ const Navigation = () => {
   return (
     <div className='d-nav'>
       <ul>
-        <Link href='/traktori'>
-          <li>Traktori</li>
+        <Link href='/delovi'>
+          <li>Rezervni delovi</li>
         </Link>
-        <Link href='/ratarstvo'>
-          <li>Ratarstvo</li>
+        <Link href='/o-nama'>
+          <li>O nama</li>
         </Link>
-        <Link href='/stočarstvo'>
-          <li>Stočarstvo</li>
+        <Link href='/finansiranje'>
+          <li>Finansiranje</li>
         </Link>
-        <Link href='/voćarstvo'>
-          <li>Voćarstvo</li>
+        <Link href='/servis'>
+          <li>Servis</li>
         </Link>
-        <Link href='/transport'>
-          <li>Transport</li>
+        <Link href='/kontakt'>
+          <li>Kontakt</li>
         </Link>
       </ul>
     </div>

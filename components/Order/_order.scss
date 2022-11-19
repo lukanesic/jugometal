@@ -1,0 +1,107 @@
+.order {
+  margin: 4rem auto;
+  padding: 1rem 1rem 3rem;
+
+  @include PadsPro() {
+    max-width: 1000px;
+  }
+
+  @include Laptops() {
+    max-width: 1000px;
+  }
+
+  @include HiDPI() {
+    max-width: 1000px;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #282828;
+    margin-bottom: 1rem;
+  }
+
+  .order-form-ctr {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    @include Pads() {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include PadsPro() {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include Laptops() {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include HiDPI() {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      @include Pads() {
+        width: 49%;
+      }
+
+      @include PadsPro() {
+        width: 49%;
+      }
+
+      @include Laptops() {
+        width: 49%;
+      }
+
+      @include HiDPI() {
+        width: 49%;
+      }
+
+      label {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-weight: 500;
+
+        span {
+          font-weight: 700;
+          color: $red;
+        }
+      }
+
+      input {
+        padding: 0.75rem;
+        border-radius: 10px;
+        border: 1px solid #cecece;
+        background: #fafafa;
+        transition: 0.4s ease all;
+        outline: none;
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+
+      input:focus {
+        border: 1px solid #282828;
+      }
+
+      input::placeholder {
+        color: #282828;
+      }
+
+      .inputLabelError {
+        border: 1px solid #d80000;
+      }
+
+      .inputLabelError:focus {
+        border: 1px solid #ff0000;
+      }
+    }
+  }
+}

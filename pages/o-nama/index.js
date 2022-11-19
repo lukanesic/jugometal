@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useEffect } from 'react'
 import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
+import Navigation from '../../components/Navigation'
 import MainLayout from './../../layout/MainLayout'
 
 import OnamaBanner from './../../public/images/banners/about.jpg'
@@ -36,6 +37,7 @@ const ONama = () => {
       </Head>
       <MainLayout>
         <Logo />
+        <Navigation />
         <PageBanner
           src={OnamaBanner}
           alt={'About Banner'}

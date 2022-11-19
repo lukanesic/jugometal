@@ -1,8 +1,15 @@
 .add-product-form {
   margin: 3rem 0;
+
   label {
     font-size: 1rem;
     margin: 1rem 0;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+      color: $red;
+    }
   }
 
   input {

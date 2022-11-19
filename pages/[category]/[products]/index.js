@@ -80,6 +80,7 @@ const Products = ({ data, path }) => {
                 image={product.image}
                 key={product._id}
                 description={product.description}
+                category={category}
               />
             ))}
           </div>

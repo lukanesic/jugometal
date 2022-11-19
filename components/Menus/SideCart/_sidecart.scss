@@ -1,5 +1,5 @@
 .dropback {
-  height: 100vh;
+  height: 100%;
   z-index: 10;
   position: absolute;
   top: 0;
@@ -26,7 +26,7 @@
 }
 
 .menu {
-  height: 100vh;
+  height: 110vh;
   z-index: 25;
   position: absolute;
   top: 0;
@@ -71,28 +71,52 @@
     text-transform: uppercase;
     margin-bottom: 2rem;
 
-    h2 {
-      font-size: 3rem;
-      text-align: center;
-      // cursor: not-allowed;
-    }
+    .side-cart-container {
+      width: 300px;
+      margin: 0 auto;
 
-    button {
-      width: 100%;
-      background: #282828;
-      text-transform: uppercase;
-      color: #fff;
-      padding: 0.8rem 0;
-      margin: 0.2rem 0;
-      font-size: 1.2rem;
-      border: none;
-      cursor: pointer;
-    }
+      h4 {
+        font-size: 2rem;
+        text-align: center;
 
-    .white {
-      color: #282828;
-      background: #fff;
-      border: 1px solid #282828;
+        // cursor: not-allowed;
+      }
+
+      h5 {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      button {
+        width: 300px;
+        background: rgba($color: $red, $alpha: 0.8);
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0.8rem 0;
+        margin: 0.2rem 0;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s ease;
+      }
+
+      .black:hover {
+        background: $red;
+      }
+
+      .white {
+        color: #282828;
+        background: transparent;
+        transition: 0.5s ease;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: none;
+      }
+
+      .white:hover {
+        color: #000;
+      }
     }
   }
 }

@@ -8,16 +8,23 @@ import { fetchAll, fetchProduct } from '../../../../lib/data'
 
 import ContactForm from '../../../../components/ContactForm'
 
+import { useDispatch } from 'react-redux'
+
 import { useSession } from 'next-auth/react'
 import Head from 'next/head'
+import AddToCartSide from '../../../../components/Menus/AddToCartSide'
+
+import { capitalizeFirstLetter, formatNumber } from './../../../../lib/func'
+import { addToCart } from '../../../../redux/slices/cartSlice'
 
 const Product = ({ path, data }) => {
   const { data: session, status } = useSession()
   const router = useRouter()
-
+  const dispatch = useDispatch()
   const product = data[0]
 
   const [remove, setRemove] = useState('Izbrišite proizvod')
+  const [showSideCart, setShowSideCart] = useState(false)
 
   useEffect(() => {
     const body = document.querySelector('#__next')
@@ -46,6 +53,15 @@ const Product = ({ path, data }) => {
     }
   }
 
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+    router.push('/cart')
+    // navigate to cart
+    // if (isLarge) {
+    //   setShowSideCart(!showSideCart)
+    // }
+  }
+
   return (
     <>
       <Head>
@@ -71,7 +87,9 @@ const Product = ({ path, data }) => {
                 src={product.image}
                 alt={product.title}
                 layout='fill'
-                objectFit='contain'
+                objectFit={`${
+                  product.category === 'delovi' ? 'cover' : 'contain'
+                }`}
                 objectPosition='center'
               />
             </div>
@@ -85,22 +103,61 @@ const Product = ({ path, data }) => {
                   </button>
                 </>
               )}
+
               {/* <h4>{capitalizeFirstLetter(product.category)}</h4> */}
 
-              <p>{product.about}</p>
+              {/* ukoliko je categorija === delovi, skloni opis jer ga nece biti vrv. Skloni i sa mongosea */}
+              {/* {product.category !== 'delovi' && <p>{product.about}</p>} */}
 
-              <ul>
-                <li>{product.spec1}</li>
-                <li>{product.spec2}</li>
-                <li>{product.spec3}</li>
-                <li>{product.spec4}</li>
-                <li>{product.spec5}</li>
-              </ul>
+              {product.category !== 'delovi' && (
+                <>
+                  <p>{product.about}</p>
+                  <ul>
+                    <li>{product.spec1}</li>
+                    <li>{product.spec2}</li>
+                    <li>{product.spec3}</li>
+                    <li>{product.spec4}</li>
+                    <li>{product.spec5}</li>
+                  </ul>
+                </>
+              )}
+
+              {/* Ako je categorija === rezervni delovi ubaci dodaj u korpu i cenu */}
+              {/* Drugacije uradi kad si na kompu drugacije na telefonu zbog animacije koja je sjebana */}
+              {product.category === 'delovi' && (
+                <div className='delovi-product-info'>
+                  <p>{product.description}</p>
+                  <h5>Rezervni {capitalizeFirstLetter(product.category)}</h5>
+                  <h4>
+                    <span>MP Cena: </span>
+                    {product && formatNumber(product.mpcena)} din
+                  </h4>
+                  <h4>
+                    <span>VP Cena: </span>
+                    {product && formatNumber(product.vpcena)} din
+                  </h4>
+
+                  <button onClick={() => handleAddToCart(product)}>
+                    Dodaj u korpu
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
 
         <ContactForm product={{ title: product.title, id: product._id }} />
+
+        <AddToCartSide
+          title={product.title}
+          price={product.price}
+          subcategory={product.subcategory}
+          category={product.category}
+          show={showSideCart}
+          setShow={setShowSideCart}
+          image={product.image}
+          about={product.about}
+        />
       </MainLayout>
     </>
   )

@@ -58,22 +58,21 @@ const SideCart = ({ open, setOpen }) => {
               <div className='side-cart-container'>
                 {/* Napravi uslov gde neces moci da udjes na cart link ako imas 0 items in cart */}
                 {/* <h2 style={{ marginBottom: '2rem' }}>{cartTotalQuantity}</h2> */}
-                <h2 style={{ marginBottom: '2rem' }}>
-                  {cartTotalQuantity > 0 && cartTotalQuantity}
-                </h2>
-                <h3>
+                <h4>{cartTotalQuantity > 0 && cartTotalQuantity}</h4>
+                <h5>
                   {cartTotalQuantity === 0
-                    ? 'Your cart is empty'
+                    ? 'Vaša korpa je prazna'
                     : cartTotalQuantity > 1
-                    ? 'Items added to your cart'
-                    : 'Item added to your cart'}
-                </h3>
+                    ? 'Proizvoda u korpi'
+                    : 'Proizvod dodat u korpu'}
+                </h5>
+
                 <Link href='/cart'>
-                  <button className='black'>View Cart</button>
+                  <button className='black'>Pogledajte korpu</button>
                 </Link>
 
                 <button className='white' onClick={() => setOpen(!open)}>
-                  Keep Shopping
+                  Nastavite sa kupovinom
                 </button>
               </div>
             </div>

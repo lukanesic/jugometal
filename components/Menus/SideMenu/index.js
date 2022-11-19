@@ -62,6 +62,9 @@ const SideMenu = ({ open, setOpen }) => {
               <Link href='/transport'>
                 <li onClick={() => setOpen(!open)}>Transport</li>
               </Link>
+              <Link href='/delovi'>
+                <li onClick={() => setOpen(!open)}>Rezervni delovi</li>
+              </Link>
             </div>
 
             <div className='side-menu-content'>
@@ -73,6 +76,9 @@ const SideMenu = ({ open, setOpen }) => {
               </Link>
               <Link href='/servis'>
                 <li onClick={() => setOpen(!open)}>Servis</li>
+              </Link>
+              <Link href='/kontakt'>
+                <li onClick={() => setOpen(!open)}>Kontakt</li>
               </Link>
             </div>
 

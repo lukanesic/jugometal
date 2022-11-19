@@ -12,7 +12,6 @@ const productSchema = mongoose.Schema(
     },
     about: {
       type: String,
-      required: true,
     },
     image: {
       type: String,
@@ -38,25 +37,26 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    mpcena: {
+      type: Number,
+    },
+    vpcena: {
+      type: Number,
+    },
     spec1: {
       type: String,
-      required: true,
     },
     spec2: {
       type: String,
-      required: true,
     },
     spec3: {
       type: String,
-      required: true,
     },
     spec4: {
       type: String,
-      required: true,
     },
     spec5: {
       type: String,
-      required: true,
     },
     featured: Boolean,
   },

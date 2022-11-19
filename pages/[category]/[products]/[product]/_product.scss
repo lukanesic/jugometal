@@ -1,6 +1,7 @@
 .product-container {
   padding: 1rem 1rem;
   margin: 0 auto;
+  margin-top: 1.5rem;
 
   @include Pads() {
     padding: 1rem 2rem;
@@ -12,6 +13,7 @@
     max-width: 1000px;
     grid-gap: 2rem;
     align-items: center;
+    margin-top: 0;
   }
 
   @include Laptops() {
@@ -20,6 +22,7 @@
     max-width: 1000px;
     grid-gap: 2rem;
     align-items: center;
+    margin-top: 0;
   }
 
   @include HiDPI() {
@@ -28,6 +31,7 @@
     max-width: 1200px;
     grid-gap: 2rem;
     align-items: center;
+    margin-top: 0;
   }
 
   .img-placeholder {
@@ -35,6 +39,7 @@
     position: relative;
     width: 280px;
     height: 260px;
+    // border: 1px solid red;
 
     @include PhonePro() {
       width: 350px;
@@ -64,15 +69,22 @@
   .p-info {
     margin: 2rem auto;
     z-index: 5;
+    // border: 1px solid red;
+
+    @include PadsPro() {
+      min-width: 450px;
+    }
 
     @include Laptops() {
       margin-top: 5rem;
       margin-right: -2rem;
+      min-width: 500px;
     }
 
     @include HiDPI() {
       margin-top: 5rem;
       margin-right: 4rem;
+      min-width: 500px;
     }
 
     h1 {
@@ -132,15 +144,42 @@
     }
 
     button {
-      background: #282828;
+      background: rgba($color: $red, $alpha: 0.8);
       color: #fff;
       padding: 0.8rem 1rem;
-      width: 100%;
+      width: 300px;
       text-transform: uppercase;
-      font-weight: 500;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      margin: 1rem 0;
       cursor: pointer;
       border: none;
+      transition: 0.5s ease;
+    }
+
+    button:hover {
+      background: $red;
+    }
+
+    .delovi-product-info {
+      p {
+        font-size: 1rem;
+      }
+
+      h5 {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+      }
+      h4 {
+        margin: 1.5rem 0;
+        font-size: 1.4rem;
+        color: #282828;
+        font-weight: 600;
+
+        span {
+          color: #2828289d;
+          font-weight: 500;
+        }
+      }
     }
   }
 }

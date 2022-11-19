@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import PageBanner from '../../components/Banners/PageBanner'
 import Logo from '../../components/Logo'
 import MainLayout from './../../layout/MainLayout'
-
+import Navigation from './../../components/Navigation'
 import FinansBanner from './../../public/images/banners/finance.jpg'
 
 const Finansiranje = () => {
@@ -34,6 +34,7 @@ const Finansiranje = () => {
 
       <MainLayout>
         <Logo />
+        <Navigation />
         <PageBanner
           h1={'Finansiranje'}
           p={'Obnovite poljoprivrednu mehanizaciju'}

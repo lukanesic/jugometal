@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 10;
   background-color: rgba(139, 139, 139, 0.4);
 
@@ -28,68 +28,51 @@
   place-content: center;
 
   .top-c-content {
-    width: fit-content;
+    width: 300px;
+    margin: 1rem auto;
 
-    h3 {
-      font-size: 0.9rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
+    h4 {
+      font-size: 1.3rem;
+      text-align: center;
 
-      @include PhonePro() {
-        font-size: 1.2rem;
-      }
+      // cursor: not-allowed;
+    }
 
-      @include Landscape() {
-        font-size: 0.8rem;
-        margin-bottom: 0.6rem;
-      }
-
-      @include Pads() {
-        font-size: 1.5rem;
-      }
-
-      span {
-        font-size: 1.5rem;
-
-        @include PhonePro() {
-          font-size: 1.9rem;
-        }
-
-        @include Pads() {
-          font-size: 2.2rem;
-        }
-      }
+    h5 {
+      text-align: center;
+      font-size: 1rem;
+      margin: 1rem 0;
     }
 
     button {
-      width: 100%;
-      background: #282828;
+      width: 250px;
+      background: rgba($color: $red, $alpha: 0.8);
       text-transform: uppercase;
       color: #fff;
       padding: 0.8rem 0;
-      margin: 0.2rem 0;
-      font-size: 0.7rem;
+      margin: 0.2rem auto;
+      display: block;
+      font-size: 0.8rem;
       border: none;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
 
-      @include PhonePro() {
-        font-size: 1rem;
-      }
-
-      @include Landscape() {
-        font-size: 0.6rem;
-        padding: 0.7rem 0;
-      }
-
-      @include Pads() {
-        font-size: 1rem;
-      }
+    .black:hover {
+      background: $red;
     }
 
     .white {
       color: #282828;
-      background: #fff;
-      border: 1px solid #282828;
+      background: transparent;
+      transition: 0.5s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    .white:hover {
+      color: #000;
     }
   }
 }

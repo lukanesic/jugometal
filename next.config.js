@@ -33,6 +33,8 @@ const nextConfig = {
       'www.sip.si',
       'www.inobrezice.com',
       'www.megametal.hr',
+      'jugometal.co.rs',
+      'firebasestorage.googleapis.com',
     ],
   },
 }

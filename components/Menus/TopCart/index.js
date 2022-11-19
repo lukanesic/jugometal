@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 const TopCart = ({ open, setOpen }) => {
   useEffect(() => {
@@ -18,6 +19,8 @@ const TopCart = ({ open, setOpen }) => {
       document.body.style.width = `auto`
     }
   }, [open])
+
+  const { cart, cartTotalQuantity } = useSelector((state) => state.cart)
 
   return (
     <AnimatePresence>
@@ -39,15 +42,21 @@ const TopCart = ({ open, setOpen }) => {
             transition={{ duration: 0.4, delay: 0.1 }}
           >
             <div className='top-c-content'>
-              <h3>
-                <span>Placeholder</span> Items added to your cart
-              </h3>
+              <h4>{cartTotalQuantity > 0 && cartTotalQuantity}</h4>
+              <h5>
+                {cartTotalQuantity === 0
+                  ? 'Vaša korpa je prazna'
+                  : cartTotalQuantity > 1
+                  ? 'Proizvoda u korpi'
+                  : 'Proizvod dodat u korpu'}
+              </h5>
+
               <Link href='/cart'>
-                <button className='black'>View Cart</button>
+                <button className='black'>Pogledajte korpu</button>
               </Link>
 
               <button className='white' onClick={() => setOpen(!open)}>
-                Keep Shopping
+                Nastavite sa kupovinom
               </button>
             </div>
           </motion.div>

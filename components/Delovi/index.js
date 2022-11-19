@@ -5,7 +5,7 @@ const Delovi = () => {
     <div className='delovi'>
       <div className='ponuda-headerr'>
         <h4>Rezervni delovi</h4>
-        <h5>Pozovite za više detalja</h5>
+        <h5>Naručite iz online prodavnice</h5>
         <p>
           Jugometal isporučuje originalne rezervne delove za servisiranje
           traktora i mašina u garantnom i postgarantnom periodu.
