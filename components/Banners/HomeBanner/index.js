@@ -10,6 +10,7 @@ const HomeBanner = () => {
       x: 0,
       transition: {
         duration: 0.75,
+        delay: 1.8,
         ease: 'easeOut',
         staggerChildren: 1,
         when: 'beforeChildren',

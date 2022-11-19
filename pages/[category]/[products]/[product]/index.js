@@ -16,6 +16,7 @@ import AddToCartSide from '../../../../components/Menus/AddToCartSide'
 
 import { capitalizeFirstLetter, formatNumber } from './../../../../lib/func'
 import { addToCart } from '../../../../redux/slices/cartSlice'
+import Loader from '../../../../components/Loader'
 
 const Product = ({ path, data }) => {
   const { data: session, status } = useSession()
@@ -72,6 +73,8 @@ const Product = ({ path, data }) => {
           content={`${product.description}`}
         />
       </Head>
+
+      <Loader />
       <MainLayout>
         {/* <Logo cls={'product-logo'} /> */}
         <Logo />
@@ -79,7 +82,7 @@ const Product = ({ path, data }) => {
           className='collection'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 2 }}
         >
           <div className='product-container'>
             <div className='img-placeholder'>

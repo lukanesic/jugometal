@@ -15,6 +15,7 @@ import Categories from '../components/Categories'
 import Offer from '../components/Offer'
 import FeatureBrands from '../components/FeatureBrands'
 import Rezervni from '../components/Rezervni'
+import Loader from '../components/Loader'
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function Home({ data }) {
         <meta property='og:site_name' content='Jugometal Svilajnac' />
         <meta />
       </Head>
-
+      <Loader />
       <MainLayout>
         <Logo />
         <Navigation />

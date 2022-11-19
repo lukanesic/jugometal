@@ -19,6 +19,7 @@ import { fetchAll, fetchSubcategory } from '../../../lib/data'
 import PageBanner from '../../../components/Banners/PageBanner'
 import Head from 'next/head'
 import Navigation from '../../../components/Navigation'
+import Loader from '../../../components/Loader'
 
 const Products = ({ data, path }) => {
   const category = removeDuplicates(data.map((sub) => sub.category)).toString()
@@ -47,6 +48,7 @@ const Products = ({ data, path }) => {
           content='Traktori, priključne mašine - Traktori i poljoprivredne mašine domaćih proizvođača IMT i IMR, Solis, Zetor, Čelmak kao i svetski poznatog Massey Fergusona. Prodaja priključnih mašina i servisiranje.'
         />
       </Head>
+      <Loader />
       <MainLayout>
         {/* <Logo cls={'product-logo'} /> */}
         <Logo />

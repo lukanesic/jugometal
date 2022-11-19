@@ -18,6 +18,7 @@ import PageBanner from './../../components/Banners/PageBanner'
 import Box from './../../components/Box'
 import { fetchAll, fetchCategory } from '../../lib/data'
 import Navigation from '../../components/Navigation'
+import Loader from '../../components/Loader'
 
 const Category = ({ path, data }) => {
   const subCategories = removeDuplicates(data.map((sub) => sub.subcategory))
@@ -34,6 +35,7 @@ const Category = ({ path, data }) => {
   }, [])
   return (
     <>
+      <Loader />
       <Head>
         <title>{`${capitalizeFirstLetter(path)}  - Jugometal`}</title>
         <meta
