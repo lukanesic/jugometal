@@ -1,5 +1,6 @@
 .cart-summary {
-  width: 100% h5 {
+  width: 100%;
+  h5 {
     font-size: 1.8rem;
     font-weight: 600;
     color: #282828;
@@ -10,15 +11,46 @@
     display: flex;
 
     .totalno-l {
-      width: 70%;
+      width: 60%;
+
+      @include Pads() {
+        width: 70%;
+      }
+
+      @include PadsPro() {
+        width: 70%;
+      }
+
+      @include Laptops() {
+        width: 70%;
+      }
+      @include HiDPI() {
+        width: 70%;
+      }
 
       p {
         margin: 1rem 0;
         border-bottom: 1px solid #cecece;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         color: #282828a4;
         font-weight: 500;
         padding: 0.5rem 0;
+
+        @include Pads() {
+          font-size: 1rem;
+        }
+
+        @include PadsPro() {
+          font-size: 1rem;
+        }
+
+        @include Laptops() {
+          font-size: 1rem;
+        }
+
+        @include HiDPI() {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -26,11 +58,27 @@
       p {
         margin: 1rem 0;
         border-bottom: 1px solid #cecece;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         color: #282828;
         font-weight: 800;
         padding: 0.5rem 0;
         text-align: right;
+
+        @include Pads() {
+          font-size: 1rem;
+        }
+
+        @include PadsPro() {
+          font-size: 1rem;
+        }
+
+        @include Laptops() {
+          font-size: 1rem;
+        }
+
+        @include HiDPI() {
+          font-size: 1rem;
+        }
       }
     }
   }

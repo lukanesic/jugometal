@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { BsSearch } from 'react-icons/bs'
@@ -8,7 +8,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import logo from './../../../public/images/jugometal-logo.png'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import SideMenu from '../../Menus/SideMenu'
+
+import { useSelector } from 'react-redux'
 
 const Small = ({
   openSideM,
@@ -19,6 +20,12 @@ const Small = ({
   setOpenSearch,
 }) => {
   const router = useRouter()
+  const { cartTotalQuantity } = useSelector((state) => state.cart)
+  const [domLoaded, setDomLoaded] = useState(false)
+
+  useEffect(() => {
+    setDomLoaded(true)
+  }, [])
 
   return (
     <nav className='sm-nav'>
@@ -39,10 +46,23 @@ const Small = ({
       </div>
 
       <div className='sm-nav-li'>
-        <AiOutlineShoppingCart
-          className='sm-i'
-          onClick={() => setOpenTopC(!openTopC)}
-        />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {domLoaded && (
+            <p
+              style={{
+                marginRight: '.2rem',
+                fontWeight: '500',
+                color: 'red',
+              }}
+            >
+              ( {cartTotalQuantity} )
+            </p>
+          )}
+          <AiOutlineShoppingCart
+            className='sm-i'
+            onClick={() => setOpenTopC(!openTopC)}
+          />
+        </div>
 
         <BsSearch className='sm-i' onClick={() => setOpenSearch(!openSearch)} />
 

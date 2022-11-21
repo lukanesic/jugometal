@@ -74,4 +74,21 @@
     grid-gap: 1rem;
     margin-top: 2rem;
   }
+
+  .dodaj-btn {
+    margin: 0rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-weight: '500';
+    border: 1px solid #cecece;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background: transparent;
+    transition: all 0.4s ease;
+  }
+
+  .dodaj-btn:hover {
+    background: #282828;
+    color: #cecece;
+  }
 }

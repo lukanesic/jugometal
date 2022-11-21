@@ -1,57 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
+import { formatNumber } from './../../lib/func'
 
-const Message = ({ item }) => {
-  // Ovo je imitacija da li je message procitana ili ne
-  // To dolazi sa baze
-
-  const {
-    name,
-    surname,
-    email,
-    phone,
-    message,
-    createdAt,
-    productTitle,
-    isRead,
-    _id,
-  } = item
-
-  // Mora da se napravi new date objekat pri pravljenju same inquire. Ne moze ovde lepo da se formatira datum. Jer je na americkom
-  const date = new Date(createdAt).toLocaleDateString()
-
-  const handleUpdate = async ({ value, id }) => {
-    const updateStatus = async () => {
-      await fetch('/api/inquire/modify', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ value, id }),
-      })
-    }
-
-    updateStatus()
-  }
-
+const RecievedOrder = ({ item }) => {
+  const date = new Date(item.createdAt).toLocaleDateString()
   return (
     <div className='message'>
       <div className='message-headers'>
         <h4>
-          {name} {surname}
+          {item.name} {item.surname}
         </h4>{' '}
-        <a href={`mailto:${email}`}>{email}</a>
-        <h4>{phone}</h4>
+        <a href={`mailto:${item.email}`}>{item.email}</a>
+        <h4>{item.phone}</h4>
+        <h4>{item.address}</h4>
       </div>
       <div className='customer-message'>
-        <h4>Proizvod: {productTitle}</h4>
-        <p>{message}</p>
+        <h4>Porudžbina: {item.productTitle}</h4>
+        <p>
+          Ukupno za plaćanje:{' '}
+          <span style={{ fontWeight: 'bold' }}>
+            {formatNumber(item.price)} RSD
+          </span>
+        </p>
       </div>
 
       <div className='message-footers'>
         <h4>{date}</h4>
 
-        {!isRead && (
+        {/* {!item.isRead && (
           <>
             <h4 style={{ color: 'red' }}>Status: Nije procitano</h4>
             <h4
@@ -63,7 +39,7 @@ const Message = ({ item }) => {
           </>
         )}
 
-        {isRead && (
+        {item.isRead && (
           <>
             <h4 style={{ color: 'green' }}>Status: Procitano</h4>
             <h4
@@ -73,17 +49,17 @@ const Message = ({ item }) => {
               Oznacite kao neprocitano
             </h4>
           </>
-        )}
+        )} */}
       </div>
       <div className='del'>
         <div className='ic'>
           {' '}
           <AiOutlineClose />
         </div>
-        <p>Obrisite poruku</p>
+        <p>Obrišite porudžbinu</p>
       </div>
     </div>
   )
 }
 
-export default Message
+export default RecievedOrder

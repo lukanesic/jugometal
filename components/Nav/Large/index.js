@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { FaFacebookF } from 'react-icons/fa'
@@ -7,6 +7,8 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 
 import { useSession, signOut } from 'next-auth/react'
+
+import { useSelector } from 'react-redux'
 
 const Large = ({
   openSearch,
@@ -20,6 +22,13 @@ const Large = ({
   const [isLogged, setIsLogged] = useState(false)
 
   const { data: session, status } = useSession()
+  const [domLoaded, setDomLoaded] = useState(false)
+
+  const { cartTotalQuantity } = useSelector((state) => state.cart)
+
+  useEffect(() => {
+    setDomLoaded(true)
+  }, [])
 
   return (
     <nav>
@@ -91,10 +100,23 @@ const Large = ({
               Kneza Miloša 81, Svilajnac
             </h3> */}
 
-            <AiOutlineShoppingCart
-              className='nav-icon'
-              onClick={() => setOpen(!open)}
-            />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              {domLoaded && (
+                <p
+                  style={{
+                    marginRight: '.2rem',
+                    fontWeight: '500',
+                    color: 'red',
+                  }}
+                >
+                  ( {cartTotalQuantity} )
+                </p>
+              )}
+              <AiOutlineShoppingCart
+                className='nav-icon'
+                onClick={() => setOpen(!open)}
+              />
+            </div>
           </div>
         </div>
       </div>

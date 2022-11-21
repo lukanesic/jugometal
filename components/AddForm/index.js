@@ -1,7 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { ref, uploadBytes, getDownloadURL } from '@firebase/storage'
+import { storage } from '../../firebase'
 
 const AddForm = () => {
   const [feedback, setFeedback] = useState(false)
+  const [storageImage, setStorageImage] = useState(null)
+  const [uploadedImage, setUploadedImage] = useState('')
 
   const title = useRef()
   const category = useRef()
@@ -24,7 +28,6 @@ const AddForm = () => {
     category.current.value = ''
     subcategory.current.value = ''
     url.current.value = ''
-    image.current.value = ''
     description.current.value = ''
     about.current.value = ''
     keyWords.current.value = ''
@@ -35,10 +38,27 @@ const AddForm = () => {
     spec5.current.value = ''
     mpcena.current.value = ''
     vpcena.current.value = ''
+    setStorageImage(null)
+    setUploadedImage('')
 
     setTimeout(() => {
       setFeedback(false)
     }, [10000])
+  }
+
+  const handleUploadToFirebase = async () => {
+    if (storageImage !== null) {
+      const imageRef = ref(
+        storage,
+        `gs://jugometalstorage.appspot.com/${storageImage.name}`
+      )
+
+      await uploadBytes(imageRef, storageImage)
+      const imgLink = await getDownloadURL(imageRef)
+      setUploadedImage(imgLink)
+    } else {
+      return
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -51,7 +71,7 @@ const AddForm = () => {
       category: category.current.value,
       subcategory: subcategory.current.value,
       url: url.current.value,
-      image: image.current.value,
+      image: uploadedImage,
       description: description.current.value,
       about: about.current.value,
       seoKey: keyWords.current.value,
@@ -75,7 +95,6 @@ const AddForm = () => {
       })
 
       const data = await response.json()
-      console.log(data)
 
       if (data.msg === 'arived') {
         resetForm()
@@ -152,25 +171,46 @@ const AddForm = () => {
           <input
             type='text'
             placeholder='Slika je link koji dolazi sa oficijalne stranice proizvoda koji se ubacuje'
-            required
             className='inputLabel'
-            ref={image}
+            required
+            onChange={(e) => setUploadedImage(e.target.value)}
+            value={uploadedImage}
           />
         </div>
 
         <div>
-          <label>
-            Opis Proizvoda <span>*</span>
-          </label>
-          <input
-            type='text'
-            placeholder='Opis proizvoda do 15 reci'
-            required
-            className='inputLabel'
-            ref={description}
-          />
+          <label>Dodajte sliku </label>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <input
+              type='file'
+              placeholder='Dodajte sliku sačuvanu sliku'
+              onChange={(e) => setStorageImage(e.target.files[0])}
+            />
+            <p
+              onClick={() => handleUploadToFirebase(storageImage)}
+              className='dodaj-btn'
+            >
+              Dodajte
+            </p>
+          </div>
         </div>
       </div>
+
+      <label>
+        Opis Proizvoda <span>*</span>
+      </label>
+      <input
+        type='text'
+        placeholder='Opis proizvoda do 15 reci'
+        required
+        className='inputLabel'
+        ref={description}
+      />
 
       <label>Veci opis Proizvoda</label>
       <input

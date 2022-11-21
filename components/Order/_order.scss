@@ -104,4 +104,24 @@
       }
     }
   }
+
+  .green {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
+  }
+
+  .green:hover {
+    color: #fff;
+    background: #1bb600;
+    border: 1px solid transparent;
+  }
+}
+
+.disclaimer {
+  width: 90%;
+  line-height: 25px;
+  color: #282828a2;
+  margin: 2rem 0;
+  font-weight: 500;
 }

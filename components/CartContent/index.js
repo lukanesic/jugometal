@@ -106,7 +106,7 @@ const CartContent = () => {
                   />
                 </div>
 
-                <p>Obriši</p>
+                <p onClick={() => dispatch(removeFromCart(item))}>Obriši</p>
               </div>
 
               <div className='right-lg'>

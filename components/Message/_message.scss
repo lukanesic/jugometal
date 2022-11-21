@@ -1,6 +1,8 @@
 .message {
-  padding: 4rem 0;
-  border-bottom: 1px solid $gray;
+  padding: 4rem 2rem;
+
+  box-shadow: 0px 2px 20px rgba(87, 87, 87, 0.2);
+  margin: 1rem 0;
 
   .message-headers {
     display: flex;
@@ -24,7 +26,7 @@
   }
 
   .customer-message {
-    padding: 4rem 0;
+    padding: 3rem 0;
 
     h4 {
       margin-bottom: 1rem;
@@ -46,5 +48,32 @@
       font-weight: 500;
       font-size: 1rem;
     }
+  }
+
+  .del {
+    display: flex;
+    margin: 3rem 0 0;
+    align-items: center;
+
+    transition: color 0.4s ease;
+    cursor: pointer;
+    font-weight: 500;
+
+    .ic {
+      width: fit-content;
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+
+      display: grid;
+      place-content: center;
+    }
+
+    p {
+      cursor: pointer;
+    }
+  }
+
+  .del:hover {
+    color: $red;
   }
 }
