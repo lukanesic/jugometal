@@ -41,15 +41,6 @@ const Products = ({ data, path }) => {
     )
   }, [])
 
-  if (router.isFallback) {
-    return (
-      <>
-        <Loader />
-        <h1>Loading</h1>
-      </>
-    )
-  }
-
   return (
     <>
       <Head>
@@ -115,7 +106,7 @@ export const getStaticPaths = async () => {
   })
   return {
     paths: paths,
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
