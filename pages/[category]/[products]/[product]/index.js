@@ -63,6 +63,15 @@ const Product = ({ path, data }) => {
     // }
   }
 
+  if (router.isFallback) {
+    return (
+      <>
+        <Loader />
+        <h1>Loading</h1>
+      </>
+    )
+  }
+
   return (
     <>
       <Head>

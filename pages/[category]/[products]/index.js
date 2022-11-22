@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 // Probaj i sa drugim layoutom. Ne zaboravi
 import MainLayout from '../../../layout/MainLayout'
@@ -27,6 +28,8 @@ const Products = ({ data, path }) => {
     data.map((sub) => sub.subcategory)
   ).toString()
 
+  const router = useRouter()
+
   useEffect(() => {
     const body = document.querySelector('#__next')
 
@@ -37,6 +40,15 @@ const Products = ({ data, path }) => {
       1500
     )
   }, [])
+
+  if (router.isFallback) {
+    return (
+      <>
+        <Loader />
+        <h1>Loading</h1>
+      </>
+    )
+  }
 
   return (
     <>
@@ -103,7 +115,7 @@ export const getStaticPaths = async () => {
   })
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
