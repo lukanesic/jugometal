@@ -5,12 +5,13 @@ const Navigation = () => {
   return (
     <div className='d-nav'>
       <ul>
-        <Link href='/delovi'>
-          <li>Rezervni delovi</li>
-        </Link>
         <Link href='/o-nama'>
           <li>O nama</li>
         </Link>
+        <Link href='/delovi'>
+          <li>Rezervni delovi</li>
+        </Link>
+
         <Link href='/finansiranje'>
           <li>Finansiranje</li>
         </Link>

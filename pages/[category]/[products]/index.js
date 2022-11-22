@@ -118,6 +118,7 @@ export const getStaticProps = async (context) => {
       data,
       path: params.products,
     },
+    revalidate: 60,
   }
 }
 

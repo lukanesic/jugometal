@@ -44,8 +44,8 @@ const Large = ({
             <a href='tel:+38135312391' className='phone'>
               035/312-391
             </a>
-            <a href='mailto:jugometal.co.rs' className='email'>
-              jugometal@gmail.co.rs
+            <a href='mailto: info@jugometal.co.rs' className='email'>
+              info@jugometal.co.rs
             </a>
           </div>
 

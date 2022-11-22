@@ -46,6 +46,12 @@ const SideMenu = ({ open, setOpen }) => {
                 <AiOutlineClose style={{ color: '#fff' }} />
               </button>
             </motion.div>
+
+            <div className='side-menu-content'>
+              <Link href='/'>
+                <li onClick={() => setOpen(!open)}>Početna</li>
+              </Link>
+            </div>
             <div className='side-menu-content'>
               <Link href='/traktori'>
                 <li onClick={() => setOpen(!open)}>Traktori</li>
@@ -78,17 +84,11 @@ const SideMenu = ({ open, setOpen }) => {
                 <li onClick={() => setOpen(!open)}>Servis</li>
               </Link>
               <Link href='/kontakt'>
-                <li onClick={() => setOpen(!open)}>Kontakt</li>
-              </Link>
-            </div>
-
-            <div className='side-menu-content'>
-              <Link href='/'>
                 <li
                   onClick={() => setOpen(!open)}
                   style={{ borderBottom: 'unset' }}
                 >
-                  Početna
+                  Kontakt
                 </li>
               </Link>
             </div>

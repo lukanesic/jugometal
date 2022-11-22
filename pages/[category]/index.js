@@ -102,6 +102,7 @@ export const getStaticProps = async (context) => {
       data,
       path: params.category,
     },
+    revalidate: 60,
   }
 }
 
