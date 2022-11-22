@@ -35,6 +35,7 @@ const nextConfig = {
       'www.megametal.hr',
       'jugometal.co.rs',
       'firebasestorage.googleapis.com',
+      'agropanonka.com',
     ],
   },
 }
