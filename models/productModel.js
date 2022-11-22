@@ -58,6 +58,9 @@ const productSchema = mongoose.Schema(
     spec5: {
       type: String,
     },
+    pdf: {
+      type: String,
+    },
     featured: Boolean,
   },
   {

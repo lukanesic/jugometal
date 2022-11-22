@@ -29,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     max-width: 1200px;
-    grid-gap: 2rem;
+    grid-gap: 4rem;
     align-items: center;
     margin-top: 0;
   }
@@ -140,6 +140,35 @@
         color: $black;
         line-height: 25px;
         margin: 0.5rem 0;
+      }
+    }
+
+    .pdf-ctr {
+      p {
+        font-size: 0.9rem;
+        color: #282828;
+        font-weight: 600;
+        padding: 0.5rem 0;
+      }
+
+      a {
+        background: rgba($color: $red, $alpha: 0.8);
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        width: fit-content;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 1rem 0;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s ease;
+        font-size: 0.8rem;
+        display: block;
+        text-align: center;
+      }
+
+      a:hover {
+        background: $red;
       }
     }
 

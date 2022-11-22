@@ -22,6 +22,7 @@ const AddForm = () => {
   const spec5 = useRef()
   const mpcena = useRef()
   const vpcena = useRef()
+  const pdf = useRef()
 
   const resetForm = () => {
     title.current.value = ''
@@ -38,6 +39,7 @@ const AddForm = () => {
     spec5.current.value = ''
     mpcena.current.value = ''
     vpcena.current.value = ''
+    pdf.current.value = ''
     setStorageImage(null)
     setUploadedImage('')
 
@@ -83,6 +85,7 @@ const AddForm = () => {
       spec5: spec5.current.value,
       mpcena: +mpcena.current.value,
       vpcena: +vpcena.current.value,
+      pdf: pdf.current.value,
     }
 
     try {
@@ -294,6 +297,16 @@ const AddForm = () => {
             placeholder='Velikoprodajna cena (samo za delove)'
             className='inputLabel'
             ref={vpcena}
+          />
+        </div>
+
+        <div>
+          <label>PDF link</label>
+          <input
+            type='text'
+            placeholder='PDF link sa oficionalnih web stranica'
+            className='inputLabel'
+            ref={pdf}
           />
         </div>
       </div>

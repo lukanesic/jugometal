@@ -122,6 +122,21 @@ const Product = ({ path, data }) => {
                     <li>{product.spec4}</li>
                     <li>{product.spec5}</li>
                   </ul>
+                  {product.pdf && (
+                    <div className='pdf-ctr'>
+                      <p>
+                        U katalogu ispod možete pogledati detaljne tehničke
+                        karakteristike traktora
+                      </p>
+                      <a
+                        href={product.pdf}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        Preuzmite katalog
+                      </a>
+                    </div>
+                  )}
                 </>
               )}
 

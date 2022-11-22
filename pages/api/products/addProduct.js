@@ -21,6 +21,7 @@ const handler = async (req, res) => {
       spec5: req.body.spec5,
       mpcena: req.body.mpcena,
       vpcena: req.body.vpcena,
+      pdf: req.body.pdf,
     })
 
     res.status(200).json({ msg: 'arived', data })

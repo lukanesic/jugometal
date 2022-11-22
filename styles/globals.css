@@ -6129,7 +6129,7 @@ footer .footer .jugo-pages .page-prodavnica {
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     max-width: 1200px;
-    grid-gap: 2rem;
+    grid-gap: 4rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -6279,6 +6279,36 @@ footer .footer .jugo-pages .page-prodavnica {
   color: #292929;
   line-height: 25px;
   margin: 0.5rem 0;
+}
+
+.product-container .p-info .pdf-ctr p {
+  font-size: 0.9rem;
+  color: #282828;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.product-container .p-info .pdf-ctr a {
+  background: rgba(237, 29, 36, 0.8);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: 0.8rem;
+  display: block;
+  text-align: center;
+}
+
+.product-container .p-info .pdf-ctr a:hover {
+  background: #ed1d24;
 }
 
 .product-container .p-info button {
