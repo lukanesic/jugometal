@@ -1,0 +1,47 @@
+.sponsors {
+  margin: 0rem auto;
+  // border: 1px solid red;
+  padding-top: 5rem;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+
+  .logo-plc {
+    position: relative;
+    height: 80px;
+  }
+
+  .next-arrow {
+    display: inline;
+    position: absolute;
+    right: -2rem;
+    top: 45%;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include Laptops() {
+      right: -3rem;
+    }
+
+    @include HiDPI() {
+      right: -3rem;
+    }
+  }
+
+  .prev-arrow {
+    display: inline;
+    position: absolute;
+    left: -2rem;
+    top: 45%;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include Laptops() {
+      left: -3rem;
+    }
+
+    @include HiDPI() {
+      left: -3rem;
+    }
+  }
+}

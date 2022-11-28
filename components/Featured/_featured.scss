@@ -140,12 +140,14 @@
     display: grid;
     text-align: center;
     grid-template-columns: repeat(4, 25%);
+    max-width: 1000px;
   }
 
   @include HiDPI() {
     display: grid;
     text-align: center;
     grid-template-columns: repeat(4, 25%);
+    max-width: 1200px;
   }
 
   .ponuda-product-item {
@@ -181,13 +183,13 @@
     @include HiDPI() {
       border: 1px solid transparent;
       border-right: 1px solid $cat-color;
-      cursor: pointer;
+      // cursor: pointer;
       transition: all 0.4s ease;
 
-      &:hover {
-        border: 1px solid $cat-color;
-        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-      }
+      // &:hover {
+      //   border: 1px solid $cat-color;
+      //   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+      // }
     }
 
     .product-item-image-container {
@@ -212,12 +214,12 @@
       }
 
       @include Laptops() {
-        width: 250px;
-        height: 200px;
+        width: 200px;
+        height: 150px;
       }
       @include HiDPI() {
-        width: 280px;
-        height: 200px;
+        width: 200px;
+        height: 150px;
       }
     }
 

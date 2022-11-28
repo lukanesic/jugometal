@@ -16,6 +16,7 @@ import Offer from '../components/Offer'
 import FeatureBrands from '../components/FeatureBrands'
 import Rezervni from '../components/Rezervni'
 import Loader from '../components/Loader'
+import Sponsors from '../components/Sponsors'
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -56,6 +57,7 @@ export default function Home({ data }) {
         {/* <Offer heading={'Ponuda traktora'} />
         <Offer heading={'Ponuda mašina'} /> */}
         <FeatureBrands />
+        <Sponsors />
         {/* <Rezervni /> */}
         <Delovi />
         <Qoute />

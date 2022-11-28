@@ -4,6 +4,9 @@
 @import './mediaquerries';
 @import './colors';
 
+// @import '~slick-carousel/slick/slick.css';
+// @import '~slick-carousel/slick/slick-theme.css';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -189,6 +192,7 @@ a,
 @import './../components/AddForm/addform';
 @import './../components/Message/message';
 @import './../components/Loader/loader';
+@import './../components/Sponsors/sponsors';
 
 @import './../components/Quote/qoute';
 @import './../components/Menus/DMenu/dmenu';
