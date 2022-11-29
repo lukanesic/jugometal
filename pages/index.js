@@ -17,6 +17,7 @@ import FeatureBrands from '../components/FeatureBrands'
 import Rezervni from '../components/Rezervni'
 import Loader from '../components/Loader'
 import Sponsors from '../components/Sponsors'
+import FeauturedSlider from '../components/FeaturedSlider'
 
 export default function Home({ data }) {
   useEffect(() => {
@@ -53,7 +54,8 @@ export default function Home({ data }) {
         {/* <LandingMoto /> */}
         <Categories />
 
-        <Featured data={data} />
+        {/* <Featured data={data} /> */}
+        <FeauturedSlider data={data} />
         {/* <Offer heading={'Ponuda traktora'} />
         <Offer heading={'Ponuda mašina'} /> */}
         <FeatureBrands />

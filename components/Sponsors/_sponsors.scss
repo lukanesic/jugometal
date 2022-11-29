@@ -1,47 +1,121 @@
 .sponsors {
   margin: 0rem auto;
   // border: 1px solid red;
-  padding-top: 5rem;
-  width: 80%;
+  padding-top: 2rem;
+  width: 60%;
   max-width: 1200px;
   position: relative;
 
+  @include PhonePro() {
+    width: 80%;
+  }
+
+  @include Landscape() {
+    width: 90%;
+  }
+
+  @include Pads() {
+    width: 90%;
+  }
+
+  @include PadsPro() {
+    width: 90%;
+  }
+
+  @include Laptops() {
+    width: 90%;
+  }
+
+  @include HiDPI() {
+    width: 90%;
+  }
+
   .logo-plc {
     position: relative;
-    height: 80px;
+    height: 90px;
+
+    @include PadsPro() {
+      height: 60px;
+    }
+
+    @include Laptops() {
+      height: 60px;
+    }
+
+    @include HiDPI() {
+      height: 60px;
+    }
   }
 
   .next-arrow {
     display: inline;
     position: absolute;
-    right: -2rem;
+    right: -3rem;
     top: 45%;
     font-size: 1.5rem;
     cursor: pointer;
 
+    @include PhonePro() {
+      right: -1rem;
+    }
+
+    @include Landscape() {
+      right: -1rem;
+    }
+
+    @include Pads() {
+      right: -1rem;
+    }
+
+    @include PadsPro() {
+      right: -1rem;
+      top: 35%;
+    }
+
     @include Laptops() {
       right: -3rem;
+      top: 35%;
     }
 
     @include HiDPI() {
       right: -3rem;
+      top: 35%;
     }
   }
 
   .prev-arrow {
     display: inline;
     position: absolute;
-    left: -2rem;
+    left: -3rem;
     top: 45%;
     font-size: 1.5rem;
     cursor: pointer;
 
+    @include PhonePro() {
+      left: -1rem;
+    }
+
+    @include Landscape() {
+      left: -1rem;
+    }
+
+    @include Pads() {
+      left: -1rem;
+    }
+
+    @include PadsPro() {
+      left: -1rem;
+      top: 35%;
+    }
+
     @include Laptops() {
       left: -3rem;
+      top: 35%;
     }
 
     @include HiDPI() {
       left: -3rem;
+      top: 35%;
     }
   }
 }

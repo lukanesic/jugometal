@@ -1,0 +1,356 @@
+.ponuda-header {
+  padding: 1rem 1rem;
+  text-align: left;
+  margin: 2rem 0rem;
+
+  @include Pads() {
+    width: 600px;
+    margin: 4rem auto 0;
+    padding: 0 0;
+  }
+
+  @include PadsPro() {
+    width: 700px;
+
+    margin: 2rem auto 3rem;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+
+  @include Laptops() {
+    width: 800px;
+
+    margin: 2rem auto 3rem;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+
+  @include HiDPI() {
+    width: 800px;
+    padding: 0 0;
+    padding-top: 2rem;
+    margin: 2rem auto 3rem;
+  }
+
+  h4 {
+    color: $red;
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+    span {
+      font-weight: 700;
+      color: $red;
+    }
+
+    @include Pads() {
+      font-size: 3rem;
+    }
+
+    @include PadsPro() {
+      font-size: 3rem;
+    }
+
+    @include Laptops() {
+      font-size: 3rem;
+    }
+
+    @include HiDPI() {
+      font-size: 4rem;
+    }
+  }
+
+  h5 {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+
+    @include Pads() {
+      font-size: 1.7rem;
+    }
+
+    @include Laptops() {
+      font-size: 1.7rem;
+    }
+
+    @include HiDPI() {
+      font-size: 2.4rem;
+    }
+  }
+
+  p {
+    // font-size: 1.3rem;
+    font-size: 0.9rem;
+
+    padding-bottom: 2rem;
+    position: relative;
+    line-height: 24px;
+    font-weight: 400;
+    color: $black;
+    margin-top: 1.5rem;
+
+    @include Pads() {
+      width: 500px;
+    }
+
+    @include PadsPro() {
+      font-size: 1rem;
+    }
+
+    @include Laptops() {
+      font-size: 1rem;
+    }
+
+    @include HiDPI() {
+      font-size: 1rem;
+    }
+  }
+}
+
+.ponuda-slider {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  .ponuda-product-item {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include PhonePro() {
+      border-bottom: none;
+    }
+
+    @include Landscape() {
+      border-bottom: none;
+    }
+
+    @include Pads() {
+      border-bottom: none;
+    }
+
+    @include PadsPro() {
+      border-bottom: none;
+    }
+
+    @include Laptops() {
+      border-bottom: none;
+    }
+
+    @include HiDPI() {
+      border: 1px solid transparent;
+
+      // cursor: pointer;
+      transition: all 0.4s ease;
+
+      // &:hover {
+      //   border: 1px solid $cat-color;
+      //   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+      // }
+    }
+
+    .product-item-image-container {
+      margin: 0 auto;
+      width: 200px;
+      height: 220px;
+      position: relative;
+
+      @include OnlyForFeatured() {
+        width: 300px;
+        height: 250px;
+      }
+
+      @include Landscape() {
+        width: 180px;
+        height: 200px;
+      }
+
+      @include Pads() {
+        width: 280px;
+        height: 230px;
+      }
+
+      @include PadsPro() {
+        width: 200px;
+        height: 150px;
+      }
+
+      @include Laptops() {
+        width: 200px;
+        height: 150px;
+      }
+      @include HiDPI() {
+        width: 220px;
+        height: 180px;
+      }
+    }
+
+    .product-item-content {
+      padding: 2rem 1rem;
+
+      h5 {
+        color: $font;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        color: $black;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      .h-line {
+        height: 1px;
+        width: 50%;
+        background: $font;
+        margin: 0 auto;
+
+        @include PhonePro() {
+          width: 80%;
+        }
+
+        @include Pads() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include PadsPro() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include Laptops() {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        @include HiDPI() {
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        height: 64px;
+        overflow: hidden;
+        margin-top: 1rem;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 0.7rem;
+        padding: 0rem 0.5rem;
+        line-height: 20px;
+
+        @include PhonePro() {
+          font-size: 0.8rem;
+        }
+
+        @include Pads() {
+          font-size: 0.9rem;
+        }
+
+        @include PadsPro() {
+          font-size: 0.9rem;
+        }
+
+        @include Laptops() {
+          max-width: 90%;
+          margin: 1rem auto;
+          font-size: 0.9rem;
+        }
+
+        @include HiDPI() {
+          max-width: 90%;
+          margin: 1rem auto;
+          font-size: 0.9rem;
+        }
+      }
+
+      a {
+        color: $red;
+        border: 0.5px solid $red;
+        padding: 0.7rem 2rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        transition: all linear 0.4s;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #fff;
+        background: $red;
+      }
+    }
+  }
+
+  .ponuda-product-item:last-child {
+    border-bottom: none;
+  }
+
+  .ponuda-product-item:nth-child(even) {
+    @include PhonePro() {
+      border-right: none;
+    }
+
+    @include Landscape() {
+      border-right: none;
+    }
+  }
+
+  .ponuda-product-item:nth-child(3n) {
+    @include Pads() {
+      border-right: none;
+    }
+
+    @include PadsPro() {
+      border-right: none;
+    }
+  }
+
+  .ponuda-product-item:nth-child(4n) {
+    @include Laptops() {
+      border-right: none;
+    }
+
+    @include HiDPI() {
+      border-right: none;
+    }
+  }
+
+  .next-arrow {
+    display: inline;
+    position: absolute;
+    right: -1rem;
+    top: 45%;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include Laptops() {
+      right: -3rem;
+    }
+
+    @include HiDPI() {
+      right: -3rem;
+    }
+  }
+
+  .prev-arrow {
+    display: inline;
+    position: absolute;
+    left: -1rem;
+    top: 45%;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @include Laptops() {
+      left: -3rem;
+    }
+
+    @include HiDPI() {
+      left: -3rem;
+    }
+  }
+}

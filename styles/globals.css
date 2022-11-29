@@ -3199,6 +3199,13 @@ footer .footer .jugo-face {
   padding: 1rem 0;
 }
 
+footer .footer .jugo-face a {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 2rem;
+}
+
 @media (min-width: 1280px) and (max-width: 1439px) {
   footer .footer .jugo-pages {
     display: -ms-grid;
@@ -4439,55 +4446,600 @@ footer .footer .jugo-pages .page-prodavnica {
 
 .sponsors {
   margin: 0rem auto;
-  padding-top: 5rem;
-  width: 80%;
+  padding-top: 2rem;
+  width: 60%;
   max-width: 1200px;
   position: relative;
 }
 
+@media (min-width: 410px) and (max-width: 567px) {
+  .sponsors {
+    width: 80%;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .sponsors {
+    width: 90%;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .sponsors {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sponsors {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .sponsors {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sponsors {
+    width: 90%;
+  }
+}
+
 .sponsors .logo-plc {
   position: relative;
-  height: 80px;
+  height: 90px;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sponsors .logo-plc {
+    height: 60px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .sponsors .logo-plc {
+    height: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sponsors .logo-plc {
+    height: 60px;
+  }
 }
 
 .sponsors .next-arrow {
   display: inline;
   position: absolute;
-  right: -2rem;
+  right: -3rem;
   top: 45%;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+@media (min-width: 410px) and (max-width: 567px) {
+  .sponsors .next-arrow {
+    right: -1rem;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .sponsors .next-arrow {
+    right: -1rem;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .sponsors .next-arrow {
+    right: -1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sponsors .next-arrow {
+    right: -1rem;
+    top: 35%;
+  }
+}
+
 @media (min-width: 1280px) and (max-width: 1439px) {
   .sponsors .next-arrow {
     right: -3rem;
+    top: 35%;
   }
 }
 
 @media (min-width: 1440px) {
   .sponsors .next-arrow {
     right: -3rem;
+    top: 35%;
   }
 }
 
 .sponsors .prev-arrow {
   display: inline;
   position: absolute;
-  left: -2rem;
+  left: -3rem;
+  top: 45%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .sponsors .prev-arrow {
+    left: -1rem;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .sponsors .prev-arrow {
+    left: -1rem;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .sponsors .prev-arrow {
+    left: -1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sponsors .prev-arrow {
+    left: -1rem;
+    top: 35%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .sponsors .prev-arrow {
+    left: -3rem;
+    top: 35%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sponsors .prev-arrow {
+    left: -3rem;
+    top: 35%;
+  }
+}
+
+.ponuda-header {
+  padding: 1rem 1rem;
+  text-align: left;
+  margin: 2rem 0rem;
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-header {
+    width: 600px;
+    margin: 4rem auto 0;
+    padding: 0 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-header {
+    width: 700px;
+    margin: 2rem auto 3rem;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-header {
+    width: 800px;
+    margin: 2rem auto 3rem;
+    padding: 0 0;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-header {
+    width: 800px;
+    padding: 0 0;
+    padding-top: 2rem;
+    margin: 2rem auto 3rem;
+  }
+}
+
+.ponuda-header h4 {
+  color: #ed1d24;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.ponuda-header h4 span {
+  font-weight: 700;
+  color: #ed1d24;
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-header h4 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-header h4 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-header h4 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-header h4 {
+    font-size: 4rem;
+  }
+}
+
+.ponuda-header h5 {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-header h5 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-header h5 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-header h5 {
+    font-size: 2.4rem;
+  }
+}
+
+.ponuda-header p {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+  position: relative;
+  line-height: 24px;
+  font-weight: 400;
+  color: #292929;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-header p {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-header p {
+    font-size: 1rem;
+  }
+}
+
+.ponuda-slider {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ponuda-slider .ponuda-product-item {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .ponuda-slider .ponuda-product-item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .ponuda-slider .ponuda-product-item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-slider .ponuda-product-item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-slider .ponuda-product-item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .ponuda-product-item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .ponuda-product-item {
+    border: 1px solid transparent;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+}
+
+.ponuda-slider .ponuda-product-item .product-item-image-container {
+  margin: 0 auto;
+  width: 200px;
+  height: 220px;
+  position: relative;
+}
+
+@media (min-width: 375px) and (max-width: 567px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 280px;
+    height: 230px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .ponuda-product-item .product-item-image-container {
+    width: 220px;
+    height: 180px;
+  }
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content {
+  padding: 2rem 1rem;
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content h5 {
+  color: #737373;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content h3 {
+  color: #292929;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content .h-line {
+  height: 1px;
+  width: 50%;
+  background: #737373;
+  margin: 0 auto;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .ponuda-slider .ponuda-product-item .product-item-content .h-line {
+    width: 80%;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-slider .ponuda-product-item .product-item-content .h-line {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-slider .ponuda-product-item .product-item-content .h-line {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .ponuda-product-item .product-item-content .h-line {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .ponuda-product-item .product-item-content .h-line {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content p {
+  height: 64px;
+  overflow: hidden;
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+  padding: 0rem 0.5rem;
+  line-height: 20px;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .ponuda-slider .ponuda-product-item .product-item-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-slider .ponuda-product-item .product-item-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-slider .ponuda-product-item .product-item-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .ponuda-product-item .product-item-content p {
+    max-width: 90%;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .ponuda-product-item .product-item-content p {
+    max-width: 90%;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+  }
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content a {
+  color: #ed1d24;
+  border: 0.5px solid #ed1d24;
+  padding: 0.7rem 2rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+  cursor: pointer;
+}
+
+.ponuda-slider .ponuda-product-item .product-item-content a:hover {
+  color: #fff;
+  background: #ed1d24;
+}
+
+.ponuda-slider .ponuda-product-item:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 410px) and (max-width: 567px) {
+  .ponuda-slider .ponuda-product-item:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 734px) {
+  .ponuda-slider .ponuda-product-item:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 735px) and (max-width: 1023px) {
+  .ponuda-slider .ponuda-product-item:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ponuda-slider .ponuda-product-item:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .ponuda-product-item:nth-child(4n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .ponuda-product-item:nth-child(4n) {
+    border-right: none;
+  }
+}
+
+.ponuda-slider .next-arrow {
+  display: inline;
+  position: absolute;
+  right: -1rem;
   top: 45%;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
-  .sponsors .prev-arrow {
+  .ponuda-slider .next-arrow {
+    right: -3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ponuda-slider .next-arrow {
+    right: -3rem;
+  }
+}
+
+.ponuda-slider .prev-arrow {
+  display: inline;
+  position: absolute;
+  left: -1rem;
+  top: 45%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ponuda-slider .prev-arrow {
     left: -3rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .sponsors .prev-arrow {
+  .ponuda-slider .prev-arrow {
     left: -3rem;
   }
 }
@@ -4505,8 +5057,9 @@ footer .footer .jugo-pages .page-prodavnica {
 }
 
 .luka-radoja p {
-  color: #737373;
+  color: #282828;
   line-height: 27px;
+  font-weight: 300;
 }
 
 @media (min-width: 735px) and (max-width: 1023px) {

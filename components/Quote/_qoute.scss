@@ -10,8 +10,9 @@
   }
 
   p {
-    color: $font;
+    color: #282828;
     line-height: 27px;
+    font-weight: 300;
 
     @include Pads() {
       width: 600px;

@@ -47,6 +47,15 @@ const Sponsors = () => {
         },
       },
       {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          initialSlide: 0,
+        },
+      },
+
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
@@ -57,7 +66,7 @@ const Sponsors = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

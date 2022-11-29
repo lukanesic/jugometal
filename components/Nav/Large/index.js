@@ -39,8 +39,11 @@ const Large = ({
               <FaFacebookF
                 className='facebook'
                 href='https://facebook.com/jugometal'
+                target='_blank'
+                rel='noopener noreferrer'
               />
             </a>
+
             <a href='tel:+38135312391' className='phone'>
               035/312-391
             </a>

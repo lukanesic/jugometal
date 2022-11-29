@@ -7,6 +7,8 @@ import dina from './../../public/images/kartice/dina-card.png'
 import express from './../../public/images/kartice/a-e.png'
 import Image from 'next/image'
 
+import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai'
+
 const Footer = () => {
   return (
     <div>
@@ -33,9 +35,22 @@ const Footer = () => {
             </div>
 
             <div className='jugo-face'>
-              <h4>Facebook</h4>
-              <a href='https://facebook.com/jugometal' className='facebook'>
-                Jugometa DOO Svilajnac
+              <h4>Socijalne mreže</h4>
+              <a
+                href='https://facebook.com/jugometal'
+                className='facebook'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <AiFillFacebook />
+              </a>
+              <a
+                href='https://www.instagram.com/jugometal.doo'
+                className='facebook'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <AiFillInstagram />
               </a>
             </div>
           </div>
